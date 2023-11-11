@@ -4,18 +4,18 @@ import * as assert from 'uvu/assert';
 
 import { uniq } from '../src';
 
-const uniqTest = suite('uniq');
+const test = suite('uniq');
 
-uniqTest('empty', () => {
+test('empty', () => {
   const input = [];
   const results = uniq(input);
   assert.equal(results, []);
 });
 
-uniqTest('1,2,3', () => {
+test('1,2,3', () => {
   const input = [1, 2, 3, 1, 2];
   const results = uniq(input);
   assert.equal(results, [1, 2, 3]);
 });
 
-uniqTest.run();
+test.run();

@@ -4,9 +4,9 @@ import * as assert from 'uvu/assert';
 
 import { set } from '../src';
 
-const setTest = suite('set');
+const test = suite('set');
 
-setTest('set flat', () => {
+test('set flat', () => {
   const input = { one: 1, two: 2 };
   const results = set(input, 'three', 3);
   assert.equal(results, {
@@ -16,7 +16,7 @@ setTest('set flat', () => {
   });
 });
 
-setTest('set deep values', () => {
+test('set deep values', () => {
   const input = { one: 1, two: 2 };
   const results = set(input, 'three.four', 4);
   assert.equal(results, {
@@ -28,7 +28,7 @@ setTest('set deep values', () => {
   });
 });
 
-setTest('set deep values with array', () => {
+test('set deep values with array', () => {
   const input = { one: 1, two: 2 };
   const results = set(input, ['three', 'four'], 4);
   assert.equal(results, {
@@ -40,4 +40,4 @@ setTest('set deep values with array', () => {
   });
 });
 
-setTest.run();
+test.run();

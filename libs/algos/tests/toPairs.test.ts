@@ -4,9 +4,9 @@ import * as assert from 'uvu/assert';
 
 import { toPairs } from '../src';
 
-const toPairsTest = suite('toPairs');
+const test = suite('toPairs');
 
-toPairsTest('check values', () => {
+test('check values', () => {
   const input = { one: 1, two: 2, three: 3 };
   const results = toPairs(input);
   assert.equal(results, [
@@ -16,4 +16,4 @@ toPairsTest('check values', () => {
   ]);
 });
 
-toPairsTest.run();
+test.run();

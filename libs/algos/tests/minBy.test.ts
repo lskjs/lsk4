@@ -4,15 +4,15 @@ import * as assert from 'uvu/assert';
 
 import { minBy } from '../src';
 
-const minByTest = suite('minBy');
+const test = suite('minBy');
 
-minByTest('empty', () => {
+test('empty', () => {
   const input = [];
   const results = minBy(input, (a) => a.value);
   assert.is(results, undefined);
 });
 
-minByTest('1,2,3', () => {
+test('1,2,3', () => {
   const input = [
     { i: 1, value: 1 },
     { i: 2, value: 2 },
@@ -25,7 +25,7 @@ minByTest('1,2,3', () => {
   assert.equal(results, { i: 1, value: 1 });
 });
 
-minByTest('3,2,1', () => {
+test('3,2,1', () => {
   const input = [
     { i: 6, value: 3 },
     { i: 5, value: 2 },
@@ -38,4 +38,4 @@ minByTest('3,2,1', () => {
   assert.equal(results, { i: 4, value: 1 });
 });
 
-minByTest.run();
+test.run();

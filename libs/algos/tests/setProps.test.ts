@@ -4,9 +4,9 @@ import * as assert from 'uvu/assert';
 
 import { setProps } from '../src';
 
-const setPropsTest = suite('setProps');
+const test = suite('setProps');
 
-setPropsTest('setProps', () => {
+test('setProps', () => {
   const input = { one: 1, two: 2 };
   const input2 = { two: 4, three: 6 };
   const input3 = { three: 9, four: 12 };
@@ -19,4 +19,4 @@ setPropsTest('setProps', () => {
   });
 });
 
-setPropsTest.run();
+test.run();

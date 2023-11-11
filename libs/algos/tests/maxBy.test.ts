@@ -4,15 +4,15 @@ import * as assert from 'uvu/assert';
 
 import { maxBy } from '../src';
 
-const maxByTest = suite('maxBy');
+const test = suite('maxBy');
 
-maxByTest('empty', () => {
+test('empty', () => {
   const input = [];
   const results = maxBy(input, (a) => a.value);
   assert.is(results, undefined);
 });
 
-maxByTest('1,2,3', () => {
+test('1,2,3', () => {
   const input = [
     { i: 1, value: 1 },
     { i: 2, value: 2 },
@@ -25,4 +25,4 @@ maxByTest('1,2,3', () => {
   assert.equal(results, { i: 3, value: 3 });
 });
 
-maxByTest.run();
+test.run();

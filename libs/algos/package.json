@@ -28,17 +28,17 @@
     "README.md",
     "LICENCE"
   ],
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "exports": {
+  "main": "lib/index.mjs",
+  "types": "lib/index.d.mts",
+  "exports2": {
     ".": {
       "import": "./lib/index.mjs",
-      "types": "./lib/index.d.ts",
+      "types": "./lib/index.d.mts",
       "default": "./lib/index.js"
     },
     "./*": {
       "import": "./lib/*.mjs",
-      "types": "./lib/*.d.ts",
+      "types": "./lib/*.d.mts",
       "default": "./lib/*.js"
     }
   },

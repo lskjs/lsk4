@@ -1,0 +1,69 @@
+{
+  "name": "@macrobe/err",
+  "version": "3.17.0",
+  "description": "LSK.js – err – Error class and utils for custom code and message extracting",
+  "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
+  "private": false,
+  "scripts": {
+    "dev": "            lsk run dev",
+    "build": "          lsk run build",
+    "test": "           lsk run test",
+    "test:check": "     uvu -r tsm tests",
+    "test:watch": "     watchlist src tests -- pnpm test:check",
+    "test:coverage": "  c8 --include=src npm test",
+    "test:report": "    c8 report --reporter=text-lcov > coverage.lcov",
+    "release2": "       lsk run release",
+    "release": "        standard-version"
+  },
+  "dependencies": {
+    "@macrobe/algos": "workspace:^"
+  },
+  "//": "///////////========================/////////========================/////////========================//////////",
+  "prettier": "@lskjs/eslint-config/prettier",
+  "eslintConfig": {
+    "extends": "@lskjs/eslint-config"
+  },
+  "jest": {
+    "preset": "@lskjs/jest-config"
+  },
+  "files": [
+    "lib",
+    "README.md",
+    "LICENCE"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.mjs",
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./*": {
+      "import": "./lib/*.mjs",
+      "types": "./lib/*.d.ts",
+      "default": "./lib/*.js"
+    }
+  },
+  "size-limit": [
+    {
+      "path": "lib/index.js",
+      "limit": "4kb"
+    }
+  ],
+  "///": "//////////========================/////////========================/////////========================/////////",
+  "repository": "https://github.com/lskjs/lskjs/tree/master//libs/err",
+  "homepage": "https://github.com/lskjs/lskjs/tree/master//libs/err",
+  "bugs": "https://github.com/lskjs/lskjs/issues",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "errors wrapper",
+    "errors",
+    "error"
+  ],
+  "////": "/////////========================/////////========================/////////========================/////////"
+}

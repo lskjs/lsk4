@@ -1,0 +1,7 @@
+{
+  "extends": "@lskjs/tsconfig",
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+  }
+}

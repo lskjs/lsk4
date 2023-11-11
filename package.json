@@ -1,0 +1,48 @@
+{
+  "name": "@lskjs/libs",
+  "version": "1.0.0",
+  "description": "Libs starter kit",
+  "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "start": "          lsk run start",
+    "dev": "            lsk run dev",
+    "build": "          lsk run build",
+    "test": "           lsk run test",
+    "release": "        lsk run release"
+  },
+  "devDependencies": {
+    "@lskjs/cli-scripts": "^3.19.0",
+    "@lskjs/eslint-config": "^3.18.0",
+    "@lskjs/jest-config": "^3.18.0",
+    "@lskjs/tsconfig": "^3.18.0",
+    "c8": "^8.0.1",
+    "lsk": "^3.19.0",
+    "standard-version": "^9.5.0",
+    "tsm": "^2.3.0",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2",
+    "uvu": "^0.5.6",
+    "watchlist": "^0.3.1"
+  },
+  "//": "///////////========================/////////========================/////////========================/////////",
+  "prettier": "@lskjs/eslint-config/prettier",
+  "eslintConfig": {
+    "extends": "@lskjs/eslint-config"
+  },
+  "jest": {
+    "preset": "@lskjs/jest-config"
+  },
+  "main": "index.js",
+  "///": "//////////========================/////////========================/////////========================/////////",
+  "repository": "https://github.com/lskjs/lskjs",
+  "homepage": "https://github.com/lskjs/lskjs",
+  "bugs": "https://github.com/lskjs/lskjs/issues",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "////": "/////////========================/////////========================/////////========================/////////"
+}

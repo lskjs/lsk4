@@ -1,6 +1,6 @@
 {
   "name": "@macrobe/cli-utils",
-  "version": "3.19.0",
+  "version": "3.19.1",
   "description": "LSK.js CLI Creds is the easiest way to manage GitHub / Gitlab secrets and credentials",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
@@ -44,7 +44,7 @@
     }
   },
   "///": "//////////========================/////////========================/////////========================/////////",
-  "repository": "https://github.com/lskjs/libs/tree/master//libs-cli/lsk",
+  "repository": "https://github.com/lskjs/libs",
   "homepage": "https://github.com/lskjs/cli",
   "bugs": "https://github.com/lskjs/libs/issues",
   "license": "MIT",

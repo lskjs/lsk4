@@ -37,7 +37,6 @@ export function getLogo({ color = 1 } = {}) {
         .join(''),
     )
     .join('\n');
-  // this.log(logo)
   return coloredLogo;
 }
 export default getLogo;

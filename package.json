@@ -6,7 +6,8 @@
   "private": false,
   "type": "module",
   "scripts": {
-    "release": "        set -a && source .env && set +a && multi-semantic-release --no-ci --first-parent --debug --deps.bump override --deps.release inherit --dry-run && git commit -am 'chore(release): publish v3.19.0' && git push && git push --tags",
+    "release": "        set -a && source .env && set +a && multi-semantic-release --no-ci --first-parent --debug --deps.bump override --deps.release inherit --dry-run",
+    "release:afterf": " git commit -am 'chore(release): publish v3.19.0' && git push && git push --tags",
     "version": "        pnpm -r --workspace-concurrency=1 exec -- npx --no-install standard-version",
     "start": "          lsk run start",
     "dev": "            lsk run dev",

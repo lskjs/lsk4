@@ -55,5 +55,19 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
+  "multi-release": {
+    "branches": [
+      "master",
+      "next"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator"
+    ],
+    "noCi": true,
+    "remove": [
+      "semantic-release-pnpm-esm"
+    ]
+  },
   "////": "/////////========================/////////========================/////////========================/////////"
 }

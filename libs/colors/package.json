@@ -49,7 +49,7 @@
     }
   ],
   "///": "//////////========================/////////========================/////////========================/////////",
-  "repository": "https://github.com/lskjs/libs/tree/master//libs/colors",
+  "repository": "https://github.com/lskjs/libs",
   "homepage": "https://github.com/lskjs/libs/tree/master//libs/colors",
   "bugs": "https://github.com/lskjs/libs/issues",
   "license": "MIT",

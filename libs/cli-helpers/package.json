@@ -51,7 +51,7 @@
     }
   },
   "///": "//////////========================/////////========================/////////========================/////////",
-  "repository": "https://github.com/lskjs/libs/tree/master//libs-cli/lsk",
+  "repository": "https://github.com/lskjs/libs",
   "homepage": "https://github.com/lskjs/cli",
   "bugs": "https://github.com/lskjs/libs/issues",
   "license": "MIT",

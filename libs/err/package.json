@@ -53,7 +53,7 @@
     }
   ],
   "///": "//////////========================/////////========================/////////========================/////////",
-  "repository": "https://github.com/lskjs/libs/tree/master//libs/err",
+  "repository": "https://github.com/lskjs/libs",
   "homepage": "https://github.com/lskjs/libs/tree/master//libs/err",
   "bugs": "https://github.com/lskjs/libs/issues",
   "license": "MIT",

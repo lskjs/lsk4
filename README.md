@@ -1,4 +1,29 @@
-# TODO
+# Lsk.js v4 Manifesto
+
+## Principles
+
+- TypeScript
+- ESM first
+- 100% Test coverage with benchmarks
+- Minimal dependencies
+- CI deploy with semver
+- Docs
+
+## Tech stack
+- TypeScript - tsup - esbuild
+- ESM - (tsm)
+- PNPM namespaces
+- UVU tests
+- C8 test coverage
+- NX or ... ???????
+
+## Not used
+- No JS & Babel
+- No LERNA
+- NO MAGIC!
+
+
+## TODO
 
 - [ ] Add uvu in `lsk run test`
 - [ ] Fix `lsk run test:watch`
@@ -9,7 +34,7 @@
 - [ ] make rsync & copy
 - [ ] change `@lskjs/log` to `pino`, `lsk log`` to pino-pretty
 
-# Notes
+## Notes for future docs
 
 
 ```json

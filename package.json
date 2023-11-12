@@ -6,7 +6,7 @@
   "private": false,
   "type": "module",
   "scripts": {
-    "release": "        set -a && source .env && set +a && multi-semantic-release --no-ci",
+    "release": "        set -a && source .env && set +a && multi-semantic-release --no-ci --first-parent",
     "version": "        pnpm -r --workspace-concurrency=1 exec -- npx --no-install standard-version",
     "start": "          lsk run start",
     "dev": "            lsk run dev",

@@ -1,4 +1,4 @@
-import { ObjectLike, ObjectMapper } from './types.js';
+import { ObjectMapper, ObjectLike } from './types.js';
 
 export const countBy = <T>(
   object: ObjectLike<T>,

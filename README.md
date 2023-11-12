@@ -2,20 +2,24 @@
 
 ## Principles
 
+- Focus to performance 
 - TypeScript
 - ESM first
-- 100% Test coverage with benchmarks
 - Minimal dependencies
 - CI deploy with semver
-- Docs
+- 100% Test coverage with benchmarks
+- Easy understnading DX (developer experience)
+- Basic docs for all packages
 
 ## Tech stack
-- TypeScript - tsup - esbuild
-- ESM - (tsm)
-- PNPM namespaces
-- UVU tests
-- C8 test coverage
-- NX or ... ???????
+- TypeScript - tsup (esbuild)
+- ESM - tsm?
+- Namespaces - PNPM
+- Test - UVU
+- Test coverage - C8
+- CI - GitHub actions
+- Semver - NX or ... ???????
+- Deployment - 
 
 ## Not used
 - No JS & Babel
@@ -31,8 +35,10 @@
 - [ ] Add more test for test coverage
 - [ ] Move cli-utils to separate packages
 - [ ] Think about publishing and semver
-- [ ] make rsync & copy
-- [ ] change `@lskjs/log` to `pino`, `lsk log`` to pino-pretty
+- [ ] Make rsync & copy commands
+- [ ] Add `lsk create` with templates
+- [ ] Change `@lskjs/log` to `pino`, `lsk log`` to pino-pretty
+- [ ] Rewrite `lsk run` commands to Yargs commands
 
 ## Notes for future docs
 

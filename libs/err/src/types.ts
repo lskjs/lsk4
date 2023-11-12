@@ -1,6 +1,6 @@
 export interface IErr extends Error {
-  code?: string;
   __err: boolean;
+  code?: string;
   // constructor(...params: any[]);
   // static getMessage(err: any, def : string): string;
   // static getText(err: any, def : string): string;

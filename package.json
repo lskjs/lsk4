@@ -6,16 +6,20 @@
   "private": false,
   "type": "module",
   "scripts": {
+    "version": "        pnpm -r --workspace-concurrency=1 exec -- npx --no-install standard-version",
     "start": "          lsk run start",
     "dev": "            lsk run dev",
     "build": "          lsk run build",
     "test": "           lsk run test",
     "release2": "        lsk run release",
     "clean": "          rm -rf libs/*/.release libs/*/.reports libs/*/coverage",
-    "release": "pnpm -r --workspace-concurrency=1 exec -- npx --no-install semantic-release -e semantic-release-monorepo",
+    "release2": "pnpm -r --workspace-concurrency=1 exec -- npx --no-install semantic-release -e semantic-release-monorepo",
+    "release": "        multi-semantic-release",
+    "standard-version": "standard-version",
     "semantic-release": "semantic-release --no-ci"
   },
   "devDependencies": {
+    "@anolilab/multi-semantic-release": "^1.0.2",
     "@lskjs/cli-scripts": "^3.19.0",
     "@lskjs/eslint-config": "^3.18.0",
     "@lskjs/jest-config": "^3.18.0",

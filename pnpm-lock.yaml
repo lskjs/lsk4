@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      '@anolilab/multi-semantic-release':
+        specifier: ^1.0.2
+        version: 1.0.2(semantic-release@22.0.7)(typescript@5.2.2)
       '@lskjs/cli-scripts':
         specifier: ^3.19.0
         version: 3.19.0
@@ -168,6 +171,33 @@ packages:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.3
       '@jridgewell/trace-mapping': 0.3.20
+    dev: true
+
+  /@anolilab/multi-semantic-release@1.0.2(semantic-release@22.0.7)(typescript@5.2.2):
+    resolution: {integrity: sha512-DLqV9r8BnzmMRIwFdpo0jsMAwgk1Q3fyL+2T0a78jeuX1fDiO7vDbDcFKcNfTLaVmrBJ+qatENlVfMte1oh+Dw==}
+    engines: {node: '>=18 || >=20.6.1'}
+    hasBin: true
+    peerDependencies:
+      semantic-release: ^20.0 || ^21.0 || >=22.0.3
+    dependencies:
+      '@semrel-extra/topo': 1.14.0
+      blork: 9.3.0
+      cosmiconfig: 8.3.6(typescript@5.2.2)
+      debug: 4.3.4
+      detect-indent: 7.0.1
+      detect-newline: 4.0.1
+      execa: 8.0.1
+      git-log-parser: 1.2.0
+      lodash-es: 4.17.21
+      resolve-from: 5.0.0
+      semantic-release: 22.0.7(typescript@5.2.2)
+      semver: 7.5.4
+      signale: 1.4.0
+      stream-buffers: 3.0.2
+      yargs: 17.7.2
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
     dev: true
 
   /@babel/code-frame@7.22.13:
@@ -1522,6 +1552,14 @@ packages:
       - supports-color
     dev: true
 
+  /@semrel-extra/topo@1.14.0:
+    resolution: {integrity: sha512-i4nMOxEva7HFfTIg0ao6Gjvdep6ux9/7tdQ4Mb/JrOj6vBJxSzYPJYZ85aB9eD3jMSWy4lkaclHsMslV5VMmIQ==}
+    dependencies:
+      fast-glob: 3.3.2
+      js-yaml: 4.1.0
+      toposource: 1.1.4
+    dev: true
+
   /@sinclair/typebox@0.27.8:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
     requiresBuild: true
@@ -2360,6 +2398,11 @@ packages:
   /binary-extensions@2.2.0:
     resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
     engines: {node: '>=8'}
+    dev: true
+
+  /blork@9.3.0:
+    resolution: {integrity: sha512-9naBrHS2bwCQeGqGR9ptcoll6utsox9jtk1E0SwOAFa4RCV/IQHoBJARdi8AhHQTPPoWkjixMrzHvQKAV5Fx2A==}
+    engines: {node: '>=10.0.0'}
     dev: true
 
   /bluebird@3.7.2:
@@ -7863,6 +7906,11 @@ packages:
       yargs: 16.2.0
     dev: true
 
+  /stream-buffers@3.0.2:
+    resolution: {integrity: sha512-DQi1h8VEBA/lURbSwFtEHnSTb9s2/pwLEaFuNhXwy1Dx3Sa0lOuYT2yNUr4/j2fs8oCAMANtrZ5OrPZtyVs3MQ==}
+    engines: {node: '>= 0.10.0'}
+    dev: true
+
   /stream-combiner2@1.1.1:
     resolution: {integrity: sha512-3PnJbYgS56AeWgtKF5jtJRT6uFJe56Z0Hc5Ngg/6sI6rIt8iiMBTa9cvdyFfpMQjaVHr8dusbNeFGIIonxOvKw==}
     dependencies:
@@ -8166,6 +8214,10 @@ packages:
     engines: {node: '>=8.0'}
     dependencies:
       is-number: 7.0.0
+    dev: true
+
+  /toposource@1.1.4:
+    resolution: {integrity: sha512-WOHoshZjzHHfHf7zSEjgk48Fv29m4uqPj0fVFKnDbH0A35gyD8BncofU01pDRdaDQ8VIace8WuQ3ChHfpBjqvg==}
     dev: true
 
   /tr46@0.0.3:

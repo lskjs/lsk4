@@ -2,7 +2,7 @@
 // import { getLogo, printInfo } from '@macrobe/cli-utils/lib/helpers/index.js';
 import fs from 'node:fs';
 
-import { getLogo, printInfo } from '@macrobe/cli-utils/helpers';
+import { getLogo, printInfo } from '@macrobe/cli-helpers';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { CommandModule } from 'yargs';

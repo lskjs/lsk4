@@ -20,6 +20,7 @@
     "@swc/core": "^1.3.96",
     "c8": "^8.0.1",
     "lsk": "^3.19.0",
+    "semantic-release-pnpm": "^1.0.2",
     "standard-version": "^9.5.0",
     "tsm": "^2.3.0",
     "tsup": "^7.2.0",

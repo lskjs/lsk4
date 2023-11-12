@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /* eslint-disable  */
 // @ts-ignore
-import { colorize } from '@lskjs/colors';
+import { colorize } from '@macrobe/colors';
 
 const logo = `
 __      $    _______.$ __  ___ $          __       _______.

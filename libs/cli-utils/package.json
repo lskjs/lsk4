@@ -37,11 +37,6 @@
       "types": "./lib/index.d.ts",
       "default": "./lib/index.js"
     },
-    "./helpers": {
-      "import": "./lib/helpers/index.js",
-      "types": "./lib/helpers/index.d.ts",
-      "default": "./lib/helpers/index.js"
-    },
     "./*": {
       "import": "./lib/*.js",
       "types": "./lib/*.d.ts",
@@ -85,6 +80,7 @@
     }
   ],
   "devDependencies": {
-    "@types/global-prefix": "^3.0.2"
+    "@types/global-prefix": "^3.0.2",
+    "@types/node": "^20.9.0"
   }
 }

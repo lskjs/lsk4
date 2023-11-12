@@ -1,5 +1,5 @@
 {
-  "name": "@macrobe/run",
+  "name": "@macrobe/cli-helpers",
   "version": "3.19.0",
   "description": "LSK.js CLI Creds is the easiest way to manage GitHub / Gitlab secrets and credentials",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
@@ -13,12 +13,9 @@
     "release": "        lsk run release"
   },
   "dependencies": {
-    "@macrobe/cli-helpers": "workspace:^",
     "@macrobe/cli-utils": "workspace:^",
-    "@macrobe/err": "workspace:^",
-    "@macrobe/spawn": "workspace:^",
-    "global-prefix": "^3.0.0",
-    "yargs": "^17.7.2"
+    "@macrobe/colors": "workspace:^",
+    "@macrobe/env": "workspace:^"
   },
   "//": "///////////========================/////////========================/////////========================//////////",
   "prettier": "@lskjs/eslint-config/prettier",
@@ -34,9 +31,6 @@
     "README.md",
     "LICENCE"
   ],
-  "bin": {
-    "lskrun": "bin/run.js"
-  },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "exports": {
@@ -44,6 +38,11 @@
       "import": "./lib/index.js",
       "types": "./lib/index.d.ts",
       "default": "./lib/index.js"
+    },
+    "./helpers": {
+      "import": "./lib/helpers/index.js",
+      "types": "./lib/helpers/index.d.ts",
+      "default": "./lib/helpers/index.js"
     },
     "./*": {
       "import": "./lib/*.js",
@@ -88,7 +87,6 @@
     }
   ],
   "devDependencies": {
-    "@types/node": "^20.9.0",
-    "@types/yargs": "^17.0.31"
+    "@types/node": "^20.9.0"
   }
 }

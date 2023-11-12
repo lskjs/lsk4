@@ -1,7 +1,5 @@
-import env from '@lskjs/env';
-
-import { getCwdInfo } from '../cwdInfo.js';
-import { getLskConfig } from '../getLskConfig.js';
+import { getCwdInfo, getLskConfig } from '@macrobe/cli-utils';
+import env from '@macrobe/env';
 
 const mapValues = (obj: any, fn: any) =>
   Object.fromEntries(Object.entries(obj).map(([k, v]) => [k, fn(v, k)]));

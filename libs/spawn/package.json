@@ -31,9 +31,6 @@
     "README.md",
     "LICENCE"
   ],
-  "bin": {
-    "lskrun": "bin/run.js"
-  },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "exports": {
@@ -83,5 +80,8 @@
       "path": "lib/index.js",
       "limit": "1kb"
     }
-  ]
+  ],
+  "devDependencies": {
+    "@types/node": "^20.9.0"
+  }
 }

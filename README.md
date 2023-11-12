@@ -2,8 +2,8 @@
 
 ## Principles
 
-- Focus to performance 
-- TypeScript
+- Focus on performance 
+- TypeScript only
 - ESM first
 - Minimal dependencies
 - CI deploy with semver
@@ -19,6 +19,7 @@
 - Test coverage - C8
 - CI - GitHub actions
 - Semver - NX or ... ???????
+- CLI - Yargs
 - Deployment - 
 
 ## Not used

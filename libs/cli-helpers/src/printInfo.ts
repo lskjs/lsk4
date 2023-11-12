@@ -1,5 +1,5 @@
 import { getCwdInfo, getLskConfig } from '@macrobe/cli-utils';
-import env from '@macrobe/env';
+import env, { stage, version } from '@macrobe/env';
 
 const mapValues = (obj: any, fn: any) =>
   Object.fromEntries(Object.entries(obj).map(([k, v]) => [k, fn(v, k)]));
@@ -26,8 +26,8 @@ export function printInfo({ config, log } = {}) {
   const envKeys = Object.keys(env)
     .sort()
     .filter((key) => key !== 'stage' && key !== 'version');
-  log(pad(`stage`), env.stage);
-  log(pad(`version`), env.version);
+  log(pad(`stage`), stage);
+  log(pad(`version`), version);
 
   envKeys.forEach((key: string) => {
     const value = (env as any)[key];

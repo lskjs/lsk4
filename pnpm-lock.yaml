@@ -29,6 +29,9 @@ importers:
       lsk:
         specifier: ^3.19.0
         version: 3.19.0(@swc/core@1.3.96)
+      semantic-release:
+        specifier: ^22.0.7
+        version: 22.0.7(typescript@5.2.2)
       semantic-release-pnpm:
         specifier: ^1.0.2
         version: 1.0.2(semantic-release@22.0.7)

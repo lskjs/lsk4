@@ -1,6 +1,6 @@
 {
-  "name": "@lskjs/libs",
-  "version": "1.0.0",
+  "name": "@macrobe/libs",
+  "version": "0.0.0-development",
   "description": "Libs starter kit",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
@@ -10,7 +10,9 @@
     "dev": "            lsk run dev",
     "build": "          lsk run build",
     "test": "           lsk run test",
-    "release": "        lsk run release"
+    "release": "        lsk run release",
+    "clean": "          rm -rf libs/*/.release libs/*/.reports libs/*/coverage",
+    "semantic-release": "semantic-release --no-ci"
   },
   "devDependencies": {
     "@lskjs/cli-scripts": "^3.19.0",
@@ -26,7 +28,8 @@
     "tsup": "^7.2.0",
     "typescript": "^5.2.2",
     "uvu": "^0.5.6",
-    "watchlist": "^0.3.1"
+    "watchlist": "^0.3.1",
+    "semantic-release": "^22.0.7"
   },
   "//": "///////////========================/////////========================/////////========================/////////",
   "prettier": "@lskjs/eslint-config/prettier",
@@ -38,9 +41,9 @@
   },
   "main": "index.js",
   "///": "//////////========================/////////========================/////////========================/////////",
-  "repository": "https://github.com/lskjs/lskjs",
-  "homepage": "https://github.com/lskjs/lskjs",
-  "bugs": "https://github.com/lskjs/lskjs/issues",
+  "repository": "https://github.com/lskjs/libs",
+  "homepage": "https://github.com/lskjs/libs",
+  "bugs": "https://github.com/lskjs/libs/issues",
   "license": "MIT",
   "publishConfig": {
     "access": "public",

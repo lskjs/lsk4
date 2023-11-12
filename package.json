@@ -14,7 +14,7 @@
     "release2": "        lsk run release",
     "clean": "          rm -rf libs/*/.release libs/*/.reports libs/*/coverage",
     "release2": "pnpm -r --workspace-concurrency=1 exec -- npx --no-install semantic-release -e semantic-release-monorepo",
-    "release": "        multi-semantic-release",
+    "release": "        multi-semantic-release --no-ci",
     "standard-version": "standard-version",
     "semantic-release": "semantic-release --no-ci"
   },
@@ -58,7 +58,7 @@
   "multi-release": {
     "branches": [
       "master",
-      "next"
+      "beta"
     ],
     "plugins": [
       "@semantic-release/commit-analyzer",

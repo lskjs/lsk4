@@ -1,6 +1,6 @@
 {
   "name": "@macrobe/env",
-  "version": "3.17.0",
+  "version": "3.17.1",
   "description": "LSK.js – env – Scripts for environment detecton",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
@@ -46,7 +46,7 @@
     }
   ],
   "///": "//////////========================/////////========================/////////========================/////////",
-  "repository": "https://github.com/lskjs/libs/tree/master//libs/env",
+  "repository": "https://github.com/lskjs/libs",
   "homepage": "https://github.com/lskjs/libs/tree/master//libs/env",
   "bugs": "https://github.com/lskjs/libs/issues",
   "license": "MIT",

@@ -1,6 +1,6 @@
 {
   "name": "@macrobe/libs",
-  "version": "0.0.0-development",
+  "version": "1.0.1-development",
   "description": "Libs starter kit",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,

@@ -1,5 +1,5 @@
-export type FormatterInput = string | number | null | undefined;
 export type Formatter = (input: FormatterInput) => string;
+export type FormatterInput = string | number | null | undefined;
 
 export type Color =
   // | 'reset'

@@ -1,6 +1,6 @@
 {
   "name": "@macrobe/libs2",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Libs starter kit",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
@@ -10,8 +10,9 @@
     "dev": "            lsk run dev",
     "build": "          lsk run build",
     "test": "           lsk run test",
-    "release": "        lsk run release",
+    "release2": "        lsk run release",
     "clean": "          rm -rf libs/*/.release libs/*/.reports libs/*/coverage",
+    "release": "pnpm -r --workspace-concurrency=1 exec -- npx --no-install semantic-release -e semantic-release-monorepo",
     "semantic-release": "semantic-release --no-ci"
   },
   "devDependencies": {
@@ -22,14 +23,15 @@
     "@swc/core": "^1.3.96",
     "c8": "^8.0.1",
     "lsk": "^3.19.0",
+    "semantic-release": "^22.0.7",
+    "semantic-release-monorepo": "^7.0.5",
     "semantic-release-pnpm": "^1.0.2",
     "standard-version": "^9.5.0",
     "tsm": "^2.3.0",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2",
     "uvu": "^0.5.6",
-    "watchlist": "^0.3.1",
-    "semantic-release": "^22.0.7"
+    "watchlist": "^0.3.1"
   },
   "//": "///////////========================/////////========================/////////========================/////////",
   "prettier": "@lskjs/eslint-config/prettier",

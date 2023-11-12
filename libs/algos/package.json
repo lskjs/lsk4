@@ -135,9 +135,9 @@
     }
   ],
   "///": "//////////========================/////////========================/////////========================/////////",
-  "repository": "https://github.com/lskjs/lskjs/tree/master//libs/algos",
-  "homepage": "https://github.com/lskjs/lskjs/tree/master//libs/algos",
-  "bugs": "https://github.com/lskjs/lskjs/issues",
+  "repository": "https://github.com/lskjs/libs/tree/master//libs/algos",
+  "homepage": "https://github.com/lskjs/libs/tree/master//libs/algos",
+  "bugs": "https://github.com/lskjs/libs/issues",
   "license": "MIT",
   "publishConfig": {
     "access": "public",

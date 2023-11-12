@@ -1,6 +1,6 @@
 {
   "name": "@macrobe/algos",
-  "version": "3.17.0",
+  "version": "3.17.1",
   "description": "LSK.js – algos – quick algos for working with arrays, objects, strings, numbers",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
@@ -135,7 +135,7 @@
     }
   ],
   "///": "//////////========================/////////========================/////////========================/////////",
-  "repository": "https://github.com/lskjs/libs/tree/master//libs/algos",
+  "repository": "https://github.com/lskjs/libs",
   "homepage": "https://github.com/lskjs/libs/tree/master//libs/algos",
   "bugs": "https://github.com/lskjs/libs/issues",
   "license": "MIT",

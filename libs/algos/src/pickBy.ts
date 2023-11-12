@@ -1,4 +1,4 @@
-import { ObjectFilter, ObjectLike } from './types';
+import { ObjectFilter, ObjectLike } from './types.js';
 
 export const pickBy = <T>(object: ObjectLike<T>, filter: ObjectFilter<T>) =>
   Object.keys(object)

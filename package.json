@@ -17,6 +17,7 @@
     "@lskjs/eslint-config": "^3.18.0",
     "@lskjs/jest-config": "^3.18.0",
     "@lskjs/tsconfig": "^3.18.0",
+    "@swc/core": "^1.3.96",
     "c8": "^8.0.1",
     "lsk": "^3.19.0",
     "standard-version": "^9.5.0",

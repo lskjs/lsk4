@@ -1,4 +1,4 @@
-import { ObjectFilter, ObjectLike } from './types';
+import { ObjectFilter, ObjectLike } from './types.js';
 
 export const any = <T>(object: ObjectLike<T>, filter: ObjectFilter<T>): boolean => {
   const keys = Object.keys(object);

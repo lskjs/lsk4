@@ -1,4 +1,4 @@
-import { set } from './set';
+import { set } from './set.js';
 
 export const setProps = <T>(object: T, ...propsArray: Record<string, unknown>[]): T => {
   propsArray.forEach((props) => {

@@ -1,8 +1,3 @@
 {
-  "extends": "@lskjs/tsconfig",
-  "extends2": "@lskjs/tsconfig/strict/tsconfig.json",
-  "compilerOptions": {
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-  }
+  "extends": "../../tsconfig.json"
 }

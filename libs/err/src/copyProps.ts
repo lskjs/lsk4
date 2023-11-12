@@ -1,4 +1,4 @@
-import { IErr } from './types';
+import { IErr } from './types.js';
 
 export const copyProps = (errTo: IErr, errFrom: any) => {
   if (typeof errFrom === 'string') return;

@@ -1,4 +1,4 @@
-import { errProps } from './errProps';
+import { errProps } from './errProps.js';
 
 type ErrorLike = {
   code?: string;

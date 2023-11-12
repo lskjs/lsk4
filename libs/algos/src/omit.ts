@@ -1,4 +1,4 @@
-import { PickOmit } from './types';
+import { PickOmit } from './types.js';
 
 /**
  * NOTE: copied from @lskjs utils

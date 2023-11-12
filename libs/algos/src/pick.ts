@@ -1,4 +1,4 @@
-import { ObjectLike } from './types';
+import { ObjectLike } from './types.js';
 
 export const pick = <T>(object: ObjectLike<T>, fields: string[]) =>
   // console.log('[object]', object);

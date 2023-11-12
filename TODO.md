@@ -6,3 +6,4 @@
 - [ ] Add more test for test coverage
 - [ ] Move cli-utils to separate packages
 - [ ] Think about publishing and semver
+- [ ] rsync & copy

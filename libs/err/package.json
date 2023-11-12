@@ -4,6 +4,7 @@
   "description": "LSK.js – err – Error class and utils for custom code and message extracting",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
+  "type": "module",
   "scripts": {
     "dev": "            lsk run dev",
     "build": "          lsk run build",
@@ -35,12 +36,12 @@
   "types": "lib/index.d.ts",
   "exports": {
     ".": {
-      "import": "./lib/index.mjs",
+      "import": "./lib/index.js",
       "types": "./lib/index.d.ts",
       "default": "./lib/index.js"
     },
     "./*": {
-      "import": "./lib/*.mjs",
+      "import": "./lib/*.js",
       "types": "./lib/*.d.ts",
       "default": "./lib/*.js"
     }

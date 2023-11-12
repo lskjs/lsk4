@@ -1,5 +1,5 @@
-import { pickBy } from './pickBy';
-import { ObjectFilter, ObjectLike } from './types';
+import { pickBy } from './pickBy.js';
+import { ObjectFilter, ObjectLike } from './types.js';
 
 const defaultFilter: ObjectFilter<any> = (a) => a != null;
 

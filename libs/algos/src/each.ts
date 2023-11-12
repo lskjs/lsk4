@@ -1,4 +1,4 @@
-import { map as each } from './map';
+import { map as each } from './map.js';
 
 export { each };
 

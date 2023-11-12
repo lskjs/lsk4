@@ -4,6 +4,7 @@
   "description": "LSK.js – algos – quick algos for working with arrays, objects, strings, numbers",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
+  "type": "module",
   "scripts": {
     "dev": "            lsk run dev",
     "build": "          lsk run build",
@@ -20,25 +21,22 @@
   "eslintConfig": {
     "extends": "@lskjs/eslint-config/strict"
   },
-  "jest": {
-    "preset": "@lskjs/jest-config/strict"
-  },
   "files": [
     "lib",
     "README.md",
     "LICENCE"
   ],
-  "main": "lib/index.mjs",
-  "types": "lib/index.d.mts",
-  "exports2": {
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
     ".": {
-      "import": "./lib/index.mjs",
-      "types": "./lib/index.d.mts",
+      "import": "./lib/index.js",
+      "types": "./lib/index.d.ts",
       "default": "./lib/index.js"
     },
     "./*": {
-      "import": "./lib/*.mjs",
-      "types": "./lib/*.d.mts",
+      "import": "./lib/*.js",
+      "types": "./lib/*.d.ts",
       "default": "./lib/*.js"
     }
   },

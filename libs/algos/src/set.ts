@@ -1,4 +1,4 @@
-import { ObjectKeyPath } from './types';
+import { ObjectKeyPath } from './types.js';
 
 export const set = <T>(object: T, keyPath: ObjectKeyPath, value: any): T => {
   const keys = Array.isArray(keyPath) ? keyPath : keyPath.split('.');

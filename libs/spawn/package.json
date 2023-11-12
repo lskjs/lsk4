@@ -1,6 +1,6 @@
 {
   "name": "@macrobe/spawn",
-  "version": "3.19.0",
+  "version": "1.0.0",
   "description": "LSK.js CLI Creds is the easiest way to manage GitHub / Gitlab secrets and credentials",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
@@ -13,7 +13,7 @@
     "release": "        lsk run release"
   },
   "dependencies": {
-    "@macrobe/cli-utils": "workspace:^",
+    "@macrobe/cli-utils": "1.0.0",
     "global-prefix": "^3.0.0",
     "yargs": "^17.7.2"
   },

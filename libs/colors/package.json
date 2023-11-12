@@ -1,6 +1,6 @@
 {
   "name": "@macrobe/colors",
-  "version": "3.17.0",
+  "version": "1.0.0",
   "description": "Yet another colors library – like picocolors but with for browser too",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
@@ -13,7 +13,7 @@
     "release": "        lsk run release"
   },
   "dependencies": {
-    "@macrobe/env": "workspace:^"
+    "@macrobe/env": "1.0.0"
   },
   "//": "///////////========================/////////========================/////////========================//////////",
   "prettier": "@lskjs/eslint-config/prettier",

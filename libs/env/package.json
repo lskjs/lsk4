@@ -1,6 +1,6 @@
 {
   "name": "@macrobe/env",
-  "version": "3.17.1",
+  "version": "1.0.0",
   "description": "LSK.js – env – Scripts for environment detecton",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,

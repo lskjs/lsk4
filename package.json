@@ -6,6 +6,7 @@
   "private": false,
   "type": "module",
   "scripts": {
+    "release": "        set -a && source .env && set +a && multi-semantic-release --no-ci",
     "version": "        pnpm -r --workspace-concurrency=1 exec -- npx --no-install standard-version",
     "start": "          lsk run start",
     "dev": "            lsk run dev",
@@ -13,8 +14,7 @@
     "test": "           lsk run test",
     "release2": "        lsk run release",
     "clean": "          rm -rf libs/*/.release libs/*/.reports libs/*/coverage",
-    "release2": "pnpm -r --workspace-concurrency=1 exec -- npx --no-install semantic-release -e semantic-release-monorepo",
-    "release": "        multi-semantic-release --no-ci",
+    "release3": "pnpm -r --workspace-concurrency=1 exec -- npx --no-install semantic-release -e semantic-release-monorepo",
     "standard-version": "standard-version",
     "semantic-release": "semantic-release --no-ci"
   },

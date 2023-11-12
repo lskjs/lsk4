@@ -1,6 +1,6 @@
 import { ObjectMapper } from './types.js';
 
-export type Mapper<T> = (value?: T, key?: string, arr?: Array<T>) => any;
+// export type Mapper<T> = (value?: T, key?: string, arr?: Array<T>) => any;
 
 export const uniqBy = <T>(arr: Array<T>, mapper: ObjectMapper<T>): Array<T> =>
   // @ts-ignore

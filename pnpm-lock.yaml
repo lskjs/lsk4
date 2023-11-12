@@ -65,13 +65,13 @@ importers:
   libs/cli-helpers:
     dependencies:
       '@macrobe/cli-utils':
-        specifier: workspace:^
+        specifier: 1.0.0
         version: link:../cli-utils
       '@macrobe/colors':
-        specifier: workspace:^
+        specifier: 1.0.0
         version: link:../colors
       '@macrobe/env':
-        specifier: workspace:^
+        specifier: 1.0.0
         version: link:../env
     devDependencies:
       '@types/node':
@@ -94,7 +94,7 @@ importers:
   libs/colors:
     dependencies:
       '@macrobe/env':
-        specifier: workspace:^
+        specifier: 1.0.0
         version: link:../env
     devDependencies:
       '@types/node':
@@ -110,22 +110,22 @@ importers:
   libs/err:
     dependencies:
       '@macrobe/algos':
-        specifier: workspace:^
+        specifier: 1.0.0
         version: link:../algos
 
   libs/run:
     dependencies:
       '@macrobe/cli-helpers':
-        specifier: workspace:^
+        specifier: 1.0.0
         version: link:../cli-helpers
       '@macrobe/cli-utils':
-        specifier: workspace:^
+        specifier: 1.0.0
         version: link:../cli-utils
       '@macrobe/err':
-        specifier: workspace:^
+        specifier: 1.0.0
         version: link:../err
       '@macrobe/spawn':
-        specifier: workspace:^
+        specifier: 1.0.0
         version: link:../spawn
       global-prefix:
         specifier: ^3.0.0
@@ -144,7 +144,7 @@ importers:
   libs/spawn:
     dependencies:
       '@macrobe/cli-utils':
-        specifier: workspace:^
+        specifier: 1.0.0
         version: link:../cli-utils
       global-prefix:
         specifier: ^3.0.0

@@ -6,7 +6,8 @@
   "private": false,
   "type": "module",
   "scripts": {
-    "release": "        set -a && source .env && set +a && multi-semantic-release --no-ci --debug --deps.bump satisfy --deps.release patch",
+    "release": "        release-it",
+    "release4": "        set -a && source .env && set +a && multi-semantic-release --no-ci --debug --deps.bump satisfy --deps.release patch",
     "release:afterf": " git commit -am 'chore(release): publish v3.19.0' && git push && git push --tags",
     "version": "        pnpm -r --workspace-concurrency=1 exec -- npx --no-install standard-version",
     "start": "          lsk run start",
@@ -20,7 +21,6 @@
     "semantic-release": "semantic-release --no-ci"
   },
   "devDependencies": {
-    "@anolilab/multi-semantic-release": "^1.0.2",
     "@lskjs/cli-scripts": "^3.19.0",
     "@lskjs/eslint-config": "^3.18.0",
     "@lskjs/jest-config": "^3.18.0",
@@ -29,6 +29,8 @@
     "@swc/core": "^1.3.96",
     "c8": "^8.0.1",
     "lsk": "^3.19.0",
+    "multi-semantic-release": "^3.0.2",
+    "release-it": "^17.0.0",
     "semantic-release": "^22.0.7",
     "semantic-release-monorepo": "^7.0.5",
     "semantic-release-pnpm": "^1.0.2",

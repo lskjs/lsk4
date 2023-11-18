@@ -7,7 +7,7 @@
   "type": "module",
   "scripts": {
     "version": "        lerna version",
-    "release": "        lerna publish",
+    "release": "        lerna version",
     "start": "          lsk run start",
     "dev": "            lsk run dev",
     "build": "          lsk run build",

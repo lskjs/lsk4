@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.0.0
+
+### Major Changes
+
+- asd
+
+## 1.4.0
+
+### Minor Changes
+
+- asd
+
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 ### [1.3.2](https://github.com/lskjs/libs/compare/v1.1.2...v1.3.2) (2023-11-18)
@@ -8,133 +20,85 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.3.0](https://github.com/lskjs/libs/compare/v3.19.1...v1.3.0) (2023-11-18)
 
-
 ### Features
 
-* add branch ([c49da71](https://github.com/lskjs/libs/commit/c49da71898d094e84d3a67304d549cfbc00bcb8d))
-* algos ([c989bd0](https://github.com/lskjs/libs/commit/c989bd06cd5f94026a896320a90b37f27f39e5dc))
-* err ([3d461c9](https://github.com/lskjs/libs/commit/3d461c9d8c49c816ef2e8b53002588a86c7af745))
-* initial commit # => v2.0.0 on [@latest](https://github.com/latest) ([ef7de8f](https://github.com/lskjs/libs/commit/ef7de8f3a8d75b5cbbb454f75d2f5d7564e0b8eb))
-* new errors ([ee1e971](https://github.com/lskjs/libs/commit/ee1e971c067dc5960eef473df8fbc4922501749e))
-* new version ([5d471aa](https://github.com/lskjs/libs/commit/5d471aa8f905a5a7499210dafabe501d89149e75))
-* new version ([03c325a](https://github.com/lskjs/libs/commit/03c325ae5b7973b8dca2d6ad08a6f74e49a7dfd0))
-* new version ([6396efe](https://github.com/lskjs/libs/commit/6396efe2b3a040f0d0df05f3a92127d0d67b9dd1))
-* remove mapper from algos ([852217a](https://github.com/lskjs/libs/commit/852217ae98eb6c0ce0c6fba1bb5892058f74c393))
-
+- add branch ([c49da71](https://github.com/lskjs/libs/commit/c49da71898d094e84d3a67304d549cfbc00bcb8d))
+- algos ([c989bd0](https://github.com/lskjs/libs/commit/c989bd06cd5f94026a896320a90b37f27f39e5dc))
+- err ([3d461c9](https://github.com/lskjs/libs/commit/3d461c9d8c49c816ef2e8b53002588a86c7af745))
+- initial commit # => v2.0.0 on [@latest](https://github.com/latest) ([ef7de8f](https://github.com/lskjs/libs/commit/ef7de8f3a8d75b5cbbb454f75d2f5d7564e0b8eb))
+- new errors ([ee1e971](https://github.com/lskjs/libs/commit/ee1e971c067dc5960eef473df8fbc4922501749e))
+- new version ([5d471aa](https://github.com/lskjs/libs/commit/5d471aa8f905a5a7499210dafabe501d89149e75))
+- new version ([03c325a](https://github.com/lskjs/libs/commit/03c325ae5b7973b8dca2d6ad08a6f74e49a7dfd0))
+- new version ([6396efe](https://github.com/lskjs/libs/commit/6396efe2b3a040f0d0df05f3a92127d0d67b9dd1))
+- remove mapper from algos ([852217a](https://github.com/lskjs/libs/commit/852217ae98eb6c0ce0c6fba1bb5892058f74c393))
 
 ### Bug Fixes
 
-* may be ([918622b](https://github.com/lskjs/libs/commit/918622bdb20f62fcc06da91fa9face69a04ce3b4))
-* move some libs ([203d7d1](https://github.com/lskjs/libs/commit/203d7d1fe4a9501549d3e0b3ffcff3cca7e4cede))
-* remove logs ([7eee07e](https://github.com/lskjs/libs/commit/7eee07ee8e26f1616f99952c4afcbece83c8d24d))
-* repos ([c2aee0c](https://github.com/lskjs/libs/commit/c2aee0c9dde9d1cdb4cbea32ae70632209552916))
+- may be ([918622b](https://github.com/lskjs/libs/commit/918622bdb20f62fcc06da91fa9face69a04ce3b4))
+- move some libs ([203d7d1](https://github.com/lskjs/libs/commit/203d7d1fe4a9501549d3e0b3ffcff3cca7e4cede))
+- remove logs ([7eee07e](https://github.com/lskjs/libs/commit/7eee07ee8e26f1616f99952c4afcbece83c8d24d))
+- repos ([c2aee0c](https://github.com/lskjs/libs/commit/c2aee0c9dde9d1cdb4cbea32ae70632209552916))
 
 ### [3.17.1](https://github.com/lskjs/libs/compare/v1.2.1...v3.17.1) (2023-11-12)
 
-
 ### Bug Fixes
 
-* update releases ([a6fdab6](https://github.com/lskjs/libs/commit/a6fdab63727b0ba2664b7f62f910ad60a889edf3))
+- update releases ([a6fdab6](https://github.com/lskjs/libs/commit/a6fdab63727b0ba2664b7f62f910ad60a889edf3))
 
 # [3.17.0](https://github.com/lskjs/lskjs/compare/v3.16.3...v3.17.0) (2023-11-06)
 
 **Note:** Version bump only for package @lskjs/algos
 
-
-
-
-
 ## [3.16.4](https://github.com/lskjs/lskjs/compare/v3.16.3...v3.16.4) (2023-11-06)
 
 **Note:** Version bump only for package @lskjs/algos
-
-
-
-
 
 ## [3.16.2](https://github.com/lskjs/lskjs/compare/v3.16.1...v3.16.2) (2023-11-06)
 
 **Note:** Version bump only for package @lskjs/algos
 
-
-
-
-
 ## [3.15.1](https://github.com/lskjs/lskjs/compare/v3.15.0...v3.15.1) (2023-10-11)
 
 **Note:** Version bump only for package @lskjs/algos
 
-
-
-
-
 # [3.11.0](https://github.com/lskjs/lskjs/compare/v3.10.0...v3.11.0) (2023-08-03)
-
 
 ### Features
 
-* **algos:** improve ts ([e6414c6](https://github.com/lskjs/lskjs/commit/e6414c6318f5e9b57aff42f9b03c1d2b645d0c5a))
-
-
-
-
+- **algos:** improve ts ([e6414c6](https://github.com/lskjs/lskjs/commit/e6414c6318f5e9b57aff42f9b03c1d2b645d0c5a))
 
 # [3.9.0](https://github.com/lskjs/lskjs/compare/v3.8.1...v3.9.0) (2023-07-26)
 
-
 ### Features
 
-* **log:** add default logger log ([1db2490](https://github.com/lskjs/lskjs/commit/1db24904456aedb46772743bddb08aeab6cb1bd4))
-
-
-
-
+- **log:** add default logger log ([1db2490](https://github.com/lskjs/lskjs/commit/1db24904456aedb46772743bddb08aeab6cb1bd4))
 
 ## [3.8.1](https://github.com/lskjs/lskjs/compare/v3.8.0...v3.8.1) (2023-07-25)
 
 **Note:** Version bump only for package @lskjs/algos
 
-
-
-
-
 # [3.3.0](https://github.com/lskjs/lskjs/compare/v3.2.2...v3.3.0) (2023-04-30)
-
 
 ### Features
 
-* **algos:** add maxBy, minBy ([5fcd4f4](https://github.com/lskjs/lskjs/commit/5fcd4f41db3497317e19db653fd03e61dd844b64))
-
-
-
-
+- **algos:** add maxBy, minBy ([5fcd4f4](https://github.com/lskjs/lskjs/commit/5fcd4f41db3497317e19db653fd03e61dd844b64))
 
 ## [3.1.1](https://github.com/lskjs/lskjs/compare/v3.1.0-alpha.2...v3.1.1) (2023-02-16)
 
 **Note:** Version bump only for package @lskjs/algos
 
-
-
-
-
 # [3.1.0-alpha.0](https://github.com/lskjs/lskjs/compare/v3.0.0-alpha.37...v3.1.0-alpha.0) (2023-02-16)
-
 
 ### Bug Fixes
 
-* **algos:** fix bug ([7e5f3ea](https://github.com/lskjs/lskjs/commit/7e5f3eae43045ea7664120dc66e431475c612050))
-* **algos:** fix bug ([0159f11](https://github.com/lskjs/lskjs/commit/0159f1191cb4af28df6d226721f1753ed36ecffb))
-* **algos:** fix bug ([e402bc1](https://github.com/lskjs/lskjs/commit/e402bc1fd9789a7481a0d0167b87fe6ded44b5f9))
-
+- **algos:** fix bug ([7e5f3ea](https://github.com/lskjs/lskjs/commit/7e5f3eae43045ea7664120dc66e431475c612050))
+- **algos:** fix bug ([0159f11](https://github.com/lskjs/lskjs/commit/0159f1191cb4af28df6d226721f1753ed36ecffb))
+- **algos:** fix bug ([e402bc1](https://github.com/lskjs/lskjs/commit/e402bc1fd9789a7481a0d0167b87fe6ded44b5f9))
 
 ### Features
 
-* **algos:** add uniq and uniqBy ([9d77839](https://github.com/lskjs/lskjs/commit/9d77839aa981f279b912070b2330386bd8d353fb))
-* **getspreadhsheet:** improve api, improve cli ([28355c8](https://github.com/lskjs/lskjs/commit/28355c80e87bd798f77fc06fa9db60b75243a178))
-
-
-
-
+- **algos:** add uniq and uniqBy ([9d77839](https://github.com/lskjs/lskjs/commit/9d77839aa981f279b912070b2330386bd8d353fb))
+- **getspreadhsheet:** improve api, improve cli ([28355c8](https://github.com/lskjs/lskjs/commit/28355c80e87bd798f77fc06fa9db60b75243a178))
 
 # [3.0.0-alpha.36](https://github.com/lskjs/lskjs/compare/v3.0.0-alpha.35...v3.0.0-alpha.36) (2023-01-22)
 

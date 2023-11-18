@@ -1,6 +1,6 @@
 {
   "name": "@macrobe/err",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "LSK.js – err – Error class and utils for custom code and message extracting 123",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
@@ -17,7 +17,7 @@
     "release": "        standard-version"
   },
   "dependencies": {
-    "@macrobe/algos": "^2.1.0"
+    "@macrobe/algos": "^2.2.0"
   },
   "//": "///////////========================/////////========================/////////========================//////////",
   "prettier": "@lskjs/eslint-config/prettier",

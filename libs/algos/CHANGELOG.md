@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/lskjs/libs/compare/v3.19.1...v1.3.0) (2023-11-18)
+
+
+### Features
+
+* add branch ([c49da71](https://github.com/lskjs/libs/commit/c49da71898d094e84d3a67304d549cfbc00bcb8d))
+* algos ([c989bd0](https://github.com/lskjs/libs/commit/c989bd06cd5f94026a896320a90b37f27f39e5dc))
+* err ([3d461c9](https://github.com/lskjs/libs/commit/3d461c9d8c49c816ef2e8b53002588a86c7af745))
+* initial commit # => v2.0.0 on [@latest](https://github.com/latest) ([ef7de8f](https://github.com/lskjs/libs/commit/ef7de8f3a8d75b5cbbb454f75d2f5d7564e0b8eb))
+* new errors ([ee1e971](https://github.com/lskjs/libs/commit/ee1e971c067dc5960eef473df8fbc4922501749e))
+* new version ([5d471aa](https://github.com/lskjs/libs/commit/5d471aa8f905a5a7499210dafabe501d89149e75))
+* new version ([03c325a](https://github.com/lskjs/libs/commit/03c325ae5b7973b8dca2d6ad08a6f74e49a7dfd0))
+* new version ([6396efe](https://github.com/lskjs/libs/commit/6396efe2b3a040f0d0df05f3a92127d0d67b9dd1))
+* remove mapper from algos ([852217a](https://github.com/lskjs/libs/commit/852217ae98eb6c0ce0c6fba1bb5892058f74c393))
+
+
+### Bug Fixes
+
+* may be ([918622b](https://github.com/lskjs/libs/commit/918622bdb20f62fcc06da91fa9face69a04ce3b4))
+* move some libs ([203d7d1](https://github.com/lskjs/libs/commit/203d7d1fe4a9501549d3e0b3ffcff3cca7e4cede))
+* remove logs ([7eee07e](https://github.com/lskjs/libs/commit/7eee07ee8e26f1616f99952c4afcbece83c8d24d))
+* repos ([c2aee0c](https://github.com/lskjs/libs/commit/c2aee0c9dde9d1cdb4cbea32ae70632209552916))
+
 ### [3.17.1](https://github.com/lskjs/libs/compare/v1.2.1...v3.17.1) (2023-11-12)
 
 

@@ -9,7 +9,7 @@
     "release": "        release-it",
     "release4": "        set -a && source .env && set +a && multi-semantic-release --no-ci --debug --deps.bump satisfy --deps.release patch",
     "release:afterf": " git commit -am 'chore(release): publish v3.19.0' && git push && git push --tags",
-    "version": "        pnpm -r --workspace-concurrency=1 exec -- npx --no-install standard-version",
+    "version2": "        pnpm -r --workspace-concurrency=1 exec -- npx --no-install standard-version",
     "start": "          lsk run start",
     "dev": "            lsk run dev",
     "build": "          lsk run build",

@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.2](https://github.com/lskjs/libs/compare/v1.3.1...v1.1.2) (2023-11-18)
+
 ### [1.1.1](https://github.com/lskjs/libs/compare/v1.3.0...v1.1.1) (2023-11-18)
 
 # [3.17.0](https://github.com/lskjs/lskjs/compare/v3.16.3...v3.17.0) (2023-11-06)

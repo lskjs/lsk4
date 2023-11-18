@@ -6,7 +6,7 @@
   "private": false,
   "type": "module",
   "scripts": {
-    "version": "        lerna version",
+    "123123version": "        lerna version",
     "release": "        lerna version",
     "start": "          lsk run start",
     "dev": "            lsk run dev",

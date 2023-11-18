@@ -25,12 +25,13 @@
     "@lskjs/eslint-config": "^3.18.0",
     "@lskjs/jest-config": "^3.18.0",
     "@lskjs/tsconfig": "^3.18.0",
+    "@release-it-plugins/workspaces": "^4.0.0",
     "@semantic-release/exec": "^6.0.3",
     "@swc/core": "^1.3.96",
     "c8": "^8.0.1",
     "lsk": "^3.19.0",
     "multi-semantic-release": "^3.0.2",
-    "release-it": "^17.0.0",
+    "release-it": "^16.0.0",
     "semantic-release": "^22.0.7",
     "semantic-release-monorepo": "^7.0.5",
     "semantic-release-pnpm": "^1.0.2",
@@ -74,6 +75,21 @@
     "remove": [
       "semantic-release-pnpm-esm"
     ]
+  },
+  "workspaces": [
+    "libs/algos",
+    "libs/err"
+  ],
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: 🎉 release v${version}"
+    },
+    "github": {
+      "release": true
+    },
+    "plugins": {
+      "@release-it-plugins/workspaces": true
+    }
   },
   "////": "/////////========================/////////========================/////////========================/////////"
 }

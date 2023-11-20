@@ -22,6 +22,11 @@
     // "declaration": true,
     // "declarationMap": true,
     // "forceConsistentCasingInFileNames": true,
+  },
+  "ts-node": {
+    // "experimentalSpecifierResolution": "node",
+    "transpileOnly": true,
+    "esm": true,
   }
 }
 

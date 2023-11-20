@@ -4,23 +4,28 @@
   "description": "Libs starter kit",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
-  "type": "module",
+  "workspaces": [
+    "libs/algos",
+    "libs/err"
+  ],
   "scripts": {
-    "123123version": "        lerna version",
-    "release": "        lerna version",
     "start": "          lsk run start",
     "dev": "            lsk run dev",
     "build": "          lsk run build",
     "test": "           lsk run test",
+    "prepack": "        lsk run prepack",
+    "release": "        lsk run release",
+    "": "",
+    "123123version": "        lerna version",
     "clean": "          rm -rf libs/*/.release libs/*/.reports libs/*/coverage",
-    "":"",
-    "release:afterf": " git commit -am 'chore(release): publish v3.19.0' && git push && git push --tags",
-    "version2": "        pnpm -r --workspace-concurrency=1 exec -- npx --no-install standard-version",
     "release2": "        lsk run release",
     "release3": "pnpm -r --workspace-concurrency=1 exec -- npx --no-install semantic-release -e semantic-release-monorepo",
-    "standard-version": "standard-version",
     "release4": "        set -a && source .env && set +a && multi-semantic-release --no-ci --debug --deps.bump satisfy --deps.release patch",
-    "semantic-release": "semantic-release --no-ci"
+    "release:afterf": " git commit -am 'chore(release): publish v3.19.0' && git push && git push --tags",
+    "semantic-release": "semantic-release --no-ci",
+    "standard-version": "standard-version",
+    "version2": "        pnpm -r --workspace-concurrency=1 exec -- npx --no-install standard-version",
+    "_release": "        lerna version"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
@@ -40,6 +45,7 @@
     "semantic-release-monorepo": "^7.0.5",
     "semantic-release-pnpm": "^1.0.2",
     "standard-version": "^9.5.0",
+    "ts-node": "^10.9.1",
     "tsm": "^2.3.0",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2",
@@ -64,6 +70,8 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
+  "////": "/////////========================/////////========================/////////========================/////////",
+  "type": "module",
   "multi-release": {
     "plugins": [
       "@semantic-release/commit-analyzer",
@@ -80,10 +88,6 @@
       "semantic-release-pnpm-esm"
     ]
   },
-  "workspaces": [
-    "libs/algos",
-    "libs/err"
-  ],
   "release-it": {
     "git": {
       "commitMessage": "chore: 🎉 release v${version}"
@@ -94,6 +98,5 @@
     "plugins": {
       "@release-it-plugins/workspaces": true
     }
-  },
-  "////": "/////////========================/////////========================/////////========================/////////"
+  }
 }

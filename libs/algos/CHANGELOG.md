@@ -1,7 +1,13 @@
-# Change Log
+# Changelog
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [2.7.0](https://github.com/lskjs/libs/compare/v2.6.0...v2.7.0) (2023-11-25)
+
+
+### Features
+
+* totally unstable ([db192d6](https://github.com/lskjs/libs/commit/db192d6ec3bd53f128191634e1a444a1bac3304a))
 
 # [2.6.0](https://github.com/lskjs/libs/compare/v1.6.0...v2.6.0) (2023-11-18)
 

@@ -5,24 +5,16 @@
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
   "scripts": {
-    "dev": "            lsk run dev",
-    "build": "          lsk run build",
-    "test": "           lsk run test",
-    "prepack": "        lsk run prepack",
-    "release": "        standard-version",
-    "release2": "       lsk run release",
-    "test:check": "     uvu -r tsm tests",
-    "test:coverage": "  c8 --include=src npm test",
-    "test:report": "    c8 report --reporter=text-lcov > coverage.lcov",
-    "test:watch": "     watchlist src tests -- pnpm test"
+    "dev": "            ycmd dev",
+    "build": "          ycmd build",
+    "test": "           ycmd test",
+    "prepack": "        ycmd prepack",
+    "release": "        ycmd release"
   },
   "//": "///////////========================/////////========================/////////========================/////////",
   "prettier": "@lskjs/eslint-config/prettier",
   "eslintConfig": {
     "extends": "@lskjs/eslint-config/strict"
-  },
-  "jest": {
-    "preset": "@lskjs/jest-config"
   },
   "files": [
     "lib",

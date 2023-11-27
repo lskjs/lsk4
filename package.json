@@ -1,68 +1,30 @@
 {
-  "name": "@lsk4/libss123",
-  "version": "1.6.0",
-  "description": "Libs starter kit",
+  "name": "@lsk4/root",
+  "version": "4.0.0-alpha.1",
+  "type": "module",
+  "description": "Lego Starte Kit",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
-  "workspaces": [
-    "libs/algos",
-    "libs/err"
-  ],
   "scripts": {
-    "start": "          lsk run start",
-    "dev": "            lsk run dev",
-    "build": "          lsk run build",
-    "test": "           lsk run test",
-    "prepack": "        lsk run prepack",
-    "release": "        lsk run release",
-    "": "",
-    "123123version": "        lerna version",
-    "clean": "          rm -rf libs/*/.release libs/*/.reports libs/*/coverage",
-    "release2": "        lsk run release",
-    "release3": "pnpm -r --workspace-concurrency=1 exec -- npx --no-install semantic-release -e semantic-release-monorepo",
-    "release4": "        set -a && source .env && set +a && multi-semantic-release --no-ci --debug --deps.bump satisfy --deps.release patch",
-    "release:afterf": " git commit -am 'chore(release): publish v3.19.0' && git push && git push --tags",
-    "semantic-release": "semantic-release --no-ci",
-    "standard-version": "standard-version",
-    "version2": "        pnpm -r --workspace-concurrency=1 exec -- npx --no-install standard-version",
-    "_release": "        lerna version"
+    "start": "          ycmd start",
+    "dev": "            ycmd dev",
+    "build": "          ycmd build",
+    "test": "           ycmd test",
+    "prepack": "        ycmd prepack",
+    "release": "        ycmd release"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.26.2",
-    "@lskjs/cli-scripts": "^3.19.0",
-    "@lskjs/cli-utils": "^3.18.0",
-    "@lskjs/env": "^3.18.0",
     "@lskjs/eslint-config": "^3.18.0",
-    "@lskjs/jest-config": "^3.18.0",
     "@lskjs/tsconfig": "^3.18.0",
-    "@release-it-plugins/workspaces": "^4.0.0",
-    "@semantic-release/exec": "^6.0.3",
-    "@swc/core": "^1.3.96",
-    "c8": "^8.0.1",
-    "lerna": "^7.4.2",
-    "lsk": "^3.19.0",
-    "multi-semantic-release": "^3.0.2",
-    "release-it": "^16.0.0",
-    "semantic-release": "^22.0.7",
-    "semantic-release-monorepo": "^7.0.5",
-    "semantic-release-pnpm": "^1.0.2",
-    "standard-version": "^9.5.0",
-    "ts-node": "^10.9.1",
-    "tsm": "^2.3.0",
-    "tsup": "^7.2.0",
-    "typescript": "^5.2.2",
-    "uvu": "^0.5.6",
-    "watchlist": "^0.3.1"
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.2",
+    "ycmd": "^0.2.0"
   },
   "//": "///////////========================/////////========================/////////========================/////////",
   "prettier": "@lskjs/eslint-config/prettier",
   "eslintConfig": {
     "extends": "@lskjs/eslint-config"
   },
-  "jest": {
-    "preset": "@lskjs/jest-config"
-  },
-  "main": "index.js",
   "///": "//////////========================/////////========================/////////========================/////////",
   "repository": "https://github.com/lskjs/libs",
   "homepage": "https://github.com/lskjs/libs",
@@ -72,33 +34,5 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "////": "/////////========================/////////========================/////////========================/////////",
-  "type": "module",
-  "multi-release": {
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      [
-        "@semantic-release/exec",
-        {
-          "prepareCmd": "echo v${nextRelease.version}"
-        }
-      ]
-    ],
-    "noCi": true,
-    "remove": [
-      "semantic-release-pnpm-esm"
-    ]
-  },
-  "release-it": {
-    "git": {
-      "commitMessage": "chore: 🎉 release v${version}"
-    },
-    "github": {
-      "release": true
-    },
-    "plugins": {
-      "@release-it-plugins/workspaces": true
-    }
-  }
+  "////": "/////////========================/////////========================/////////========================/////////"
 }

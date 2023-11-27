@@ -5,25 +5,22 @@
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
   "scripts": {
-    "dev": "            lsk run dev",
-    "build": "          lsk run build",
-    "test": "           lsk run test",
-    "prepack": "        lsk run prepack",
-    "release": "        lsk run release"
+    "dev": "            ycmd dev",
+    "build": "          ycmd build",
+    "test": "           ycmd test",
+    "prepack": "        ycmd prepack",
+    "release": "        ycmd release"
   },
   "dependencies": {
     "@lsk4/env": "^4.0.0-alpha.1"
   },
   "devDependencies": {
-    "@types/node": "^20.9.0"
+    "@types/node": "^20.10.0"
   },
   "//": "///////////========================/////////========================/////////========================/////////",
   "prettier": "@lskjs/eslint-config/prettier",
   "eslintConfig": {
     "extends": "@lskjs/eslint-config"
-  },
-  "jest": {
-    "preset": "@lskjs/jest-config"
   },
   "files": [
     "lib",

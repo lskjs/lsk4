@@ -1,0 +1,27 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@lsk4/algos": "4.0.0-alpha.1",
+    "@lskjs/algos": "^3.18.0",
+    "@lskjs/env": "^3.18.0",
+    "@lskjs/stringify": "^3.19.0",
+    "@macrobe/run": "^1.0.0",
+    "clean-publish": "^4.2.0",
+    "fishbird": "^1.0.0",
+    "gitlog": "^4.0.8",
+    "license-checker": "^25.0.1",
+    "size-limit": "^11.0.0",
+    "sort-package-json": "^2.6.0",
+    "tsup": "^8.0.1"
+  }
+}

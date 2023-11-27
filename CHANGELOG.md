@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0-alpha.1](https://github.com/lskjs/libs/compare/v2.7.0...v4.0.0-alpha.1) (2023-11-27)
+
+
+### Features
+
+* stable lsk4 cjs and esm ([d078aab](https://github.com/lskjs/libs/commit/d078aabed5a0b16510fddd68c29f791faf182949))
+
+
+
+
+
 # [2.6.0](https://github.com/lskjs/libs/compare/v1.6.0...v2.6.0) (2023-11-18)
 
 

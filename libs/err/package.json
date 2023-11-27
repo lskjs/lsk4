@@ -1,6 +1,6 @@
 {
   "name": "@lsk4/err",
-  "version": "4.0.0-alpha.0",
+  "version": "4.0.0-alpha.1",
   "description": "LSK.js – err – Error class and utils for custom code and message extracting 123",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
@@ -17,7 +17,7 @@
     "test:watch": "     watchlist src tests -- pnpm test:check"
   },
   "dependencies": {
-    "@lsk4/algos": "^4.0.0-alpha.0"
+    "@lsk4/algos": "^4.0.0-alpha.1"
   },
   "//": "///////////========================/////////========================/////////========================/////////",
   "prettier": "@lskjs/eslint-config/prettier",

@@ -1,6 +1,6 @@
 {
   "name": "@lsk4/colors",
-  "version": "4.0.0-alpha.0",
+  "version": "4.0.0-alpha.1",
   "description": "Yet another colors library – like picocolors but with for browser too",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
@@ -12,7 +12,7 @@
     "release": "        lsk run release"
   },
   "dependencies": {
-    "@lsk4/env": "^4.0.0-alpha.0"
+    "@lsk4/env": "^4.0.0-alpha.1"
   },
   "devDependencies": {
     "@types/node": "^20.9.0"

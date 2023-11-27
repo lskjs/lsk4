@@ -89,7 +89,7 @@ importers:
   libs/colors:
     dependencies:
       '@lsk4/env':
-        specifier: ^4.0.0-alpha.0
+        specifier: ^4.0.0-alpha.1
         version: link:../env
     devDependencies:
       '@types/node':
@@ -105,22 +105,22 @@ importers:
   libs/err:
     dependencies:
       '@lsk4/algos':
-        specifier: ^4.0.0-alpha.0
+        specifier: ^4.0.0-alpha.1
         version: link:../algos
 
   libs/log:
     dependencies:
       '@lsk4/algos':
-        specifier: ^4.0.0-alpha.0
+        specifier: ^4.0.0-alpha.1
         version: link:../algos
       '@lsk4/colors':
-        specifier: ^4.0.0-alpha.0
+        specifier: ^4.0.0-alpha.1
         version: link:../colors
       '@lsk4/env':
-        specifier: ^4.0.0-alpha.0
+        specifier: ^4.0.0-alpha.1
         version: link:../env
       '@lsk4/err':
-        specifier: ^4.0.0-alpha.0
+        specifier: ^4.0.0-alpha.1
         version: link:../err
       fast-safe-stringify:
         specifier: 2.1.1

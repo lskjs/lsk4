@@ -1,6 +1,6 @@
 {
-  "name": "@macrobe/err",
-  "version": "2.6.0",
+  "name": "@lsk4/err",
+  "version": "4.0.0-alpha.0",
   "description": "LSK.js – err – Error class and utils for custom code and message extracting 123",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
@@ -17,7 +17,7 @@
     "test:watch": "     watchlist src tests -- pnpm test:check"
   },
   "dependencies": {
-    "@macrobe/algos": "^2.6.0"
+    "@lsk4/algos": "^4.0.0-alpha.0"
   },
   "//": "///////////========================/////////========================/////////========================/////////",
   "prettier": "@lskjs/eslint-config/prettier",
@@ -29,21 +29,22 @@
   },
   "files": [
     "lib",
+    "cjs",
     "README.md",
     "LICENCE"
   ],
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "cjs/index.js",
+  "types": "cjs/index.d.ts",
   "exports": {
     ".": {
       "import": "./lib/index.js",
       "types": "./lib/index.d.ts",
-      "default": "./lib/index.js"
+      "default": "./cjs/index.js"
     },
     "./*": {
       "import": "./lib/*.js",
       "types": "./lib/*.d.ts",
-      "default": "./lib/*.js"
+      "default": "./cjs/*.js"
     }
   },
   "size-limit": [
@@ -66,6 +67,5 @@
     "errors",
     "error"
   ],
-  "////": "/////////========================/////////========================/////////========================/////////",
-  "type": "module"
+  "////": "/////////========================/////////========================/////////========================/////////"
 }

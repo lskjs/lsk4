@@ -1,11 +1,11 @@
 /* eslint-disable no-nested-ternary */
-import { colorize } from '@lskjs/colors';
-import { getEnvVar } from '@lskjs/env';
-import figures from 'figures';
+import { colorize } from '@lsk4/colors';
+import { getEnvVar } from '@lsk4/env';
 import _prettyBytes from 'pretty-bytes';
 import _prettyTime from 'pretty-time';
 
 import { contentColors } from '../config.js';
+import { cross, info, lineCross, warning } from '../figures/figures';
 import { themeize, themeizeLight, themeizeRandom } from '../themeize.js';
 import { LoggerLevelType } from '../types.js';
 import { hashCode } from '../utils/hashCode.js';
@@ -88,13 +88,13 @@ export const prettyLevel = (level: LoggerLevelType): string => {
   let str: string;
   if (LOG_VIEW === 'emoji') {
     const icons: Record<string, string> = {
-      fatal: figures.cross,
-      error: figures.cross,
-      warn: figures.warning,
-      // info: figures.tick,
-      info: figures.info,
-      debug: figures.info,
-      trace: figures.info,
+      fatal: lineCross,
+      error: cross,
+      warn: warning,
+      // info: tick,
+      info,
+      debug: info,
+      trace: info,
     };
     str = icons[level] || ' ';
     return themeizeLight(str, level);

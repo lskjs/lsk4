@@ -92,7 +92,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### Patch Changes
 
 - Updated dependencies
-  - @macrobe/algos@2.0.0
+  - @lsk4/algos@2.0.0
 
 ## 1.2.0
 
@@ -103,7 +103,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### Patch Changes
 
 - Updated dependencies
-  - @macrobe/algos@1.4.0
+  - @lsk4/algos@1.4.0
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 

@@ -1,8 +1,7 @@
 {
-  "name": "@macrobe/algos",
-  "version": "2.7.0",
+  "name": "@lsk4/algos",
+  "version": "4.0.0-alpha.0",
   "description": "LSK.js – algos – quick algos for working with arrays, objects, strings, numbers 123",
-  "type": "module",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
   "scripts": {
@@ -27,21 +26,22 @@
   },
   "files": [
     "lib",
+    "cjs",
     "README.md",
     "LICENCE"
   ],
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "cjs/index.js",
+  "types": "cjs/index.d.ts",
   "exports": {
     ".": {
       "import": "./lib/index.js",
       "types": "./lib/index.d.ts",
-      "default": "./lib/index.js"
+      "default": "./cjs/index.js"
     },
     "./*": {
       "import": "./lib/*.js",
       "types": "./lib/*.d.ts",
-      "default": "./lib/*.js"
+      "default": "./cjs/*.js"
     }
   },
   "size-limit": [
@@ -148,17 +148,5 @@
     "registry": "https://registry.npmjs.org/"
   },
   "keywords": [],
-  "////": "/////////========================/////////========================/////////========================/////////",
-  "_exports": {
-    ".": {
-      "import": "./lib/index.js",
-      "types": "./lib/index.d.mts",
-      "require": "./lib/index.cjs",
-      "default": "./lib/index.cjs"
-    }
-  },
-  "_main": "lib/index.cjs",
-  "_module": "lib/index.js",
-  "_type": "module",
-  "_types": "lib/index.d.mts"
+  "////": "/////////========================/////////========================/////////========================/////////"
 }

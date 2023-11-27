@@ -1,1 +1,0 @@
-echo "Plain sh -- OK"

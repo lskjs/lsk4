@@ -1,7 +1,6 @@
 {
-  "name": "@macrobe/log",
-  "version": "3.17.0",
-  "type": "module",
+  "name": "@lsk4/log",
+  "version": "4.0.0-alpha.0",
   "description": "Yet another logger whitch combines the best features of debug, bunyan, logfmt/logrus, morgan/winston",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "contributors": [
@@ -16,12 +15,11 @@
     "release": "        lsk run release"
   },
   "dependencies": {
-    "@macrobe/algos": "workspace:^",
-    "@macrobe/colors": "workspace:^",
-    "@macrobe/env": "workspace:^",
-    "@macrobe/err": "workspace:^",
+    "@lsk4/algos": "^4.0.0-alpha.0",
+    "@lsk4/colors": "^4.0.0-alpha.0",
+    "@lsk4/env": "^4.0.0-alpha.0",
+    "@lsk4/err": "^4.0.0-alpha.0",
     "fast-safe-stringify": "2.1.1",
-    "figures": "^6.0.1",
     "pretty-bytes": "5.6.0",
     "pretty-time": "1.1.0",
     "readline": "1.3.0",
@@ -29,9 +27,9 @@
     "through": "2.3.8"
   },
   "devDependencies": {
-    "@types/pretty-time": "1.1.2",
-    "@types/split": "1.0.2",
-    "@types/through": "0.0.30",
+    "@types/pretty-time": "1.1.5",
+    "@types/split": "1.0.5",
+    "@types/through": "0.0.33",
     "logfmt": "1.3.2"
   },
   "optionalDependencies": {
@@ -48,24 +46,25 @@
   "files": [
     "bin",
     "lib",
+    "cjs",
     "README.md",
     "LICENCE"
   ],
   "bin": {
     "lsklog": "bin/lsklog"
   },
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "cjs/index.js",
+  "types": "cjs/index.d.ts",
   "exports": {
     ".": {
       "import": "./lib/index.js",
       "types": "./lib/index.d.ts",
-      "default": "./lib/index.js"
+      "default": "./cjs/index.js"
     },
     "./*": {
       "import": "./lib/*.js",
       "types": "./lib/*.d.ts",
-      "default": "./lib/*.js"
+      "default": "./cjs/*.js"
     }
   },
   "size-limit": [

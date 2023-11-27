@@ -1,4 +1,4 @@
-import { tryJSONparse } from '@lskjs/env';
+import { tryJSONparse } from '@lsk4/env';
 
 // eslint-disable-next-line import/prefer-default-export
 export const parseArgs = (msg: any, data: any): any[] => {

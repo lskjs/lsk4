@@ -5,6 +5,7 @@
 **/coverage
 **/.release
 **/lib
+**/cjs
 
 **/node_modules
 **/.DS_Store

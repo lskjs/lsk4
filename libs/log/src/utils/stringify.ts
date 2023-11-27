@@ -1,7 +1,10 @@
 // export * from 'fast-safe-stringify';
 import raw from 'fast-safe-stringify';
 
-export const stringify = raw.default;
+// @ts-ignore
+const stringify = raw.default;
+
+export { stringify };
 export default stringify;
 
 // export { default as stringify } from 'fast-safe-stringify';

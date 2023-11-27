@@ -1,4 +1,5 @@
-import { isPlainObject, ObjectLike, pick } from '@macrobe/algos';
+import type { ObjectLike } from '@lsk4/algos';
+import { isPlainObject, pick } from '@lsk4/algos';
 
 export const isLskError = (err: any) => err && err.__err;
 export const getLskErrorProps = (err: any) => pick(err, Object.getOwnPropertyNames(err));

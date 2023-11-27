@@ -1,4 +1,4 @@
-import { omit, pick } from '@macrobe/algos';
+import { omit, pick } from '@lsk4/algos';
 
 const uniq = (arr: any[]) => Array.from(new Set(arr));
 

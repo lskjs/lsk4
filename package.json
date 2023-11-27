@@ -1,5 +1,5 @@
 {
-  "name": "@macrobe/libss123",
+  "name": "@lsk4/libss123",
   "version": "1.6.0",
   "description": "Libs starter kit",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
@@ -30,6 +30,8 @@
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
     "@lskjs/cli-scripts": "^3.19.0",
+    "@lskjs/cli-utils": "^3.18.0",
+    "@lskjs/env": "^3.18.0",
     "@lskjs/eslint-config": "^3.18.0",
     "@lskjs/jest-config": "^3.18.0",
     "@lskjs/tsconfig": "^3.18.0",

@@ -1,5 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import { pick } from '@macrobe/algos';
+import { pick } from '@lsk4/algos';
 import { suite } from 'uvu';
 import * as assert from 'uvu/assert';
 

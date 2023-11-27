@@ -1,6 +1,6 @@
 {
-  "name": "@macrobe/colors",
-  "version": "1.0.0",
+  "name": "@lsk4/colors",
+  "version": "4.0.0-alpha.0",
   "description": "Yet another colors library – like picocolors but with for browser too",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
@@ -12,7 +12,7 @@
     "release": "        lsk run release"
   },
   "dependencies": {
-    "@macrobe/env": "1.0.0"
+    "@lsk4/env": "^4.0.0-alpha.0"
   },
   "devDependencies": {
     "@types/node": "^20.9.0"
@@ -27,21 +27,22 @@
   },
   "files": [
     "lib",
+    "cjs",
     "README.md",
     "LICENCE"
   ],
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "cjs/index.js",
+  "types": "cjs/index.d.ts",
   "exports": {
     ".": {
       "import": "./lib/index.js",
       "types": "./lib/index.d.ts",
-      "default": "./lib/index.js"
+      "default": "./cjs/index.js"
     },
     "./*": {
       "import": "./lib/*.js",
       "types": "./lib/*.d.ts",
-      "default": "./lib/*.js"
+      "default": "./cjs/*.js"
     }
   },
   "size-limit": [
@@ -62,6 +63,5 @@
   "keywords": [
     "colors"
   ],
-  "////": "/////////========================/////////========================/////////========================/////////",
-  "type": "module"
+  "////": "/////////========================/////////========================/////////========================/////////"
 }

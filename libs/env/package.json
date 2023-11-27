@@ -1,6 +1,6 @@
 {
-  "name": "@macrobe/env",
-  "version": "1.0.0",
+  "name": "@lsk4/env",
+  "version": "4.0.0-alpha.0",
   "description": "LSK.js – env – Scripts for environment detecton",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
@@ -24,21 +24,22 @@
   },
   "files": [
     "lib",
+    "cjs",
     "README.md",
     "LICENCE"
   ],
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "cjs/index.js",
+  "types": "cjs/index.d.ts",
   "exports": {
     ".": {
       "import": "./lib/index.js",
       "types": "./lib/index.d.ts",
-      "default": "./lib/index.js"
+      "default": "./cjs/index.js"
     },
     "./*": {
       "import": "./lib/*.js",
       "types": "./lib/*.d.ts",
-      "default": "./lib/*.js"
+      "default": "./cjs/*.js"
     }
   },
   "size-limit": [
@@ -59,6 +60,5 @@
     "environment variables",
     "env"
   ],
-  "////": "/////////========================/////////========================/////////========================/////////",
-  "type": "module"
+  "////": "/////////========================/////////========================/////////========================/////////"
 }

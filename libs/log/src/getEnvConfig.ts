@@ -1,5 +1,5 @@
+import type { ObjectLike } from '@lskjs/algos';
 import { omitNull } from '@lskjs/algos';
-import { ObjectLike } from '@lskjs/algos/types';
 import { getEnvVar, isClient, isDev } from '@lskjs/env';
 
 import { parseNs } from './utils/parseNs.js';

@@ -1,5 +1,5 @@
 /* global window */
-import { getEnvVar, isClient, isServer, isTTY } from '@macrobe/env';
+import { getEnvVar, isClient, isServer, isTTY } from '@lsk4/env';
 
 // @ts-ignore
 const envs = isClient ? window : process.env;

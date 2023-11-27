@@ -16,6 +16,7 @@ async function main({ isRoot, ctx, cwd, args, log } = {}) {
   let cmd = '';
   const isNodemon = !isLib && isWatch;
   // console.log({ isNodemon });
+
   if (isNodemon) {
     const path = 'src/**';
     const ext = 'ts,tsx,js,jsx,mjs,cjs,json';
@@ -32,15 +33,14 @@ async function main({ isRoot, ctx, cwd, args, log } = {}) {
     cmd += ' src';
     if (isSilent) cmd += ' --silent';
     if (isWatch) cmd += ' --watch';
-    setTimeout(() => {
-      writeFile(`${cwd}/cjs/package.json`, JSON.stringify({ type: 'commonjs' }));
-    }, 1000);
-    setTimeout(() => {
-      writeFile(`${cwd}/lib/package.json`, JSON.stringify({ type: 'module' }));
-    }, 1000);
   }
   if (isProd) cmd = `NODE_ENV=production ${cmd}`;
-
+  setTimeout(() => {
+    writeFile(`${cwd}/cjs/package.json`, JSON.stringify({ type: 'commonjs' }));
+  }, 1000);
+  setTimeout(() => {
+    writeFile(`${cwd}/lib/package.json`, JSON.stringify({ type: 'module' }));
+  }, 1000);
   await shell(cmd, { ctx });
 }
 

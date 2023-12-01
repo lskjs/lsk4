@@ -16,9 +16,10 @@
   "devDependencies": {
     "@lskjs/eslint-config": "^3.18.0",
     "@lskjs/tsconfig": "^3.18.0",
+    "@ycmd/commands": "^0.8.0",
     "tsup": "^8.0.1",
     "typescript": "^5.3.2",
-    "ycmd": "^0.2.0"
+    "ycmd": "^0.8.0"
   },
   "//": "///////////========================/////////========================/////////========================/////////",
   "prettier": "@lskjs/eslint-config/prettier",

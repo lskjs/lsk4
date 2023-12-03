@@ -1,6 +1,6 @@
 import { getEnvConfig } from './getEnvConfig.js';
 import { Logger } from './Logger.js';
-import { ILogger } from './types.js';
+import type { ILogger } from './types.js';
 
 export const createLogger = (propsOrName = {}, props = {}): ILogger => {
   const cnf = getEnvConfig();

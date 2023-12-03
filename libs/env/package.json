@@ -1,6 +1,6 @@
 {
   "name": "@lsk4/env",
-  "version": "4.0.0-alpha.1",
+  "version": "4.0.1",
   "description": "LSK.js – env – Scripts for environment detecton",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
@@ -51,7 +51,9 @@
   "bugs": "https://github.com/lskjs/libs/issues",
   "license": "MIT",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "directory": ".release"
   },
   "keywords": [
     "environment variables",

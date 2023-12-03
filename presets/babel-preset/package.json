@@ -1,6 +1,6 @@
 {
   "name": "@lsk4/babel-preset",
-  "version": "3.17.0",
+  "version": "4.0.1",
   "description": "Babel preset for LSK.js projects",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "contributors": [
@@ -55,7 +55,8 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public",
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "directory": ".release"
   },
   "keywords": [
     "eslint",
@@ -63,7 +64,8 @@
     "lskjs"
   ],
   "files": [
-    "index.js"
+    "index.js",
+    "README.md"
   ],
   "////": "/////////========================/////////========================/////////========================/////////"
 }

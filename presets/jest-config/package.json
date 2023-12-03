@@ -1,0 +1,53 @@
+{
+  "name": "@lsk4/jest-config",
+  "version": "3.17.0",
+  "description": "Jest config for LSK.js projects",
+  "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
+  "private": false,
+  "scripts": {
+    "dev": "     ycmd dev",
+    "build": "   ycmd build",
+    "test": "    ycmd test",
+    "prepack": " ycmd prepack",
+    "release": " ycmd release"
+  },
+  "dependencies": {
+    "jest-junit": "^16.0.0",
+    "ts-jest": "^29.1.1"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1"
+  },
+  "optionalDependencies": {
+    "jest": "^29.6.2"
+  },
+  "//": "///////////========================/////////========================/////////========================//////////",
+  "prettier": "@lskjs/eslint-config/prettier",
+  "eslintConfig": {
+    "extends": "@lskjs/eslint-config"
+  },
+  "jest": {
+    "preset": "@lskjs/jest-config"
+  },
+  "files": [
+    "strict",
+    "jest-preset.js",
+    "jest.setup.js"
+  ],
+  "main": "jest-preset.js",
+  "///": "//////////========================/////////========================/////////========================/////////",
+  "repository": "https://github.com/lskjs/lskjs/tree/master//libs-presets/jest-config",
+  "homepage": "https://github.com/lskjs/lskjs/tree/master//libs-presets/jest-config",
+  "bugs": "https://github.com/lskjs/lskjs/issues",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "jest",
+    "config",
+    "lskjs"
+  ],
+  "////": "/////////========================/////////========================/////////========================/////////"
+}

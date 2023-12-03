@@ -1,0 +1,38 @@
+{
+  "name": "@lsk4/tsconfig",
+  "version": "3.17.0",
+  "description": "TS configs for LSK.js projects",
+  "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
+  "private": false,
+  "scripts": {
+    "dev": "     ycmd dev",
+    "build": "   ycmd build",
+    "test": "    ycmd test",
+    "prepack": " ycmd prepack",
+    "release": " ycmd release"
+  },
+  "//": "///////////========================/////////========================/////////========================//////////",
+  "prettier": "@lskjs/eslint-config/prettier",
+  "eslintConfig": {
+    "extends": "@lskjs/eslint-config"
+  },
+  "jest": {
+    "preset": "@lskjs/jest-config"
+  },
+  "main": "tsconfig.json",
+  "///": "//////////========================/////////========================/////////========================/////////",
+  "repository": "https://github.com/lskjs/lskjs/tree/master//libs-presets/tsconifg",
+  "homepage": "https://github.com/lskjs/lskjs/tree/master//libs-presets/tsconifg",
+  "bugs": "https://github.com/lskjs/lskjs/issues",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "eslint",
+    "config",
+    "lskjs"
+  ],
+  "////": "/////////========================/////////========================/////////========================/////////"
+}

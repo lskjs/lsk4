@@ -1,0 +1,25 @@
+{
+  "extends": "../base/tsconfig.json",
+  "compilerOptions": {
+    "strict": true,
+
+    // "declaration": true,
+    // "forceConsistentCasingInFileNames": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUnusedLocals": false, // выключаю иначе заебет во время development, думаю пока достаточно warning eslint
+    "noUnusedParameters": false, // выключаю иначе заебет во время development, думаю пока достаточно warning eslint
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    
+    "ignoreDeprecations": "5.0",
+    "suppressImplicitAnyIndexErrors": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true
+  },
+}
+
+

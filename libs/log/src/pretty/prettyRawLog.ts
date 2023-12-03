@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-import { tryJSONparse } from '@lskjs/env';
+import { tryJSONparse } from '@lsk4/env';
 
 import { ILogger } from '../types.js';
 import { tryLogfmtParse } from '../utils/tryLogfmtParse.js';

@@ -1,6 +1,6 @@
 /* eslint-disable no-nested-ternary */
 // import debug from 'debug';
-import { omitNull } from '@lskjs/algos';
+import { omitNull } from '@lsk4/algos';
 
 import { levelsPriority } from './config.js';
 import { defaultFormat, getEnvConfig } from './getEnvConfig.js';

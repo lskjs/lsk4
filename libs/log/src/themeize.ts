@@ -1,4 +1,4 @@
-import { colorize } from '@lskjs/colors';
+import { colorize } from '@lsk4/colors';
 
 import { randomColors, theme, themeLight } from './config.js';
 import { ThemeKey } from './types.js';

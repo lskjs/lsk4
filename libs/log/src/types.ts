@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/named
-import { Color } from '@lskjs/colors';
+import { Color } from '@lsk4/colors';
 
 export type LoggerLevelType = 'fatal' | 'error' | 'warn' | 'debug' | 'info' | 'trace' | 'log';
 

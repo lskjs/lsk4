@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0](https://github.com/lskjs/libs/compare/v4.0.0-alpha.1...v4.1.0) (2023-12-04)
+
+
+### Bug Fixes
+
+* add readme in tsconfig ([c4e8720](https://github.com/lskjs/libs/commit/c4e87200226c2084a5ebef3a08675ca5a3e73741))
+* esm migraton errors ([14156cd](https://github.com/lskjs/libs/commit/14156cd70618fc83bba3ec75011ba584327c7ddd))
+* figures works in browsers ([1b3b19f](https://github.com/lskjs/libs/commit/1b3b19f12b48abc3b141e2da64ecdb8fc2043023))
+
+
+### Features
+
+* add presets ([fb77ea7](https://github.com/lskjs/libs/commit/fb77ea7a166945ead62ec5a6771735611fd5a133))
+* start to test ycmd commands ([0a3cb4d](https://github.com/lskjs/libs/commit/0a3cb4dbd19dabfe8813eb4b4399245a742a7ac0))
+
+
+
+
+
 # [4.0.0-alpha.1](https://github.com/lskjs/libs/compare/v2.7.0...v4.0.0-alpha.1) (2023-11-27)
 
 

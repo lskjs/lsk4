@@ -1,23 +1,13 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    // "target": "ES2021",
-    "lib": ["esnext"],
-    // "module": "esnext",
-    "module": "commonjs",
-    // "moduleResolution": "node",
+    "target": "ESNext",
+    "lib": ["ESNext"],
+
+    "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "esModuleInterop": true,
     
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-
-    // "declaration": true,
-    // "declarationMap": true,
-    // "preserveSymlinks": true
-
-    // "forceConsistentCasingInFileNames": true,
-    // "declaration": true,
-    // "sourceMap": true,
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@lsk4/err",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "LSK.js – err – Error class and utils for custom code and message extracting 123",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
@@ -12,7 +12,7 @@
     "release": "        ycmd release"
   },
   "dependencies": {
-    "@lsk4/algos": "^4.0.1"
+    "@lsk4/algos": "^4.0.2"
   },
   "//": "///////////========================/////////========================/////////========================/////////",
   "prettier": "@lskjs/eslint-config/prettier",
@@ -52,8 +52,7 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public",
-    "registry": "https://registry.npmjs.org/",
-    "directory": ".release"
+    "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
     "errors wrapper",

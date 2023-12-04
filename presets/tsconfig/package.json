@@ -1,6 +1,6 @@
 {
   "name": "@lsk4/tsconfig",
-  "version": "4.0.1",
+  "version": "4.0.3",
   "description": "TS configs for LSK.js projects",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
@@ -19,7 +19,32 @@
   "jest": {
     "preset": "@lskjs/jest-config"
   },
-  "main": "tsconfig.json",
+  "main": "strict/tsconfig.json",
+  "exports": {
+    ".": {
+      "import": "./strict/tsconfig.json",
+      "require": "./strict/tsconfig.json",
+      "node": "./strict/tsconfig.json",
+      "default": "./strict/tsconfig.json"
+    },
+    "./strict": {
+      "import": "./strict/tsconfig.json",
+      "require": "./strict/tsconfig.json",
+      "node": "./strict/tsconfig.json",
+      "default": "./strict/tsconfig.json"
+    },
+    "./nostrict": {
+      "import": "./nostrict/tsconfig.json",
+      "require": "./nostrict/tsconfig.json",
+      "node": "./nostrict/tsconfig.json",
+      "default": "./nostrict/tsconfig.json"
+    }
+  },
+  "files": [
+    "base",
+    "strict",
+    "nostrict"
+  ],
   "///": "//////////========================/////////========================/////////========================/////////",
   "repository": "https://github.com/lskjs/lskjs/tree/master//libs-presets/tsconifg",
   "homepage": "https://github.com/lskjs/lskjs/tree/master//libs-presets/tsconifg",
@@ -27,8 +52,7 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public",
-    "registry": "https://registry.npmjs.org/",
-    "directory": ".release"
+    "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
     "eslint",

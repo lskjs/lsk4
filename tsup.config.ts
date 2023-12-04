@@ -2,6 +2,7 @@ export const options = {
   entry: ['src/**/*.tsx?'],
   treeshake: true,
   sourcemap: true,
+  splitting: true,
   platform: 'node',
   shims: true,
   dts: true,
@@ -12,7 +13,6 @@ export const optionsESM = {
   ...options,
   format: 'esm',
   dts: true,
-  splitting: true,
   outExtension: () => ({ js: '.js', dts: '.d.ts' }),
   outDir: 'lib',
 };

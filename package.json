@@ -1,6 +1,6 @@
 {
   "name": "@lsk4/root",
-  "version": "4.0.0-alpha.1",
+  "version": "4.0.2",
   "type": "module",
   "description": "Lego Starte Kit",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
@@ -16,15 +16,19 @@
   "devDependencies": {
     "@lskjs/eslint-config": "^3.18.0",
     "@lskjs/tsconfig": "^3.18.0",
-    "@ycmd/commands": "^0.8.0",
-    "tsup": "^8.0.1",
     "typescript": "^5.3.2",
-    "ycmd": "^0.8.0"
+    "ycmd": "^0.10.0"
   },
   "//": "///////////========================/////////========================/////////========================/////////",
   "prettier": "@lskjs/eslint-config/prettier",
   "eslintConfig": {
     "extends": "@lskjs/eslint-config"
+  },
+  "ycmd": {
+    "scripts": [
+      "./scripts",
+      "./node_modules/ycmd/scripts"
+    ]
   },
   "///": "//////////========================/////////========================/////////========================/////////",
   "repository": "https://github.com/lskjs/libs",

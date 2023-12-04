@@ -43,7 +43,8 @@
   "files": [
     "base",
     "strict",
-    "nostrict"
+    "nostrict",
+    "README.md"
   ],
   "///": "//////////========================/////////========================/////////========================/////////",
   "repository": "https://github.com/lskjs/lskjs/tree/master//libs-presets/tsconifg",

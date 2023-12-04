@@ -4,7 +4,7 @@
   "type": "module",
   "description": "Lego Starte Kit",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
-  "private": false,
+  "private": true,
   "scripts": {
     "start": "          ycmd start",
     "dev": "            ycmd dev",
@@ -36,8 +36,7 @@
   "bugs": "https://github.com/lskjs/libs/issues",
   "license": "MIT",
   "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
+    "access": "restricted"
   },
   "////": "/////////========================/////////========================/////////========================/////////"
 }

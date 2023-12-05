@@ -24,12 +24,12 @@
   "exports": {
     ".": {
       "import": "./lib/index.js",
-      "types": "./lib/index.d.ts",
+      "types": "./cjs/index.d.ts",
       "default": "./cjs/index.js"
     },
     "./*": {
       "import": "./lib/*.js",
-      "types": "./lib/*.d.ts",
+      "types": "./cjs/*.d.ts",
       "default": "./cjs/*.js"
     }
   },

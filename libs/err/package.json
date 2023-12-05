@@ -15,9 +15,9 @@
     "@lsk4/algos": "^4.1.0"
   },
   "//": "///////////========================/////////========================/////////========================/////////",
-  "prettier": "@lskjs/eslint-config/prettier",
+  "prettier": "@lsk4/eslint-config/prettier",
   "eslintConfig": {
-    "extends": "@lskjs/eslint-config"
+    "extends": "@lsk4/eslint-config"
   },
   "files": [
     "lib",

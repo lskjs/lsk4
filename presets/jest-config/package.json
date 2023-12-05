@@ -22,9 +22,9 @@
     "jest": "^29.6.2"
   },
   "//": "///////////========================/////////========================/////////========================//////////",
-  "prettier": "@lskjs/eslint-config/prettier",
+  "prettier": "@lsk4/eslint-config/prettier",
   "eslintConfig": {
-    "extends": "@lskjs/eslint-config"
+    "extends": "@lsk4/eslint-config"
   },
   "jest": {
     "preset": "@lskjs/jest-config"

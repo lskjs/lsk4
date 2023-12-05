@@ -12,9 +12,9 @@
     "release": "        ycmd release"
   },
   "//": "///////////========================/////////========================/////////========================/////////",
-  "prettier": "@lskjs/eslint-config/prettier",
+  "prettier": "@lsk4/eslint-config/prettier",
   "eslintConfig": {
-    "extends": "@lskjs/eslint-config/strict"
+    "extends": "@lsk4/eslint-config/strict"
   },
   "files": [
     "lib",

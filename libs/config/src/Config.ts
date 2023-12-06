@@ -48,7 +48,7 @@ export async function loadConfig(
 ): Promise<{ path?: string; config?: LskrcConfig }> {
   try {
     const configJoycon = new JoyCon();
-    const configPath = await configJoycon.resolve({
+    let configPath = await configJoycon.resolve({
       files: 
         exts
         .filter((ext) => allowedExtensions.some((extension) => ext.endsWith(extension)))
@@ -62,27 +62,25 @@ export async function loadConfig(
     });
 
     const processEnvValue = process.env[processKey];
-    if (typeof processEnvValue === 'string') {
-      const envPath = `process.env.${processKey}`;
-      const res = JSON.parse(processEnvValue);
-      return {
-        path: envPath,
-        config: res,
-      };
-    }
+    const processEnvPath = `process.env.${processKey}`;
+    const hasProcessEnvValue = typeof processEnvValue === 'string';
 
     if (configPath) {
       if (configPath.endsWith('.json')) {
         let data = await loadJson(configPath)
-        if (configPath.endsWith('package.json') && packageKey) {
-          data = data[packageKey];
+        if (configPath.endsWith('package.json')) {
+          data = packageKey ? data[packageKey] : undefined;
+        }
+        if (!data && hasProcessEnvValue) {
+          data = JSON.parse(processEnvValue);
+          configPath = processEnvPath;
         }
         if (data) {
           return { path: configPath, config: data };
         }
         return {};
       }
-      
+
       const { mod: config } = await bundleRequire({
         filepath: configPath,
       });
@@ -92,6 +90,11 @@ export async function loadConfig(
         path: configPath,
         config: raw[packageKey] || raw.default || raw,
       };
+    } else if (hasProcessEnvValue) {
+      return {
+        path: processEnvPath,
+        config: JSON.parse(processEnvValue),
+      }
     }
   } catch (err) {
     if (throwError) throw err;

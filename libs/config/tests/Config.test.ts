@@ -61,6 +61,15 @@ test('find env from package.json', async () => {
 });
 
 if (typeof process.env.TEST_JSON_ENV === 'string') {
+  test('find json even if process.env.TEST_JSON_ENV is defined', async () => {
+    const { config = {} } = await loadConfig('env', {
+      cwd: 'envs',
+      exts: ['.json'],
+      processKey: 'TEST_JSON_ENV'
+    });
+    assert.is(config['this is'], 'json(c) file');
+  });
+
   test('find env from process.env.TEST_JSON_ENV', async () => {
     const { config = {} } = await loadConfig('env', {
       processKey: 'TEST_JSON_ENV'

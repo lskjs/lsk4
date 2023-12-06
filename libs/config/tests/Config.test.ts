@@ -55,7 +55,7 @@ test('find json env', async () => {
 
 test('find env from package.json', async () => {
   const { config = {} } = await loadConfig('env', {
-    packageKey: 'publishConfig'
+    packageKey: 'publishConfig',
   });
   assert.is(config.access, 'public');
 });
@@ -65,14 +65,14 @@ if (typeof process.env.TEST_JSON_ENV === 'string') {
     const { config = {} } = await loadConfig('env', {
       cwd: 'envs',
       exts: ['.json'],
-      processKey: 'TEST_JSON_ENV'
+      processEnvKey: 'TEST_JSON_ENV',
     });
     assert.is(config['this is'], 'json(c) file');
   });
 
   test('find env from process.env.TEST_JSON_ENV', async () => {
     const { config = {} } = await loadConfig('env', {
-      processKey: 'TEST_JSON_ENV'
+      processEnvKey: 'TEST_JSON_ENV',
     });
     assert.is(config['this is'], 'process.env.TEST_JSON_ENV');
   });

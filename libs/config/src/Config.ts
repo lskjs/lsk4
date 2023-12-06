@@ -1,35 +1,34 @@
+// @ts-ignore it can't find types, but module has types
+import { bundleRequire } from 'bundle-require';
 import fs from 'fs';
 import JoyCon from 'joycon';
 import path from 'path';
-// @ts-ignore it can't find types, but module has types
-import { bundleRequire } from 'bundle-require';
+
 import { jsoncParse } from './jsoncParse';
 import type { LoadConfigParams, LskrcConfig } from './types.js';
 
-const joycon = new JoyCon()
+const joycon = new JoyCon();
 
 const loadJson = async (filepath: string) => {
   try {
-    return jsoncParse(await fs.promises.readFile(filepath, 'utf8'))
+    return jsoncParse(await fs.promises.readFile(filepath, 'utf8'));
   } catch (error) {
     if (error instanceof Error) {
       throw new Error(
-        `Failed to parse ${path.relative(process.cwd(), filepath)}: ${
-          error.message
-        }`
-      )
+        `Failed to parse ${path.relative(process.cwd(), filepath)}: ${error.message}`,
+      );
     } else {
-      throw error
+      throw error;
     }
   }
-}
+};
 
 const jsonLoader = {
   test: /\.json$/,
   load(filepath: string) {
-    return loadJson(filepath)
+    return loadJson(filepath);
   },
-}
+};
 
 joycon.addLoader(jsonLoader);
 
@@ -43,14 +42,13 @@ export async function loadConfig(
     stopDir,
     throwError = true,
     packageKey = '',
-    processKey = '',
+    processEnvKey = '',
   }: LoadConfigParams = {},
 ): Promise<{ path?: string; config?: LskrcConfig }> {
   try {
     const configJoycon = new JoyCon();
     let configPath = await configJoycon.resolve({
-      files: 
-        exts
+      files: exts
         .filter((ext) => allowedExtensions.some((extension) => ext.endsWith(extension)))
         .map((ext) => {
           if (ext === 'package.json') return ext;
@@ -61,13 +59,13 @@ export async function loadConfig(
       packageKey,
     });
 
-    const processEnvValue = process.env[processKey];
-    const processEnvPath = `process.env.${processKey}`;
+    const processEnvValue = process.env[processEnvKey];
+    const processEnvPath = `process.env.${processEnvKey}`;
     const hasProcessEnvValue = typeof processEnvValue === 'string';
 
     if (configPath) {
       if (configPath.endsWith('.json')) {
-        let data = await loadJson(configPath)
+        let data = await loadJson(configPath);
         if (configPath.endsWith('package.json')) {
           data = packageKey ? data[packageKey] : undefined;
         }
@@ -90,11 +88,12 @@ export async function loadConfig(
         path: configPath,
         config: raw[packageKey] || raw.default || raw,
       };
-    } else if (hasProcessEnvValue) {
+    }
+    if (hasProcessEnvValue) {
       return {
         path: processEnvPath,
         config: JSON.parse(processEnvValue),
-      }
+      };
     }
   } catch (err) {
     if (throwError) throw err;

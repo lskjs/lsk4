@@ -1,0 +1,154 @@
+{
+  "name": "@lsk4/stringify",
+  "version": "4.1.1",
+  "description": "LSK.js – stringify JS, ESM, TS like JSON.stringify",
+  "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
+  "private": false,
+  "scripts": {
+    "dev": "            ycmd dev",
+    "build": "          ycmd build",
+    "test": "           ycmd test",
+    "prepack": "        ycmd prepack",
+    "release": "        ycmd release"
+  },
+  "dependencies": {
+    "@lsk4/algos": "^4.1.1",
+    "@lsk4/err": "^4.1.1",
+    "javascript-stringify": "^2.1.0",
+    "js-yaml": "^4.1.0"
+  },
+  "//": "///////////========================/////////========================/////////========================/////////",
+  "prettier": "@lsk4/eslint-config/prettier",
+  "eslintConfig": {
+    "extends": "@lsk4/eslint-config/strict"
+  },
+  "files": [
+    "lib",
+    "cjs",
+    "README.md",
+    "LICENCE"
+  ],
+  "main": "cjs/index.js",
+  "types": "cjs/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "types": "./cjs/index.d.ts",
+      "default": "./cjs/index.js"
+    },
+    "./*": {
+      "import": "./lib/*.js",
+      "types": "./cjs/*.d.ts",
+      "default": "./cjs/*.js"
+    }
+  },
+  "size-limit": [
+    {
+      "path": "lib/index.js",
+      "limit": "1.4kb"
+    },
+    {
+      "path": "lib/index.mjs",
+      "limit": "1.1kb"
+    },
+    {
+      "path": "lib/any.js",
+      "limit": "1kb"
+    },
+    {
+      "path": "lib/count.js",
+      "limit": "1kb"
+    },
+    {
+      "path": "lib/countBy.js",
+      "limit": "1kb"
+    },
+    {
+      "path": "lib/each.js",
+      "limit": "1kb"
+    },
+    {
+      "path": "lib/every.js",
+      "limit": "1kb"
+    },
+    {
+      "path": "lib/fromPairs.js",
+      "limit": "1kb"
+    },
+    {
+      "path": "lib/isPlainObject.js",
+      "limit": "1kb"
+    },
+    {
+      "path": "lib/map.js",
+      "limit": "1kb"
+    },
+    {
+      "path": "lib/mapValues.js",
+      "limit": "1kb"
+    },
+    {
+      "path": "lib/omit.js",
+      "limit": "1kb"
+    },
+    {
+      "path": "lib/omitBy.js",
+      "limit": "1kb"
+    },
+    {
+      "path": "lib/omitNull.js",
+      "limit": "1kb"
+    },
+    {
+      "path": "lib/pad.js",
+      "limit": "1kb"
+    },
+    {
+      "path": "lib/pick.js",
+      "limit": "1kb"
+    },
+    {
+      "path": "lib/pickBy.js",
+      "limit": "1kb"
+    },
+    {
+      "path": "lib/set.js",
+      "limit": "1kb"
+    },
+    {
+      "path": "lib/setProps.js",
+      "limit": "1kb"
+    },
+    {
+      "path": "lib/toPairs.js",
+      "limit": "1kb"
+    },
+    {
+      "path": "lib/types.js",
+      "limit": "1kb"
+    },
+    {
+      "path": "lib/uniq.js",
+      "limit": "1kb"
+    },
+    {
+      "path": "lib/uniqBy.js",
+      "limit": "1kb"
+    }
+  ],
+  "///": "//////////========================/////////========================/////////========================/////////",
+  "repository": "https://github.com/lskjs/libs",
+  "homepage": "https://github.com/lskjs/libs/tree/master//libs/algos",
+  "bugs": "https://github.com/lskjs/libs/issues",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [],
+  "////": "/////////========================/////////========================/////////========================/////////",
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20.10.1"
+  }
+}

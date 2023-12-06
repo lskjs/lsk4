@@ -1,6 +1,6 @@
 import path from 'node:path';
 
-import { log } from '@lsk4/log/log';
+import { Logger } from '@lsk4/log';
 // @ts-ignore it can't find types, but module has types
 import { bundleRequire } from 'bundle-require';
 import JoyCon from 'joycon';
@@ -85,7 +85,7 @@ export async function loadConfig(
   } catch (err) {
     if (throwError) throw err;
     // replace to lsk4/log, but now it doesn't compile dts
-    log.warn('[loadConfig]', err);
+    new Logger().warn('[loadConfig]', err);
   }
   return {};
 }

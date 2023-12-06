@@ -1,0 +1,67 @@
+{
+  "name": "@lsk4/config",
+  "version": "4.1.1",
+  "description": "LSK.js – config",
+  "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
+  "private": false,
+  "scripts": {
+    "dev": "            ycmd dev",
+    "build": "          ycmd build",
+    "test": "           ycmd test",
+    "prepack": "        ycmd prepack",
+    "release": "        ycmd release"
+  },
+  "dependencies": {
+    "bundle-require": "^4.0.2",
+    "joycon": "^3.1.1",
+    "strip-json-comments": "^3.1.1"
+  },
+  "//": "///////////========================/////////========================/////////========================/////////",
+  "prettier": "@lsk4/eslint-config/prettier",
+  "eslintConfig": {
+    "extends": "@lsk4/eslint-config"
+  },
+  "files": [
+    "lib",
+    "cjs",
+    "README.md",
+    "LICENCE"
+  ],
+  "main": "cjs/index.js",
+  "types": "cjs/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "types": "./cjs/index.d.ts",
+      "default": "./cjs/index.js"
+    },
+    "./*": {
+      "import": "./lib/*.js",
+      "types": "./cjs/*.d.ts",
+      "default": "./cjs/*.js"
+    }
+  },
+  "size-limit": [
+    {
+      "path": "lib/index.js",
+      "limit": "4kb"
+    }
+  ],
+  "///": "//////////========================/////////========================/////////========================/////////",
+  "repository": "https://github.com/lskjs/libs",
+  "homepage": "https://github.com/lskjs/libs/tree/master//libs/config",
+  "bugs": "https://github.com/lskjs/libs/issues",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "config"
+  ],
+  "////": "/////////========================/////////========================/////////========================/////////",
+  "devDependencies": {
+    "@types/node": "^20.10.1",
+    "uvu": "^0.5.6"
+  }
+}

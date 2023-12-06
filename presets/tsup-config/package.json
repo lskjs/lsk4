@@ -16,9 +16,6 @@
   "eslintConfig": {
     "extends": "@lsk4/eslint-config"
   },
-  "jest": {
-    "preset": "@lskjs/jest-config"
-  },
   "main": "cjs/index.js",
   "types": "cjs/index.d.ts",
   "exports": {

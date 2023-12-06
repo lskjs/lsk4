@@ -26,9 +26,6 @@
   "eslintConfig": {
     "extends": "@lsk4/eslint-config"
   },
-  "jest": {
-    "preset": "@lskjs/jest-config"
-  },
   "files": [
     "strict",
     "jest-preset.js",

@@ -13,11 +13,14 @@
     "prepack": "        ycmd prepack",
     "release": "        ycmd release"
   },
+  "optionalDependencies": {
+    "@size-limit/preset-big-lib": "^11.0.1"
+  },
   "devDependencies": {
     "@lsk4/eslint-config": "workspace:^",
     "@lsk4/tsconfig": "workspace:^",
-    "typescript": "^5.3.2",
-    "ycmd": "^0.12.0"
+    "typescript": "^5.3.3",
+    "ycmd": "^0.14.0"
   },
   "//": "///////////========================/////////========================/////////========================/////////",
   "prettier": "@lsk4/eslint-config/prettier",

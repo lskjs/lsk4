@@ -8,14 +8,14 @@ const test = suite('loadConfig()');
 
 test('find some env', async () => {
   const { config = {} } = await loadConfig('env', {
-    cwd: 'envs',
+    cwd: 'tests/fixtures',
   });
   assert.match(config['this is'], 'file');
 });
 
 test('find typescript env with multiple exts', async () => {
   const { config = {} } = await loadConfig('env', {
-    cwd: 'envs',
+    cwd: 'tests/fixtures',
     exts: ['.ts', '.json', '.mjs', '.cjs'],
   });
   assert.is(config['this is'], 'typescript file');
@@ -23,7 +23,7 @@ test('find typescript env with multiple exts', async () => {
 
 test('find commonjs env', async () => {
   const { config = {} } = await loadConfig('env', {
-    cwd: 'envs',
+    cwd: 'tests/fixtures',
     exts: ['.cjs'],
   });
   assert.is(config['this is'], 'common js file');
@@ -31,7 +31,7 @@ test('find commonjs env', async () => {
 
 test('find js env', async () => {
   const { config = {} } = await loadConfig('env', {
-    cwd: 'envs',
+    cwd: 'tests/fixtures',
     exts: ['.js'],
   });
   assert.is(config['this is'], 'js file');
@@ -39,7 +39,7 @@ test('find js env', async () => {
 
 test('find ecmamodules env', async () => {
   const { config = {} } = await loadConfig('env', {
-    cwd: 'envs',
+    cwd: 'tests/fixtures',
     exts: ['.mjs'],
   });
   assert.is(config['this is'], 'ecmamodules file');
@@ -47,7 +47,7 @@ test('find ecmamodules env', async () => {
 
 test('find json env', async () => {
   const { config = {} } = await loadConfig('env', {
-    cwd: 'envs',
+    cwd: 'tests/fixtures',
     exts: ['.json'],
   });
   assert.is(config['this is'], 'json(c) file');
@@ -63,7 +63,7 @@ test('find env from package.json', async () => {
 if (typeof process.env.TEST_JSON_ENV === 'string') {
   test('find json even if process.env.TEST_JSON_ENV is defined', async () => {
     const { config = {} } = await loadConfig('env', {
-      cwd: 'envs',
+      cwd: 'tests/fixtures',
       exts: ['.json'],
       processEnvKey: 'TEST_JSON_ENV',
     });

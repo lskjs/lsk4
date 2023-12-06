@@ -70,19 +70,15 @@
       "limit": "11kb"
     },
     {
-      "path": "lib/index.mjs",
-      "limit": "11kb"
-    },
-    {
-      "path": "lib/pretty/prettyFormat.mjs",
+      "path": "lib/pretty/prettyFormat.js",
       "limit": "10kb"
     },
     {
-      "path": "lib/pretty/prettyRawLog.mjs",
+      "path": "lib/pretty/prettyRawLog.js",
       "limit": "11kb"
     },
     {
-      "path": "lib/themeize.mjs",
+      "path": "lib/themeize.js",
       "limit": "3.1kb"
     }
   ],

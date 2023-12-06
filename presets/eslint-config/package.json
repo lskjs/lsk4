@@ -40,9 +40,6 @@
   "eslintConfig": {
     "extends": "@lsk4/eslint-config"
   },
-  "jest": {
-    "preset": "@lskjs/jest-config"
-  },
   "main": "index.js",
   "///": "//////////========================/////////========================/////////========================/////////",
   "repository": "https://github.com/lskjs/lskjs/tree/master//libs-presets/eslint-config",

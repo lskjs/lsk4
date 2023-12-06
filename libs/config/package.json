@@ -12,6 +12,7 @@
     "release": "        ycmd release"
   },
   "dependencies": {
+    "@lsk4/log": "workspace:^",
     "bundle-require": "^4.0.2",
     "joycon": "^3.1.1",
     "strip-json-comments": "^3.1.1"
@@ -41,12 +42,6 @@
       "default": "./cjs/*.js"
     }
   },
-  "size-limit": [
-    {
-      "path": "lib/index.js",
-      "limit": "4kb"
-    }
-  ],
   "///": "//////////========================/////////========================/////////========================/////////",
   "repository": "https://github.com/lskjs/libs",
   "homepage": "https://github.com/lskjs/libs/tree/master//libs/config",

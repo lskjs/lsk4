@@ -42,10 +42,6 @@
       "limit": "1.4kb"
     },
     {
-      "path": "lib/index.mjs",
-      "limit": "1.1kb"
-    },
-    {
       "path": "lib/any.js",
       "limit": "1kb"
     },

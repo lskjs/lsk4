@@ -1,32 +1,19 @@
+import path from 'node:path';
+
+import { log } from '@lsk4/log/log';
 // @ts-ignore it can't find types, but module has types
 import { bundleRequire } from 'bundle-require';
-import fs from 'fs';
 import JoyCon from 'joycon';
-import path from 'path';
 
-import { jsoncParse } from './jsoncParse';
+import { loadJsonc } from './loadJsonc';
 import type { LoadConfigParams, LskrcConfig } from './types.js';
 
 const joycon = new JoyCon();
 
-const loadJson = async (filepath: string) => {
-  try {
-    return jsoncParse(await fs.promises.readFile(filepath, 'utf8'));
-  } catch (error) {
-    if (error instanceof Error) {
-      throw new Error(
-        `Failed to parse ${path.relative(process.cwd(), filepath)}: ${error.message}`,
-      );
-    } else {
-      throw error;
-    }
-  }
-};
-
 const jsonLoader = {
   test: /\.json$/,
   load(filepath: string) {
-    return loadJson(filepath);
+    return loadJsonc(filepath);
   },
 };
 
@@ -65,7 +52,7 @@ export async function loadConfig(
 
     if (configPath) {
       if (configPath.endsWith('.json')) {
-        let data = await loadJson(configPath);
+        let data = await loadJsonc(configPath);
         if (configPath.endsWith('package.json')) {
           data = packageKey ? data[packageKey] : undefined;
         }
@@ -98,7 +85,7 @@ export async function loadConfig(
   } catch (err) {
     if (throwError) throw err;
     // replace to lsk4/log, but now it doesn't compile dts
-    console.error('[loadConfig]', err);
+    log.warn('[loadConfig]', err);
   }
   return {};
 }

@@ -14,10 +14,10 @@
     "release": "        ycmd release"
   },
   "devDependencies": {
-    "@lsk4/eslint-config": "^4.0.1",
-    "@lsk4/tsconfig": "^4.0.3",
+    "@lsk4/eslint-config": "workspace:^",
+    "@lsk4/tsconfig": "workspace:^",
     "typescript": "^5.3.2",
-    "ycmd": "^0.10.0"
+    "ycmd": "^0.12.0"
   },
   "//": "///////////========================/////////========================/////////========================/////////",
   "prettier": "@lsk4/eslint-config/prettier",

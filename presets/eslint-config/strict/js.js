@@ -4,6 +4,8 @@ const { maxLen } = require('../config');
 // TODO
 // https://github.com/lydell/eslint-plugin-simple-import-sort/blob/main/examples/.eslintrc.js
 
+const ignoreDirs = (dirs) => dirs.map((dir) => `**/${dir}/**`);
+
 module.exports = {
   env: {
     browser: false,
@@ -12,13 +14,16 @@ module.exports = {
   extends: ['airbnb-base', 'prettier'],
   plugins: ['simple-import-sort', 'prettier'],
   ignorePatterns: [
-    '**/node_modules/**',
-    '**/__*/**',
-    '**/lib/**',
-    '**/dist/**',
-    '**/build/**',
-    '**/coverage/**',
-    '**/public/**',
+    ...ignoreDirs([
+      //
+      'node_modules',
+      '__*',
+      'lib',
+      'dist',
+      'build',
+      'coverage',
+      'public',
+    ]),
     '!.gitlab-ci.js',
   ],
   rules: {

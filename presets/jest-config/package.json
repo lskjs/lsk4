@@ -43,8 +43,7 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public",
-    "registry": "https://registry.npmjs.org/",
-    "directory": ".release"
+    "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
     "jest",

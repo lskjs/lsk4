@@ -1,6 +1,6 @@
 {
   "name": "@lsk4/tsup-config",
-  "version": "4.1.0",
+  "version": "4.1.1-alpha.0",
   "description": "TSUP configs for LSK.js projects",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
@@ -46,8 +46,7 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public",
-    "registry": "https://registry.npmjs.org/",
-    "directory": ".release"
+    "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
     "eslint",

@@ -1,6 +1,6 @@
 {
   "name": "@lsk4/err",
-  "version": "4.1.1",
+  "version": "4.3.0",
   "description": "LSK.js – err – Error class and utils for custom code and message extracting 123",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,
@@ -12,7 +12,7 @@
     "release": "        ycmd release"
   },
   "dependencies": {
-    "@lsk4/algos": "^4.1.1"
+    "@lsk4/algos": "^4.3.0"
   },
   "//": "///////////========================/////////========================/////////========================/////////",
   "prettier": "@lsk4/eslint-config/prettier",

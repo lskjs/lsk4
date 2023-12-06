@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.3.0](https://github.com/lskjs/libs/compare/v4.2.0...v4.3.0) (2023-12-06)
+
+
+### Bug Fixes
+
+* **#5:** processKey -> processEnvKey and format ([97aee8a](https://github.com/lskjs/libs/commit/97aee8a88abf6ce9c8f232a6c900cf17349ab40c)), closes [#5](https://github.com/lskjs/libs/issues/5)
+* **#5:** processKey should be second, not first ([9c71e61](https://github.com/lskjs/libs/commit/9c71e619d5d778ab93d5e9c93fbdad2e0615b75d)), closes [#5](https://github.com/lskjs/libs/issues/5)
+* log log types ([78c0983](https://github.com/lskjs/libs/commit/78c098333d8053e9cb3a0772eaa1a18db1cfa435))
+* test phase ycmd ([476475b](https://github.com/lskjs/libs/commit/476475bbeb0289e9e2f4175fbae19bf4af8dc007))
+
+
+### Features
+
+* **#5:** config ([61357a1](https://github.com/lskjs/libs/commit/61357a1d82211040e44e05516728eb70194af7ce)), closes [#5](https://github.com/lskjs/libs/issues/5)
+
+
+
+
+
 # [4.1.0](https://github.com/lskjs/libs/compare/v4.0.0-alpha.1...v4.1.0) (2023-12-04)
 
 

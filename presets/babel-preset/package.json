@@ -1,6 +1,6 @@
 {
   "name": "@lsk4/babel-preset",
-  "version": "4.1.1",
+  "version": "4.3.0",
   "description": "Babel preset for LSK.js projects",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "contributors": [

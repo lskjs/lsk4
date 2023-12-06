@@ -21,25 +21,6 @@ importers:
         specifier: ^0.12.0
         version: 0.12.0(esbuild@0.19.8)(typescript@5.3.2)
 
-  libs/_stringify:
-    dependencies:
-      '@lskjs/algos':
-        specifier: ^3.17.0
-        version: 3.18.0
-      '@lskjs/err':
-        specifier: ^3.17.0
-        version: 3.18.0
-      javascript-stringify:
-        specifier: 2.1.0
-        version: 2.1.0
-      js-yaml:
-        specifier: 4.1.0
-        version: 4.1.0
-    devDependencies:
-      '@types/js-yaml':
-        specifier: ^4.0.5
-        version: 4.0.9
-
   libs/algos: {}
 
   libs/colors:
@@ -2336,11 +2317,13 @@ packages:
 
   /@lskjs/algos@3.18.0:
     resolution: {integrity: sha512-dTLE+MJNdks4xKtNuziYqADgxR4+b5xUHr8RfmeWhousvNoRfCNi6LRzLEp8PYtrCt5KJfrB09v5t0MIOyGtPg==}
+    dev: true
 
   /@lskjs/err@3.18.0:
     resolution: {integrity: sha512-5eUaWXVBc6FeF9BfCJWv9Ug70VLn/kQAgck6VBUg1rgKt9nfJLIu7yAqJlZn+GqDeAXA15sSIgmoxs1S6Lojmg==}
     dependencies:
       '@lskjs/algos': 3.18.0
+    dev: true
 
   /@lskjs/stringify@3.19.0:
     resolution: {integrity: sha512-nT0l+a0Ma7ctzpjP4hlVYtW7/Mlnw9Q/5V/vP3r0jbzlUcAz8DhV1tgI0V5ozbwXS+QV7CsC6/ZKYZUg7+Fg+w==}

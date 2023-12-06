@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.2.0](https://github.com/lskjs/libs/compare/v4.1.1...v4.2.0) (2023-12-06)
+
+
+### Features
+
+* migrate stringify package ([0ffb5fb](https://github.com/lskjs/libs/commit/0ffb5fb991f2c85cc804bb1837710f8ecdb54a1e))
+
+
+
+
+
 # [3.19.0](https://github.com/lskjs/lskjs/compare/v3.17.0...v3.19.0) (2023-11-08)
 
 

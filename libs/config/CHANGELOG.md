@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.3.3](https://github.com/lskjs/libs/compare/v4.3.2...v4.3.3) (2023-12-07)
+
+
+### Bug Fixes
+
+* **config:** mjs can load cjs ([6541ac7](https://github.com/lskjs/libs/commit/6541ac7a6ba3874a1659b6de34c8b6c8f1a5b7a8))
+
+
+
+
+
 ## [4.3.2](https://github.com/lskjs/libs/compare/v4.3.1...v4.3.2) (2023-12-07)
 
 

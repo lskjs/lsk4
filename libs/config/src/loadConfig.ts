@@ -6,17 +6,22 @@ import { Logger } from '@lsk4/log';
 import { bundleRequire } from 'bundle-require';
 import JoyCon from 'joycon';
 
+import { isCommonJS } from './isCommonJS';
 import { loadJsonc } from './loadJsonc';
 import type { LoadConfigParams } from './types.js';
 
 const allowedExtensions = ['.ts', '.js', '.cjs', '.mjs', '.json'];
+
+const defaultExtensions = allowedExtensions.filter(
+  (ext) => !ext.endsWith(isCommonJS() ? '.mjs' : '.cjs'),
+);
 
 export async function loadConfig<T>(
   name: string = '.env',
   {
     cwd = process.cwd(),
     files: initFiles = [],
-    exts = allowedExtensions,
+    exts = defaultExtensions,
     stopDir,
     throwError = true,
     silent = false,

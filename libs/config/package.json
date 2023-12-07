@@ -12,6 +12,7 @@
     "release": "        ycmd release"
   },
   "dependencies": {
+    "@lsk4/err": "workspace:^4.3.0",
     "@lsk4/log": "workspace:^",
     "bundle-require": "^4.0.2",
     "joycon": "^3.1.1",
@@ -56,7 +57,6 @@
   ],
   "////": "/////////========================/////////========================/////////========================/////////",
   "devDependencies": {
-    "@types/node": "^20.10.1",
-    "uvu": "^0.5.6"
+    "@types/node": "^20.10.1"
   }
 }

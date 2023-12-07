@@ -1,46 +1,41 @@
 import path from 'node:path';
 
+import { Err } from '@lsk4/err';
 import { Logger } from '@lsk4/log';
 // @ts-ignore it can't find types, but module has types
 import { bundleRequire } from 'bundle-require';
 import JoyCon from 'joycon';
 
 import { loadJsonc } from './loadJsonc';
-import type { LoadConfigParams, LskrcConfig } from './types.js';
+import type { LoadConfigParams } from './types.js';
 
-const joycon = new JoyCon();
+const allowedExtensions = ['.ts', '.js', '.cjs', '.mjs', '.json'];
 
-const jsonLoader = {
-  test: /\.json$/,
-  load(filepath: string) {
-    return loadJsonc(filepath);
-  },
-};
-
-joycon.addLoader(jsonLoader);
-
-const allowedExtensions = ['.ts', '.js', '.cjs', '.mjs', '.json', 'package.json'];
-
-export async function loadConfig(
+export async function loadConfig<T>(
   name: string = '.env',
   {
     cwd = process.cwd(),
+    files: initFiles = [],
     exts = allowedExtensions,
     stopDir,
     throwError = true,
+    silent = false,
     packageKey = '',
     processEnvKey = '',
   }: LoadConfigParams = {},
-): Promise<{ path?: string; config?: LskrcConfig }> {
+): Promise<{ path?: string; config?: T }> {
   try {
     const configJoycon = new JoyCon();
-    let configPath = await configJoycon.resolve({
-      files: exts
-        .filter((ext) => allowedExtensions.some((extension) => ext.endsWith(extension)))
-        .map((ext) => {
-          if (ext === 'package.json') return ext;
-          return name + ext;
-        }),
+    const filteredExts = exts.filter((ext) => allowedExtensions.some((e) => ext.endsWith(e)));
+
+    let files = initFiles;
+    if (files.length === 0) {
+      files = filteredExts.map((ext) => name + ext);
+      if (packageKey) files.push('package.json');
+    }
+
+    const configPath = await configJoycon.resolve({
+      files,
       cwd,
       stopDir: stopDir || path.parse(cwd).root,
       packageKey,
@@ -48,44 +43,43 @@ export async function loadConfig(
 
     const processEnvValue = process.env[processEnvKey];
     const processEnvPath = `process.env.${processEnvKey}`;
-    const hasProcessEnvValue = typeof processEnvValue === 'string';
 
-    if (configPath) {
-      if (configPath.endsWith('.json')) {
-        let data = await loadJsonc(configPath);
-        if (configPath.endsWith('package.json')) {
-          data = packageKey ? data[packageKey] : undefined;
-        }
-        if (!data && hasProcessEnvValue) {
-          data = JSON.parse(processEnvValue);
-          configPath = processEnvPath;
-        }
-        if (data) {
-          return { path: configPath, config: data };
-        }
-        return {};
-      }
+    const isProcess = typeof processEnvValue === 'string';
+    const isJson = configPath && configPath.endsWith('.json');
+    const isRequire = configPath && !isJson;
 
+    // js,.ts,.cjs,.mjs
+    if (isRequire) {
       const { mod: config } = await bundleRequire({
         filepath: configPath,
       });
-
       const raw = config; // config.mod
       return {
         path: configPath,
         config: raw[packageKey] || raw.default || raw,
       };
     }
-    if (hasProcessEnvValue) {
+    // json, package.json
+    if (isJson) {
+      let data = await loadJsonc(configPath);
+      if (packageKey && configPath.endsWith('package.json')) {
+        data = packageKey ? data[packageKey] : undefined;
+      }
+      if (data) {
+        return { path: configPath, config: data };
+      }
+    }
+    if (isProcess) {
       return {
         path: processEnvPath,
         config: JSON.parse(processEnvValue),
       };
     }
+    throw new Err(`Config not found: ${name}`);
   } catch (err) {
     if (throwError) throw err;
-    // replace to lsk4/log, but now it doesn't compile dts
-    new Logger().warn('[loadConfig]', err);
+    // TODO: replace to lsk4/log/log, but now it doesn't compile dts
+    if (!silent) new Logger().warn('[loadConfig]', err);
   }
   return {};
 }

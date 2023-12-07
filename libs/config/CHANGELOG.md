@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.3.2](https://github.com/lskjs/libs/compare/v4.3.1...v4.3.2) (2023-12-07)
+
+
+### Bug Fixes
+
+* **#5:** check on running in commonjs and filter default extensions ([3452907](https://github.com/lskjs/libs/commit/34529078708c4b4bdb4df940930793086cc8feec)), closes [#5](https://github.com/lskjs/libs/issues/5)
+* **config:** change ext orders ([597bb2a](https://github.com/lskjs/libs/commit/597bb2ab8024ee06e21a00df28ef2e57b03c7eaf))
+
+
+
+
+
 ## [4.3.1](https://github.com/lskjs/libs/compare/v4.3.0...v4.3.1) (2023-12-07)
 
 **Note:** Version bump only for package @lsk4/config

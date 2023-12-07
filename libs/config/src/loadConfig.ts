@@ -12,9 +12,10 @@ import type { LoadConfigParams } from './types.js';
 
 const allowedExtensions = ['.ts', '.json', '.cjs', '.mjs', '.js'];
 
-const defaultExtensions = allowedExtensions.filter(
-  (ext) => !ext.endsWith(isCommonJS() ? '.mjs' : '.cjs'),
-);
+const defaultExtensions = allowedExtensions.filter((ext) => {
+  if (isCommonJS()) return ext !== '.mjs';
+  return true;
+});
 
 export async function loadConfig<T>(
   name: string = '.env',

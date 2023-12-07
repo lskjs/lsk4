@@ -10,7 +10,7 @@ import { isCommonJS } from './isCommonJS';
 import { loadJsonc } from './loadJsonc';
 import type { LoadConfigParams } from './types.js';
 
-const allowedExtensions = ['.ts', '.js', '.cjs', '.mjs', '.json'];
+const allowedExtensions = ['.ts', '.json', '.cjs', '.mjs', '.js'];
 
 const defaultExtensions = allowedExtensions.filter(
   (ext) => !ext.endsWith(isCommonJS() ? '.mjs' : '.cjs'),

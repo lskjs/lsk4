@@ -1,6 +1,6 @@
 {
   "name": "@lsk4/env",
-  "version": "4.1.1",
+  "version": "4.3.1",
   "description": "LSK.js – env – Scripts for environment detecton",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,

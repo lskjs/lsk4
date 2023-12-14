@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.3.4](https://github.com/lskjs/lskjs/compare/v4.3.3...v4.3.4) (2023-12-14)
+
+
+### Bug Fixes
+
+* **log:** pass error req ([3eaca9b](https://github.com/lskjs/lskjs/commit/3eaca9b5500f61eaa9cde9fe3aeb32592c70d7c0))
+
+
+
+
+
 ## [4.3.1](https://github.com/lskjs/lskjs/compare/v4.3.0...v4.3.1) (2023-12-07)
 
 

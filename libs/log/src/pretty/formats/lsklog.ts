@@ -17,6 +17,7 @@ export const lsklogWebLevels = [
   'status',
   'length',
   'duration',
+  'err',
 ];
 
 export const isLsklog = (json: any): boolean =>

@@ -14,7 +14,7 @@ export const createLogger = (propsOrName = {}, props = {}): ILogger => {
     prm.level = 'trace';
   }
   if (prm.off?.some((v: RegExp) => v.test(name))) {
-    prm.level = 'fatal';
+    prm.level = 'error';
   }
   return new Logger(prm);
 };

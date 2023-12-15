@@ -1,6 +1,6 @@
 {
   "name": "@lsk4/stringify",
-  "version": "4.3.1",
+  "version": "4.4.0",
   "description": "LSK.js – stringify JS, ESM, TS like JSON.stringify",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,

@@ -1,6 +1,6 @@
 {
   "name": "@lsk4/colors",
-  "version": "4.3.1",
+  "version": "4.4.0",
   "description": "Yet another colors library – like picocolors but with for browser too",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": false,

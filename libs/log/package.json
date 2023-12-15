@@ -15,10 +15,10 @@
     "release": "        ycmd release"
   },
   "dependencies": {
-    "@lsk4/algos": "^4.3.0",
-    "@lsk4/colors": "^4.3.1",
-    "@lsk4/env": "^4.3.1",
-    "@lsk4/err": "^4.3.0",
+    "@lsk4/algos": "workspace:^",
+    "@lsk4/colors": "workspace:^",
+    "@lsk4/env": "workspace:^",
+    "@lsk4/err": "workspace:^",
     "fast-safe-stringify": "2.1.1",
     "pretty-bytes": "5.6.0",
     "pretty-time": "1.1.0",

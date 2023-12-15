@@ -12,8 +12,8 @@
     "release": "        ycmd release"
   },
   "dependencies": {
-    "@lsk4/algos": "^4.3.0",
-    "@lsk4/err": "^4.3.0",
+    "@lsk4/algos": "workspace:^",
+    "@lsk4/err": "workspace:^",
     "javascript-stringify": "^2.1.0",
     "js-yaml": "^4.1.0"
   },
@@ -55,6 +55,6 @@
   "////": "/////////========================/////////========================/////////========================/////////",
   "devDependencies": {
     "@types/js-yaml": "^4.0.9",
-    "@types/node": "^20.10.1"
+    "@types/node": "^20.10.4"
   }
 }

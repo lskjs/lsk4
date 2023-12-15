@@ -12,10 +12,10 @@
     "release": "        ycmd release"
   },
   "dependencies": {
-    "@lsk4/env": "^4.3.1"
+    "@lsk4/env": "workspace:^"
   },
   "devDependencies": {
-    "@types/node": "^20.10.1"
+    "@types/node": "^20.10.4"
   },
   "//": "///////////========================/////////========================/////////========================/////////",
   "prettier": "@lsk4/eslint-config/prettier",

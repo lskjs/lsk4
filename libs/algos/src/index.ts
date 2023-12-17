@@ -1,6 +1,7 @@
 import { any } from './any.js';
 import { count } from './count.js';
 import { countBy } from './countBy.js';
+import { deepMerge } from './deepMerge.js';
 import { every } from './every.js';
 import { fromPairs } from './fromPairs.js';
 import { isPlainObject } from './isPlainObject.js';
@@ -24,8 +25,9 @@ export * from './types.js';
 
 export {
   any,
-  countBy,
   count,
+  countBy,
+  deepMerge,
   every,
   fromPairs,
   isPlainObject,
@@ -47,8 +49,9 @@ export {
 };
 export default {
   any,
-  countBy,
   count,
+  countBy,
+  deepMerge,
   every,
   fromPairs,
   isPlainObject,

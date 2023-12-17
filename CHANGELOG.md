@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.5.0](https://github.com/lskjs/lsk4/compare/v4.4.1...v4.5.0) (2023-12-17)
+
+
+### Features
+
+* **algos:** add deepMerge ([0093316](https://github.com/lskjs/lsk4/commit/0093316832226bafb2e54f5c516ca6cffcd2048c))
+
+
+
+
+
 ## [4.4.1](https://github.com/lskjs/lsk4/compare/v4.4.0...v4.4.1) (2023-12-15)
 
 **Note:** Version bump only for package @lsk4/root

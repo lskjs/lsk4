@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.5.0](https://github.com/lskjs/libs/compare/v4.4.1...v4.5.0) (2023-12-17)
+
+**Note:** Version bump only for package @lsk4/config
+
+
+
+
+
 # [4.4.0](https://github.com/lskjs/libs/compare/v4.3.4...v4.4.0) (2023-12-15)
 
 

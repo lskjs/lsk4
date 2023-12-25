@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.7.0](https://github.com/lskjs/lsk4/compare/v4.6.0...v4.7.0) (2023-12-25)
+
+
+### Features
+
+* **log:** improve process env safety for storybook ([fb9d733](https://github.com/lskjs/lsk4/commit/fb9d733f9aaf86b6689867d882fecb749d4cc480))
+
+
+
+
+
 # [4.6.0](https://github.com/lskjs/lsk4/compare/v4.5.0...v4.6.0) (2023-12-25)
 
 

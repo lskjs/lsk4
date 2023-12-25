@@ -5,11 +5,14 @@ import { getEnvVar, isClient, isDev } from '@lsk4/env';
 import { parseNs } from './utils/parseNs.js';
 
 export const defaultFormat = isDev || isClient ? 'pretty' : 'lsk';
+const safeProcess = typeof process !== 'undefined' ? process : null;
+
+const isYes = (v: string | undefined | null): boolean => Boolean(+(v as any));
 
 export const getEnvConfig = (): ObjectLike<string | RegExp[]> => {
   const debug = getEnvVar('DEBUG', '') || '';
-  const isSilent =
-    typeof process && (!!+process.env.LSK_SILENT! || process.argv?.includes('--silent'));
+  // NOTE: тупое говно тупого говна, увы, надо переделать
+  const isSilent = isYes(getEnvVar('LSK_SILENT')) || safeProcess?.argv?.includes('--silent');
   const isTrace = debug.startsWith('lsk') || debug.startsWith('*');
   const format = getEnvVar('LOG_FORMAT', getEnvVar('DEBUG_FORMAT', defaultFormat));
   const { on, off } = parseNs(debug);

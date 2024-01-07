@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.8.0](https://github.com/lskjs/lsk4/compare/v4.7.0...v4.8.0) (2024-01-07)
+
+
+### Features
+
+* **log:** add pretty export ([dc40e77](https://github.com/lskjs/lsk4/commit/dc40e77f088ff95cb1b75973ba209f8b41190db9))
+
+
+
+
+
 # [4.7.0](https://github.com/lskjs/lsk4/compare/v4.6.0...v4.7.0) (2023-12-25)
 
 

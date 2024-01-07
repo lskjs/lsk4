@@ -62,6 +62,16 @@
       "import": "./lib/*.js",
       "types": "./cjs/*.d.ts",
       "default": "./cjs/*.js"
+    },
+    "./pretty": {
+      "import": "./lib/pretty/index.js",
+      "types": "./cjs/pretty/index.d.ts",
+      "default": "./cjs/pretty/index.js"
+    },
+    "./pretty/*": {
+      "import": "./lib/pretty/*.js",
+      "types": "./cjs/pretty/*.d.ts",
+      "default": "./cjs/pretty/*.js"
     }
   },
   "size-limit": [

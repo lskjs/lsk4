@@ -6,6 +6,7 @@ export type LoggerLevelType = 'fatal' | 'error' | 'warn' | 'debug' | 'info' | 't
 export interface ILoggerProps {
   prefix?: string;
   ns?: string;
+  // TODO: remove (migration to ns only)
   name?: string;
   level?: LoggerLevelType;
   format?: string;
@@ -30,6 +31,7 @@ export interface ILogger extends ILoggerProps {
   error(...args: any[]): void;
   fatal(...args: any[]): void;
   log(...args: any[]): void;
+  createChild(...propsArray: ILoggerProps[]): ILogger;
 }
 
 export type ILoggerMeta = {

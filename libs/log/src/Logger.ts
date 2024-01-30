@@ -8,7 +8,7 @@ import { stringify } from './pretty/formats/index.js';
 import { isLsklogWeb } from './pretty/formats/lsklog.js';
 // import { tryPrettyFormat } from './pretty/tryPrettyFormat.js';
 import { prettyFormat } from './pretty/prettyFormat.js';
-import { ILogger, ILoggerMessage, ILoggerProps, LoggerLevelType } from './types.js';
+import type { ILogger, ILoggerMessage, ILoggerProps, LoggerLevelType } from './types.js';
 import { anyRegExps } from './utils/anyRegExps.js';
 
 export class Logger implements ILogger {

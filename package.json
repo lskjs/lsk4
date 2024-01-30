@@ -14,14 +14,14 @@
     "release": "        ycmd release"
   },
   "optionalDependencies": {
-    "@size-limit/preset-small-lib": "^11.0.1"
+    "@size-limit/preset-small-lib": "^11.0.2"
   },
   "devDependencies": {
     "@lsk4/eslint-config": "workspace:^",
     "@lsk4/tsconfig": "workspace:^",
     "typescript": "^5.3.3",
     "uvu": "^0.5.6",
-    "ycmd": "^0.16.1"
+    "ycmd": "^0.17.1"
   },
   "//": "///////////========================/////////========================/////////========================/////////",
   "prettier": "@lsk4/eslint-config/prettier",

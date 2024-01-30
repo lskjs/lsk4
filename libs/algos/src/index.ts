@@ -5,6 +5,7 @@ import { deepMerge } from './deepMerge.js';
 import { every } from './every.js';
 import { fromPairs } from './fromPairs.js';
 import { isPlainObject } from './isPlainObject.js';
+import { keyBy } from './keyBy.js';
 import { map } from './map.js';
 import { mapValues } from './mapValues.js';
 import { maxBy } from './maxBy.js';
@@ -46,6 +47,7 @@ export {
   toPairs,
   uniq,
   uniqBy,
+  keyBy,
 };
 export default {
   any,
@@ -69,4 +71,5 @@ export default {
   toPairs,
   uniq,
   uniqBy,
+  keyBy,
 };

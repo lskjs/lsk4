@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.9.0](https://github.com/lskjs/lsk4/compare/v4.8.0...v4.9.0) (2024-01-30)
+
+
+### Features
+
+* **algos:** add keyBy ([21bf72b](https://github.com/lskjs/lsk4/commit/21bf72be5f7493a835c743e4836e4bb730ae4c14))
+
+
+
+
+
 # [4.8.0](https://github.com/lskjs/lsk4/compare/v4.7.0...v4.8.0) (2024-01-07)
 
 

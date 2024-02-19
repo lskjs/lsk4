@@ -7,7 +7,8 @@ export const errUnknown = 'err_unknown';
 export const getMessage = (err: any, def = errUnknown): string => {
   if (typeof err === 'string') return err;
   const errName = err && err.name !== 'Error' ? err.name : null;
-  return (err && (err.message || err.text || err.code || errName)) || def;
+  const str = (err && (err.message || err.text || err.code || errName)) || def;
+  return String(str).substring(0, 1000);
 };
 
 export const getText = (err: any, def = errUnknown): string => {

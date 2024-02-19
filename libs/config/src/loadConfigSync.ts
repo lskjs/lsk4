@@ -3,14 +3,16 @@ import path from 'node:path';
 import { Err } from '@lsk4/err';
 import { Logger } from '@lsk4/log';
 // @ts-ignore it can't find types, but module has types
-import { bundleRequire } from 'bundle-require';
 import JoyCon from 'joycon';
 
 import { allowedExtensions, defaultExtensions } from './options';
 import type { LoadConfigOptions } from './types.js';
-import { loadJsonc } from './utils/loadJsonc';
+import { bundleRequireSync } from './utils/bundleRequireSync';
+import { loadJsoncSync } from './utils/loadJsoncSync';
 
-export async function loadConfig<T>(
+// NOTE: это копипаста из соседнего файла loadConfig.ts, но синхронная версия. Изменять нужно оба файла.
+
+export function loadConfigSync<T>(
   name: string = '.env',
   {
     cwd = process.cwd(),
@@ -22,7 +24,7 @@ export async function loadConfig<T>(
     packageKey = '',
     processEnvKey = '',
   }: LoadConfigOptions = {},
-): Promise<{ path?: string; config?: T }> {
+): { path?: string; config?: T } {
   try {
     const configJoycon = new JoyCon();
     const filteredExts = exts.filter((ext) => allowedExtensions.some((e) => ext.endsWith(e)));
@@ -33,7 +35,7 @@ export async function loadConfig<T>(
       if (packageKey) files.push('package.json');
     }
 
-    const configPath = await configJoycon.resolve({
+    const configPath = configJoycon.resolveSync({
       files,
       cwd,
       stopDir: stopDir || path.parse(cwd).root,
@@ -49,7 +51,7 @@ export async function loadConfig<T>(
 
     // js,.ts,.cjs,.mjs
     if (isRequire) {
-      const { mod: config } = await bundleRequire({
+      const { mod: config } = bundleRequireSync<any>({
         filepath: configPath,
       });
       const raw = config; // config.mod
@@ -60,7 +62,7 @@ export async function loadConfig<T>(
     }
     // json, package.json
     if (isJson) {
-      let data = await loadJsonc(configPath);
+      let data = loadJsoncSync(configPath);
       if (packageKey && configPath.endsWith('package.json')) {
         data = packageKey ? data[packageKey] : undefined;
       }

@@ -1,4 +1,4 @@
-export interface LoadConfigParams {
+export interface LoadConfigOptions {
   cwd?: string;
   files?: string[];
   exts?: string[];

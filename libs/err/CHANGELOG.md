@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.10.0](https://github.com/lskjs/libs/compare/v4.9.0...v4.10.0) (2024-02-19)
+
+
+### Bug Fixes
+
+* **err:** do not pass 1mb in err message ny mistake ([bd51614](https://github.com/lskjs/libs/commit/bd5161470f396f425b920b0a0bb02c67ffb8a4b9))
+
+
+
+
+
 # [4.9.0](https://github.com/lskjs/libs/compare/v4.8.0...v4.9.0) (2024-01-30)
 
 **Note:** Version bump only for package @lsk4/err

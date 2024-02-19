@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.10.0](https://github.com/lskjs/libs/compare/v4.9.0...v4.10.0) (2024-02-19)
+
+
+### Features
+
+* **config:** add loadConfigSync ([61a72e2](https://github.com/lskjs/libs/commit/61a72e2c3d8c86ac63aa5b30cc30834abde9a5b4))
+
+
+
+
+
 # [4.9.0](https://github.com/lskjs/libs/compare/v4.8.0...v4.9.0) (2024-01-30)
 
 **Note:** Version bump only for package @lsk4/config

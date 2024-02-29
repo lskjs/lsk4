@@ -2,7 +2,7 @@ export const options = {
   entry: ['src/**/*.tsx?'],
   treeshake: true,
   sourcemap: true,
-  splitting: true,
+  splitting: false,
   platform: 'node',
   shims: true,
   dts: true,

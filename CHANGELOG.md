@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.10.1](https://github.com/lskjs/lsk4/compare/v4.10.0...v4.10.1) (2024-02-29)
+
+
+### Bug Fixes
+
+* **eslint-config:** disable import/extensions ([a8342b9](https://github.com/lskjs/lsk4/commit/a8342b9477d6029f5e6ee7f0dade46e91ec038d7))
+
+
+
+
+
 # [4.10.0](https://github.com/lskjs/lsk4/compare/v4.9.0...v4.10.0) (2024-02-19)
 
 

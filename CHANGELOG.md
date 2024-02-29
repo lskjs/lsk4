@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.10.2](https://github.com/lskjs/lsk4/compare/v4.10.1...v4.10.2) (2024-02-29)
+
+
+### Bug Fixes
+
+* disable splitting ([813aead](https://github.com/lskjs/lsk4/commit/813aead5bf415c5e044a8828d07d66e01779a51e))
+
+
+
+
+
 ## [4.10.1](https://github.com/lskjs/lsk4/compare/v4.10.0...v4.10.1) (2024-02-29)
 
 

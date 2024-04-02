@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.12.0](https://github.com/lskjs/lsk4/compare/v4.11.0...v4.12.0) (2024-04-02)
+
+
+### Features
+
+* **config:** improve returing config type ([a1277bb](https://github.com/lskjs/lsk4/commit/a1277bbae2119e99023cab2ad3e607c490699161))
+
+
+
+
+
 # [4.11.0](https://github.com/lskjs/lsk4/compare/v4.10.2...v4.11.0) (2024-04-02)
 
 

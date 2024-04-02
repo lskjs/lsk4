@@ -4,3 +4,4 @@ export * from './getCommentString.js';
 export * from './jsonToString.js';
 export * from './jsonToYaml.js';
 export * from './jsonToFile.js';
+export * from './importRequire.js';

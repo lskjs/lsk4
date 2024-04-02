@@ -5,13 +5,13 @@ import { Err } from '@lsk4/err';
 import { readFile } from 'fs/promises';
 import yaml from 'js-yaml';
 
+import { importRequire } from './importRequire.js';
+
 export async function fileToJson(filename: string, { type = 'keyval' } = {}) {
   if (!exists(filename)) return null;
   try {
-    if (type === 'js') {
-      // eslint-disable-next-line import/no-dynamic-require
-      const data = require(filename);
-      delete require.cache[require.resolve(filename)];
+    if (type === 'js' || type === 'cjs' || type === 'mjs' || type === 'ts' || type === 'es6') {
+      const data = await importRequire(filename, { removeCache: true });
       return data;
     }
     const str = (await readFile(filename)).toString();

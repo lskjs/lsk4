@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.11.0](https://github.com/lskjs/lskjs/compare/v4.10.2...v4.11.0) (2024-04-02)
+
+
+### Features
+
+* **tsconfig:** add default tsconfig for esm ([bfdb491](https://github.com/lskjs/lskjs/commit/bfdb491d381658d8182f4f0c5aa245fa29517cee))
+
+
+
+
+
 # [4.3.0](https://github.com/lskjs/lskjs/compare/v4.2.0...v4.3.0) (2023-12-06)
 
 

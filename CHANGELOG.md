@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.11.0](https://github.com/lskjs/lsk4/compare/v4.10.2...v4.11.0) (2024-04-02)
+
+
+### Features
+
+* **stringify:** improve importRequire ([c11e97a](https://github.com/lskjs/lsk4/commit/c11e97af8a70b4733b085eb518800cd11fa06aeb))
+* **tsconfig:** add default tsconfig for esm ([bfdb491](https://github.com/lskjs/lsk4/commit/bfdb491d381658d8182f4f0c5aa245fa29517cee))
+
+
+
+
+
 ## [4.10.2](https://github.com/lskjs/lsk4/compare/v4.10.1...v4.10.2) (2024-02-29)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.11.0](https://github.com/lskjs/libs/compare/v4.10.2...v4.11.0) (2024-04-02)
+
+
+### Features
+
+* **stringify:** improve importRequire ([c11e97a](https://github.com/lskjs/libs/commit/c11e97af8a70b4733b085eb518800cd11fa06aeb))
+
+
+
+
+
 # [4.10.0](https://github.com/lskjs/libs/compare/v4.9.0...v4.10.0) (2024-02-19)
 
 **Note:** Version bump only for package @lsk4/stringify

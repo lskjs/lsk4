@@ -20,9 +20,9 @@
   "types": "cjs/index.d.ts",
   "exports": {
     ".": {
-      "import": "./lib/tsup.config.js",
-      "types": "./cjs/tsup.config.d.ts",
-      "default": "./cjs/intsup.configdex.js"
+      "import": "./lib/index.js",
+      "types": "./cjs/index.d.ts",
+      "default": "./cjs/inindexdex.js"
     },
     "./*": {
       "import": "./lib/*.js",
@@ -30,9 +30,9 @@
       "default": "./cjs/*.js"
     },
     "./esm": {
-      "import": "./lib/esm/tsup.config.js",
-      "types": "./cjs/esm/tsup.config.d.ts",
-      "default": "./cjs/esm/tsup.config.js"
+      "import": "./lib/esm/index.js",
+      "types": "./cjs/esm/index.d.ts",
+      "default": "./cjs/esm/index.js"
     },
     "./esm/*": {
       "import": "./lib/esm/*.js",

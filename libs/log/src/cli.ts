@@ -9,6 +9,8 @@ import { prettyRawLog } from './pretty/prettyRawLog.js';
 if (process.env.LSK_LOG_READLINE !== '0') {
   readline
     .createInterface({
+      // TODO: разоботаться почему
+      // @ts-ignore
       input: process.stdin,
       // output: process.stdout,
     })
@@ -28,5 +30,7 @@ if (process.env.LSK_LOG_READLINE !== '0') {
         prettyRawLog(log, raw);
       }),
     )
+    // TODO: разоботаться почему
+    // @ts-ignore
     .pipe(process.stdout);
 }

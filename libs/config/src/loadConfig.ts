@@ -1,7 +1,6 @@
 import path from 'node:path';
 
 import { Err } from '@lsk4/err';
-import { Logger } from '@lsk4/log';
 // @ts-ignore it can't find types, but module has types
 import { bundleRequire } from 'bundle-require';
 import JoyCon from 'joycon';
@@ -9,16 +8,18 @@ import JoyCon from 'joycon';
 import { allowedExtensions, defaultExtensions } from './options';
 import type { LoadConfigOptions } from './types.js';
 import { loadJsonc } from './utils/loadJsonc';
+import { checkSchema } from './checkSchema';
+import { lazyLog } from './log';
 
 // NOTE: перегружаю функцию, чтобы добавить не опциональный возвращаемый тип
 export async function loadConfig<T>(
   name: string,
-  options: LoadConfigOptions & { throwError?: true },
+  options: LoadConfigOptions<T> & { throwError?: true },
 ): Promise<{ path: string; config: T }>;
 export async function loadConfig<T>(name: string): Promise<{ path: string; config: T }>;
 export async function loadConfig<T>(
   name: string,
-  options: LoadConfigOptions & { throwError: false },
+  options: LoadConfigOptions<T> & { throwError: false },
 ): Promise<{ path?: string; config?: T }>;
 
 export async function loadConfig<T>(
@@ -32,7 +33,8 @@ export async function loadConfig<T>(
     silent = false,
     packageKey = '',
     processEnvKey = '',
-  }: LoadConfigOptions = {},
+    schema,
+  }: LoadConfigOptions<T> = {},
 ): Promise<{ path?: string; config?: T }> {
   try {
     const configJoycon = new JoyCon();
@@ -64,10 +66,13 @@ export async function loadConfig<T>(
         filepath: configPath,
       });
       const raw = config; // config.mod
-      return {
+      const res = {
+        name,
         path: configPath,
         config: raw[packageKey] || raw.default || raw,
       };
+      if (schema) return checkSchema<T>(res as any, { schema, throwError, silent });
+      return res;
     }
     // json, package.json
     if (isJson) {
@@ -76,20 +81,29 @@ export async function loadConfig<T>(
         data = packageKey ? data[packageKey] : undefined;
       }
       if (data) {
-        return { path: configPath, config: data };
+        const res = {
+          name,
+          path: configPath,
+          config: data,
+        };
+        if (schema) return checkSchema<T>(res as any, { schema, throwError, silent });
+        return res;
       }
     }
     if (isProcess) {
-      return {
+      const res = {
+        name,
         path: processEnvPath,
         config: JSON.parse(processEnvValue),
       };
+      if (schema) return checkSchema<T>(res as any, { schema, throwError, silent });
+      return res;
     }
     throw new Err(`Config not found: ${name}`);
   } catch (err) {
     if (throwError) throw err;
     // TODO: replace to lsk4/log/log, but now it doesn't compile dts
-    if (!silent) new Logger('config').warn('[loadConfig]', err);
+    if (!silent) lazyLog().warn('[loadConfig]', err);
   }
   return {};
 }

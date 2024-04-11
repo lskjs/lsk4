@@ -1,1 +1,0 @@
-# LSK.js – valid config with zod

@@ -43,6 +43,7 @@
   "files": [
     "lib",
     "cjs",
+    "esm",
     "README.md",
     "LICENCE"
   ],

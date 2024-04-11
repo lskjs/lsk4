@@ -146,22 +146,6 @@ importers:
         specifier: ^20.10.4
         version: 20.10.4
 
-  libs/valid-config:
-    dependencies:
-      '@lsk4/config':
-        specifier: workspace:^
-        version: link:../config
-      '@lsk4/err':
-        specifier: workspace:^
-        version: link:../err
-    devDependencies:
-      '@types/node':
-        specifier: ^20.10.4
-        version: 20.12.2
-      zod:
-        specifier: ^3.22.4
-        version: 3.22.4
-
   presets/babel-preset:
     dependencies:
       '@babel/plugin-proposal-class-properties':
@@ -13130,3 +13114,4 @@ packages:
   /zod@3.22.4:
     resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
     requiresBuild: true
+    dev: false

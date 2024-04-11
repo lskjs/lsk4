@@ -13,8 +13,9 @@ import { loadJsonc } from './utils/loadJsonc';
 // NOTE: перегружаю функцию, чтобы добавить не опциональный возвращаемый тип
 export async function loadConfig<T>(
   name: string,
-  options: LoadConfigOptions & { throwError: true },
+  options: LoadConfigOptions & { throwError?: true },
 ): Promise<{ path: string; config: T }>;
+export async function loadConfig<T>(name: string): Promise<{ path: string; config: T }>;
 export async function loadConfig<T>(
   name: string,
   options: LoadConfigOptions & { throwError: false },

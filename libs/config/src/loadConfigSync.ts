@@ -4,12 +4,12 @@ import { Err } from '@lsk4/err';
 // @ts-ignore it can't find types, but module has types
 import JoyCon from 'joycon';
 
+import { checkSchema } from './checkSchema';
+import { lazyLog } from './log';
 import { allowedExtensions, defaultExtensions } from './options';
 import type { LoadConfigOptions } from './types.js';
 import { bundleRequireSync } from './utils/bundleRequireSync';
 import { loadJsoncSync } from './utils/loadJsoncSync';
-import { checkSchema } from './checkSchema';
-import { lazyLog } from './log';
 
 // NOTE: это копипаста из соседнего файла loadConfig.ts, но синхронная версия. Изменять нужно оба файла.
 

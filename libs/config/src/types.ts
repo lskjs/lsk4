@@ -1,4 +1,4 @@
-import type { ZodType } from "zod";
+import type { ZodType } from 'zod';
 
 export interface LoadConfigOptions<T> {
   cwd?: string;
@@ -11,4 +11,3 @@ export interface LoadConfigOptions<T> {
   processEnvKey?: string;
   schema?: ZodType<T>;
 }
-

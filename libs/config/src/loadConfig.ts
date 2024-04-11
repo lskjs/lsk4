@@ -5,11 +5,11 @@ import { Err } from '@lsk4/err';
 import { bundleRequire } from 'bundle-require';
 import JoyCon from 'joycon';
 
+import { checkSchema } from './checkSchema';
+import { lazyLog } from './log';
 import { allowedExtensions, defaultExtensions } from './options';
 import type { LoadConfigOptions } from './types.js';
 import { loadJsonc } from './utils/loadJsonc';
-import { checkSchema } from './checkSchema';
-import { lazyLog } from './log';
 
 // NOTE: перегружаю функцию, чтобы добавить не опциональный возвращаемый тип
 export async function loadConfig<T>(

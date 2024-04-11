@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.14.1](https://github.com/lskjs/lskjs/compare/v4.14.0...v4.14.1) (2024-04-11)
+
+
+### Bug Fixes
+
+* **tsup-config:** esm tsup config fix ([16df2d9](https://github.com/lskjs/lskjs/commit/16df2d93d36daa1c1c63b8c3d20d970d44f5f760))
+
+
+
+
+
 # [4.14.0](https://github.com/lskjs/lskjs/compare/v4.13.0...v4.14.0) (2024-04-11)
 
 

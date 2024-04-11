@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.15.0](https://github.com/lskjs/libs/compare/v4.14.1...v4.15.0) (2024-04-11)
+
+
+### Features
+
+* **config:** write more tests ([39619ff](https://github.com/lskjs/libs/commit/39619fff6d3da0d957d699ce0da592ddf368f06b))
+
+
+
+
+
 # [4.13.0](https://github.com/lskjs/libs/compare/v4.12.0...v4.13.0) (2024-04-11)
 
 

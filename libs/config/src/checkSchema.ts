@@ -12,18 +12,24 @@ export function checkSchema<T>(
 
   const result = schema.safeParse(res.config);
   if (!result.success) {
-    if (!silent)
+    if (!silent) {
       lazyLog().error(
         '[checkSchema]',
         'Invalid config',
-        [res.name, res.path].filter(Boolean).join(':'),
+        `"${[res.name, res.path].filter(Boolean).join(':')}"`,
       );
+    }
     result.error.errors.forEach((err) => {
       if (!silent)
         lazyLog().warn('[checkSchema]', [err.path, err.message].filter(Boolean).join(' '));
     });
     if (!silent) lazyLog().trace('[checkSchema]', 'Invalid config error', result.error);
-    if (!throwError) return res;
+    if (!throwError) {
+      return {
+        ...res,
+        error: result.error,
+      };
+    }
     throw new Err('invalidConfig', { name: res.name, path: res.path, result });
   }
   return {

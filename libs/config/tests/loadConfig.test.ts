@@ -5,17 +5,18 @@ import * as assert from 'uvu/assert';
 import { loadConfig } from '../src';
 
 const test = suite('loadConfig()');
+const cwd = 'tests/fixtures/any';
 
 test('find some env', async () => {
   const { config = {} as any } = await loadConfig('env', {
-    cwd: 'tests/fixtures',
+    cwd,
   });
   assert.match(config['this is'], 'file');
 });
 
 test('find typescript env with multiple exts', async () => {
   const { config = {} as any } = await loadConfig('env', {
-    cwd: 'tests/fixtures',
+    cwd,
     exts: ['.ts', '.json', '.mjs', '.cjs'],
   });
   assert.is(config['this is'], 'typescript file');
@@ -23,7 +24,7 @@ test('find typescript env with multiple exts', async () => {
 
 test('find commonjs env', async () => {
   const { config = {} as any } = await loadConfig('env', {
-    cwd: 'tests/fixtures',
+    cwd,
     exts: ['.cjs'],
   });
   assert.is(config['this is'], 'common js file');
@@ -31,7 +32,7 @@ test('find commonjs env', async () => {
 
 test('find js env', async () => {
   const { config = {} as any } = await loadConfig('env', {
-    cwd: 'tests/fixtures',
+    cwd,
     exts: ['.js'],
   });
   assert.is(config['this is'], 'js file');
@@ -39,7 +40,7 @@ test('find js env', async () => {
 
 test('find ecmamodules env', async () => {
   const { config = {} as any } = await loadConfig('env', {
-    cwd: 'tests/fixtures',
+    cwd,
     exts: ['.mjs'],
   });
   assert.is(config['this is'], 'ecmamodules file');
@@ -47,7 +48,7 @@ test('find ecmamodules env', async () => {
 
 test('find json env', async () => {
   const { config = {} as any } = await loadConfig('env', {
-    cwd: 'tests/fixtures',
+    cwd,
     exts: ['.json'],
   });
   assert.is(config['this is'], 'json(c) file');
@@ -63,7 +64,7 @@ test('find env from package.json', async () => {
 if (typeof process.env.TEST_JSON_ENV === 'string') {
   test('find json even if process.env.TEST_JSON_ENV is defined', async () => {
     const { config = {} as any } = await loadConfig('env', {
-      cwd: 'tests/fixtures',
+      cwd,
       exts: ['.json'],
       processEnvKey: 'TEST_JSON_ENV',
     });
@@ -72,7 +73,7 @@ if (typeof process.env.TEST_JSON_ENV === 'string') {
 
   test('find env from process.env.TEST_JSON_ENV', async () => {
     const { config = {} as any } = await loadConfig('env_not_found', {
-      cwd: 'tests/fixtures',
+      cwd,
       processEnvKey: 'TEST_JSON_ENV',
     });
     assert.is(config['this is'], 'process.env.TEST_JSON_ENV');

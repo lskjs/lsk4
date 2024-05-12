@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.17.0](https://github.com/lskjs/libs/compare/v4.16.1...v4.17.0) (2024-05-12)
+
+
+### Features
+
+* **stringify:** refactor file formats ([5d546dd](https://github.com/lskjs/libs/commit/5d546dd91e834196411d638875967fb18cf5fd0e))
+
+
+
+
+
 ## [4.16.1](https://github.com/lskjs/libs/compare/v4.16.0...v4.16.1) (2024-05-12)
 
 

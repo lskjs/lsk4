@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.16.1](https://github.com/lskjs/libs/compare/v4.16.0...v4.16.1) (2024-05-12)
+
+
+### Bug Fixes
+
+* **stringify:** allow empty strings getComment ([7897e5e](https://github.com/lskjs/libs/commit/7897e5e972974b34ae064f3917d78cc3f65ee563))
+
+
+
+
+
 # [4.16.0](https://github.com/lskjs/libs/compare/v4.15.0...v4.16.0) (2024-05-12)
 
 

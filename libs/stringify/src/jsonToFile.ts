@@ -16,10 +16,11 @@ export async function jsonToFile(
   if (compare && isEqual(json, data)) {
     // // eslint-disable-next-line no-console
     // console.log('isEqual', filename);
-    return;
+    return { status: 'no-changes' };
   }
   await mkdir(path.dirname(filename), { recursive: true });
   await writeFile(filename, jsonToString(json, { type, comment }));
+  return { status: 'updated' };
 }
 
 export default jsonToFile;

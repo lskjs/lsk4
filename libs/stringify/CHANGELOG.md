@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.16.0](https://github.com/lskjs/libs/compare/v4.15.0...v4.16.0) (2024-05-12)
+
+
+### Bug Fixes
+
+* **stringify:** add cache invalidation in esm ([3b5116e](https://github.com/lskjs/libs/commit/3b5116eb7d6244f1b069e0564e0c9088cc9b2e51))
+
+
+### Features
+
+* **stringify:** add status to jsonToFile ([50a39d4](https://github.com/lskjs/libs/commit/50a39d45ae7e9bf25229b172d7e6171dca8c439d))
+* **stringify:** improve lazyLog trace ([e4c3f45](https://github.com/lskjs/libs/commit/e4c3f4580f40a85e478effa2a18366ff9f9a53af))
+
+
+
+
+
 # [4.11.0](https://github.com/lskjs/libs/compare/v4.10.2...v4.11.0) (2024-04-02)
 
 

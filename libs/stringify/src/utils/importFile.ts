@@ -15,14 +15,18 @@ export type ImportFileOptions = {
   undefault?: boolean;
 };
 
-export async function importFile(filename: string, { format: initFormat, undefault = true }: ImportFileOptions = {}) {
+export async function importFile(
+  filename: string,
+  { format: initFormat, undefault = true }: ImportFileOptions = {},
+) {
   const format = initFormat ? getFileFormat(initFormat) : guessFileFormat(filename);
   if (!format) throw new Err('cantGuessFormat', { data: { filename } });
   if (!exists(filename)) return null;
   try {
     if (format === 'cjs' || format === 'esm') {
       const data = await importRequire(filename, { removeCache: true });
-      if (undefault && Object.keys(data).length === 1  && Object.keys(data)[0] === 'default') return data.default;
+      if (undefault && Object.keys(data).length === 1 && Object.keys(data)[0] === 'default')
+        return data.default;
       return data;
     }
     const str = (await readFile(filename)).toString();

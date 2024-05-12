@@ -1,5 +1,5 @@
 // TODO: make more efficient
-export const isEqualObjects = (a: any, b: any) => {
+export function isEqualObjects(a: any, b: any) {
   // console.log('=====================');
   // console.log(JSON.stringify(a));
   // console.log('=====================');

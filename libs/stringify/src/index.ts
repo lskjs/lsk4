@@ -1,3 +1,4 @@
+export * from './types.js';
 export * from './getComment.js';
 export * from './getCommentString.js';
 export * from './jsonToString.js';

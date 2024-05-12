@@ -34,7 +34,8 @@ export async function jsonToFile(
   if (compare && isExists) {
     try {
       const data = await importFile(filename, { format });
-      if (isEqualObjects(json, data)) {
+      const isEqual = isEqualObjects(json, data);
+      if (isEqual) {
         // console.log('isEqual', filename);
         return { status: 'nochanges' };
       }

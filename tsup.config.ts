@@ -3,6 +3,7 @@ export const options = {
   treeshake: true,
   sourcemap: true,
   // splitting: true,
+  splitting: false,
   platform: 'node',
   shims: true,
   dts: true,

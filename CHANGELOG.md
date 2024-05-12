@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.17.3](https://github.com/lskjs/lsk4/compare/v4.17.2...v4.17.3) (2024-05-12)
+
+
+### Bug Fixes
+
+* **stringify:** fix types ([0e549e5](https://github.com/lskjs/lsk4/commit/0e549e5da970b69686ac72404c5cb2a325fa6d5f))
+
+
+
+
+
 ## [4.17.2](https://github.com/lskjs/lsk4/compare/v4.17.1...v4.17.2) (2024-05-12)
 
 

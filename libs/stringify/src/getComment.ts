@@ -27,7 +27,7 @@ export const getComment = (props: CommentProps) => {
       if (!value) return null;
       const keyStr = String(key).padEnd(maxKeyLength, ' ');
       if (key === 'Footer') return `\n${value}`;
-      return `${keyStr}: ${value}`;
+      return [keyStr, value].filter(Boolean).join(': ');
     })
     .filter(Boolean)
     .join('\n')

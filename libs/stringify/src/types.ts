@@ -5,5 +5,5 @@ export interface CommentProps {
   name?: string;
   date?: Date;
   footer?: string;
-  values?: Array<[string, string]>;
+  values?: Array<[string, string] | []>;
 }

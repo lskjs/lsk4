@@ -26,7 +26,7 @@ export type JsonToFileResult = {
 export async function jsonToFile(
   filename: string,
   json: Record<string, unknown>,
-  { format: initFormat = null, comment = '', compare = true } = {},
+  { format: initFormat, comment = '', compare = true }: JsonToFileOptions = {},
 ) {
   const format = initFormat ? getFileFormat(initFormat) : guessFileFormat(filename);
   if (!format) throw new Err('cantGuessFormat', { data: { filename } });

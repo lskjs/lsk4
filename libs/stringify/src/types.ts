@@ -1,5 +1,6 @@
 // TODO: add jsonc
 // TODO: add csv
+// TODO: add jsonEachRow
 export type FileFormat = 'json' | 'cjs' | 'esm' | 'yml' | 'env';
 
 export interface CommentProps {

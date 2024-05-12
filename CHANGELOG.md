@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.19.0](https://github.com/lskjs/lsk4/compare/v4.18.0...v4.19.0) (2024-05-12)
+
+
+### Features
+
+* **stringify:** allow save string ([e48fba0](https://github.com/lskjs/lsk4/commit/e48fba0f533f8a063e7df447bde40c72ebaa8ab0))
+
+
+
+
+
 # [4.18.0](https://github.com/lskjs/lsk4/compare/v4.17.3...v4.18.0) (2024-05-12)
 
 

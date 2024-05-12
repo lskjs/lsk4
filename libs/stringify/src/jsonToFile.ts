@@ -2,6 +2,8 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
+import { lazyLog } from '@lsk4/log';
+
 import { fileToJson } from './fileToJson';
 import { jsonToString } from './jsonToString';
 
@@ -12,11 +14,16 @@ export async function jsonToFile(
   json: Record<string, unknown>,
   { type = 'keyval', comment = '', compare = true } = {},
 ) {
-  const data = await fileToJson(filename, { type });
-  if (compare && isEqual(json, data)) {
-    // // eslint-disable-next-line no-console
-    // console.log('isEqual', filename);
-    return { status: 'no-changes' };
+  if (compare) {
+    try {
+      const data = await fileToJson(filename, { type });
+      if (isEqual(json, data)) {
+        // console.log('isEqual', filename);
+        return { status: 'no-changes' };
+      }
+    } catch (err) {
+      lazyLog('stringify').trace('jsonToFile compare error', err);
+    }
   }
   await mkdir(path.dirname(filename), { recursive: true });
   await writeFile(filename, jsonToString(json, { type, comment }));

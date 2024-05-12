@@ -14,6 +14,7 @@
   "dependencies": {
     "@lsk4/algos": "workspace:^",
     "@lsk4/err": "workspace:^",
+    "@lsk4/log": "workspace:^",
     "javascript-stringify": "^2.1.0",
     "js-yaml": "^4.1.0"
   },

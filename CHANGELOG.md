@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.18.0](https://github.com/lskjs/lsk4/compare/v4.17.3...v4.18.0) (2024-05-12)
+
+
+### Bug Fixes
+
+* **stringify:** fix eslint ([43b5d52](https://github.com/lskjs/lsk4/commit/43b5d527e4994e71e4b742976ab6fa3f118816d3))
+* **tsup-config:** disable spliting ([0639d21](https://github.com/lskjs/lsk4/commit/0639d21dc53c74f72d3793e1dea6dc35e7a33f89))
+
+
+### Features
+
+* **stringify:** improve compare objects ([43bfaa1](https://github.com/lskjs/lsk4/commit/43bfaa1df5b2c37c044afaff3054344afc1dd366))
+
+
+
+
+
 ## [4.17.3](https://github.com/lskjs/lsk4/compare/v4.17.2...v4.17.3) (2024-05-12)
 
 

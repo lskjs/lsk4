@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.18.0](https://github.com/lskjs/lskjs/compare/v4.17.3...v4.18.0) (2024-05-12)
+
+
+### Bug Fixes
+
+* **tsup-config:** disable spliting ([0639d21](https://github.com/lskjs/lskjs/commit/0639d21dc53c74f72d3793e1dea6dc35e7a33f89))
+
+
+
+
+
 ## [4.14.1](https://github.com/lskjs/lskjs/compare/v4.14.0...v4.14.1) (2024-04-11)
 
 

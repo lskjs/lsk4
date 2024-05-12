@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.17.2](https://github.com/lskjs/libs/compare/v4.17.1...v4.17.2) (2024-05-12)
+
+
+### Bug Fixes
+
+* **stringify:** exports utils ([7183144](https://github.com/lskjs/libs/commit/7183144a6d58870dbd242871ea487812f572fed8))
+
+
+
+
+
 ## [4.17.1](https://github.com/lskjs/libs/compare/v4.17.0...v4.17.1) (2024-05-12)
 
 

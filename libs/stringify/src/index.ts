@@ -6,3 +6,4 @@ export * from './jsonToFile.js';
 export * from './utils/importFile.js';
 export * from './utils/importRequire.js';
 export * from './utils/getFileFormat.js';
+export * from './utils/guessFileFormat.js';

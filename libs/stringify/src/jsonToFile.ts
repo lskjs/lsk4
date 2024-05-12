@@ -9,7 +9,7 @@ import { lazyLog } from '@lsk4/log';
 import { jsonToString } from './jsonToString';
 import type { FileFormat } from './types';
 import { getFileFormat } from './utils/getFileFormat';
-import { guessFileFormat } from './utils/guessFleFormat';
+import { guessFileFormat } from './utils/guessFileFormat';
 import { importFile } from './utils/importFile';
 import { isEqualObjects } from './utils/isEqualObjects';
 

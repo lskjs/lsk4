@@ -7,7 +7,7 @@ import { readFile } from 'fs/promises';
 import yaml from 'js-yaml';
 
 import { getFileFormat } from './getFileFormat.js';
-import { guessFileFormat } from './guessFleFormat.js';
+import { guessFileFormat } from './guessFileFormat.js';
 import { importRequire } from './importRequire.js';
 
 export type ImportFileOptions = {

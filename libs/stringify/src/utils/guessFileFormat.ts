@@ -1,9 +1,5 @@
 import { getFileFormat } from './getFileFormat.js';
 
-export type ImportFileOptions = {
-  format?: string;
-};
-
 function getExt(filename: string) {
   return filename.split('.').pop();
 }

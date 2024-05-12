@@ -25,13 +25,13 @@ export type JsonToFileResult = {
 
 export async function jsonToFile(
   filename: string,
-  json: Record<string, unknown>,
+  json: Record<string, unknown> | string,
   { format: initFormat, comment = '', compare = true }: JsonToFileOptions = {},
 ) {
   const format = initFormat ? getFileFormat(initFormat) : guessFileFormat(filename);
   if (!format) throw new Err('cantGuessFormat', { data: { filename } });
   const isExists = existsSync(filename);
-  if (compare && isExists) {
+  if (compare && isExists && typeof json !== 'string') {
     try {
       const data = await importFile(filename, { format });
       const isEqual = isEqualObjects(json, data);

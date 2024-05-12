@@ -1,31 +1,46 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { mapValues, omit } from '@lsk4/algos';
-import { stringify as JSstringify } from 'javascript-stringify';
+import { isPlainObject, omit } from '@lsk4/algos';
+import { Err } from '@lsk4/err';
+import { stringify as jsStringify } from 'javascript-stringify';
 
 import { getCommentString } from './getCommentString.js';
 import { jsonToYaml } from './jsonToYaml.js';
+import type { FileFormat } from './types.js';
+import { envStringify } from './utils/envStringify.js';
+import { getFileFormat } from './utils/getFileFormat.js';
 
-const KV = {
-  stringify: (json: Record<string, unknown>) =>
-    Object.values(mapValues(json, (value, key) => `${key}=${value}`)).join('\n'),
+export type JsonToStringOptions = {
+  format?: FileFormat;
+  comment?: string;
+  indent?: number;
 };
 
-export function jsonToString(json: any, { type = 'keyval', comment = '', indent = 2 } = {}) {
-  const commentString = getCommentString(comment, { type }) || null;
-  if (type === 'keyval' || type === 'keyvalue' || type === 'env' || type === 'dotenv') {
-    return [commentString, KV.stringify(json)].filter(Boolean).join('\n');
+export function jsonToString(
+  json: any,
+  { format: initFormat, comment = '', indent = 2 }: JsonToStringOptions = {},
+) {
+  const format = getFileFormat(initFormat);
+  if (!format) throw new Err('emptyFormat');
+  const commentString = getCommentString(comment, { format }) || null;
+  if (format === 'env') {
+    return [
+      //
+      commentString,
+      envStringify(json),
+    ]
+      .filter(Boolean)
+      .join('\n');
   }
-  if (type === 'json') {
-    if (typeof json === 'object' && !Array.isArray(json)) {
+  if (format === 'json') {
+    if (isPlainObject(json)) {
       // eslint-disable-next-line no-param-reassign
       json = {
-        __comment: commentString,
+        __comment__: `\n${commentString}\n`,
         ...json,
       };
     }
     return JSON.stringify(json, null, indent);
   }
-  if (type === 'yaml' || type === 'yml') {
+  if (format === 'yml') {
     let yamlObject;
     const footer = json.__raw;
     if (Array.isArray(json)) {
@@ -45,12 +60,12 @@ export function jsonToString(json: any, { type = 'keyval', comment = '', indent 
       .join('\n');
   }
 
-  const moduleExports = type === 'es6' ? 'export default' : 'module.exports =';
+  const moduleExports = format === 'esm' ? 'export default' : 'module.exports =';
 
   return [
     commentString,
     '/* eslint-disable prettier/prettier */',
-    `${moduleExports} ${JSstringify(json, null, indent)};`,
+    `${moduleExports} ${jsStringify(json, null, indent)};`,
   ]
     .filter(Boolean)
     .join('\n');

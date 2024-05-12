@@ -2,23 +2,32 @@ import { existsSync as exists } from 'node:fs';
 
 import { fromPairs } from '@lsk4/algos';
 import { Err } from '@lsk4/err';
+import { lazyLog } from '@lsk4/log';
 import { readFile } from 'fs/promises';
 import yaml from 'js-yaml';
 
+import { getFileFormat } from './getFileFormat.js';
+import { guessFileFormat } from './guessFleFormat.js';
 import { importRequire } from './importRequire.js';
 
-export async function fileToJson(filename: string, { type = 'keyval' } = {}) {
+export type ImportFileOptions = {
+  format?: string;
+};
+
+export async function importFile(filename: string, { format: initFormat }: ImportFileOptions = {}) {
+  const format = initFormat ? getFileFormat(initFormat) : guessFileFormat(filename);
+  if (!format) throw new Err('cantGuessFormat', { data: { filename } });
   if (!exists(filename)) return null;
   try {
-    if (type === 'js' || type === 'cjs' || type === 'mjs' || type === 'ts' || type === 'es6') {
+    if (format === 'cjs' || format === 'esm') {
       const data = await importRequire(filename, { removeCache: true });
       return data;
     }
     const str = (await readFile(filename)).toString();
-    if (type === 'json') {
+    if (format === 'json') {
       return JSON.parse(str);
     }
-    if (type === 'keyval' || type === 'keyvalue' || type === 'env' || type === 'dotenv') {
+    if (format === 'env') {
       if (!str) return [];
       const keyvalues = String(str)
         .split('\n')
@@ -36,16 +45,15 @@ export async function fileToJson(filename: string, { type = 'keyval' } = {}) {
       // console.log({ str, keyvalues });
       return fromPairs(keyvalues);
     }
-    if (type === 'yaml' || type === 'yml') {
+    if (format === 'yml') {
       return yaml.load(str);
     }
-    throw new Err('!type', { data: { type } });
+    throw new Err('incorrectFormat', { data: { format } });
   } catch (err) {
     // TODO: обработать ошибку если
-    // eslint-disable-next-line no-console
-    console.error('fileToJson err', err, { filename, type });
+    lazyLog('stringify').trace('importFile error', err, { filename, format });
     return null;
   }
 }
 
-export default fileToJson;
+export default importFile;

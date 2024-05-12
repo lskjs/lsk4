@@ -1,33 +1,51 @@
 // import { isEqual } from '@lskjs/algos';
+import { existsSync } from 'node:fs';
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
+import { Err } from '@lsk4/err';
 import { lazyLog } from '@lsk4/log';
 
-import { fileToJson } from './fileToJson';
 import { jsonToString } from './jsonToString';
+import type { FileFormat } from './types';
+import { getFileFormat } from './utils/getFileFormat';
+import { guessFileFormat } from './utils/guessFleFormat';
+import { importFile } from './utils/importFile';
+import { isEqualObjects } from './utils/isEqualObjects';
 
-const isEqual = (a: any, b: any) => JSON.stringify(a) === JSON.stringify(b);
+export type JsonToFileOptions = {
+  format?: FileFormat;
+  comment?: string;
+  compare?: boolean;
+};
+
+export type JsonToFileResult = {
+  status: 'created' | 'updated' | 'nochanges';
+};
 
 export async function jsonToFile(
   filename: string,
   json: Record<string, unknown>,
-  { type = 'keyval', comment = '', compare = true } = {},
+  { format: initFormat = null, comment = '', compare = true } = {},
 ) {
-  if (compare) {
+  const format = initFormat ? getFileFormat(initFormat) : guessFileFormat(filename);
+  if (!format) throw new Err('cantGuessFormat', { data: { filename } });
+  const isExists = existsSync(filename);
+  if (compare && isExists) {
     try {
-      const data = await fileToJson(filename, { type });
-      if (isEqual(json, data)) {
+      const data = await importFile(filename, { format });
+      if (isEqualObjects(json, data)) {
         // console.log('isEqual', filename);
-        return { status: 'no-changes' };
+        return { status: 'nochanges' };
       }
     } catch (err) {
       lazyLog('stringify').trace('jsonToFile compare error', err);
     }
   }
   await mkdir(path.dirname(filename), { recursive: true });
-  await writeFile(filename, jsonToString(json, { type, comment }));
-  return { status: 'updated' };
+
+  await writeFile(filename, jsonToString(json, { format, comment }));
+  return { status: isExists ? 'updated' : 'created' };
 }
 
 export default jsonToFile;

@@ -1,6 +1,6 @@
 import { Err } from '@lsk4/err';
 
-// Import or require
+// NOTE: ESM Import or CJS require
 export async function importRequire(path: string, { removeCache }: { removeCache?: boolean } = {}) {
   try {
     // eslint-disable-next-line import/no-dynamic-require

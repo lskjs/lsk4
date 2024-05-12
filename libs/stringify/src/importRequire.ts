@@ -19,8 +19,9 @@ export async function importRequire(path: string, { removeCache }: { removeCache
     // console.log({ isTryImport });
     if (isTryImport) {
       try {
-        const res = await import(path);
-        // TODO: remove cache
+        const rand = Date.now() + Math.random();
+        const fullpath = removeCache ? `${path}?update=${rand}` : path;
+        const res = await import(fullpath);
         return res;
       } catch (importErr) {
         if (Err.getCode(importErr) === 'ERR_MODULE_NOT_FOUND') {

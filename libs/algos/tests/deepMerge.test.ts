@@ -4,7 +4,7 @@ import * as assert from 'uvu/assert';
 
 import { deepMerge } from '../src';
 
-const test = suite('map');
+const test = suite('deepMerge');
 
 test('without mapper', () => {
   const input1 = {

@@ -4,6 +4,7 @@ import { countBy } from './countBy.js';
 import { deepMerge } from './deepMerge.js';
 import { every } from './every.js';
 import { fromPairs } from './fromPairs.js';
+import { groupBy } from './groupBy.js';
 import { isPlainObject } from './isPlainObject.js';
 import { keyBy } from './keyBy.js';
 import { map } from './map.js';
@@ -18,6 +19,7 @@ import { pick } from './pick.js';
 import { pickBy } from './pickBy.js';
 import { set } from './set.js';
 import { setProps } from './setProps.js';
+import { sortBy } from './sortBy.js';
 import { toPairs } from './toPairs.js';
 import { uniq } from './uniq.js';
 import { uniqBy } from './uniqBy.js';
@@ -32,6 +34,7 @@ export {
   every,
   fromPairs,
   isPlainObject,
+  groupBy,
   map,
   mapValues,
   maxBy,
@@ -44,6 +47,7 @@ export {
   pickBy,
   set,
   setProps,
+  sortBy,
   toPairs,
   uniq,
   uniqBy,
@@ -57,6 +61,7 @@ export default {
   every,
   fromPairs,
   isPlainObject,
+  groupBy,
   map,
   mapValues,
   maxBy,
@@ -68,6 +73,7 @@ export default {
   pick,
   pickBy,
   setProps,
+  sortBy,
   toPairs,
   uniq,
   uniqBy,

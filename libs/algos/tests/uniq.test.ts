@@ -7,7 +7,7 @@ import { uniq } from '../src';
 const test = suite('uniq');
 
 test('empty', () => {
-  const input = [];
+  const input: any[] = [];
   const results = uniq(input);
   assert.equal(results, []);
 });

@@ -30,7 +30,17 @@ export async function importFile(
       return data;
     }
     const str = (await readFile(filename)).toString();
+    // if (format === 'sh') {
+    //   const raw = readFile(filename);
+    //   return raw.toString().split('\n').map((a) => {
+    //     const s = a.trim();
+    //     if (s[0] === '#') return null;
+    //     return s;
+    //   }).join('\n');
+    // }
     if (format === 'json') {
+      const raw = JSON.parse(str);
+      delete raw.__comment__;
       return JSON.parse(str);
     }
     if (format === 'env') {

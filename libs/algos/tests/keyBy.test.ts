@@ -5,7 +5,7 @@ import * as assert from 'uvu/assert';
 import { keyBy } from '../src';
 import { keyByFn } from '../src/keyBy';
 
-const test = suite('map');
+const test = suite('keyBy');
 
 test('default', () => {
   const input = [

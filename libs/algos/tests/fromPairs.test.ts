@@ -7,7 +7,7 @@ import { fromPairs } from '../src';
 const test = suite('fromPairs');
 
 test('check values', () => {
-  const input = [
+  const input: Array<[string, number]> = [
     ['one', 1],
     ['two', 2],
     ['three', 3],

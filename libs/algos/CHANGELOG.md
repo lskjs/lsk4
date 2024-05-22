@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.20.0](https://github.com/lskjs/libs/compare/v4.19.0...v4.20.0) (2024-05-22)
+
+
+### Bug Fixes
+
+* **commands:** fix size-limits log ([065c6a7](https://github.com/lskjs/libs/commit/065c6a7164551a83f862dbd3af9618755d51afe8))
+
+
+### Features
+
+* **algos:** add groupBy ([9d5cea9](https://github.com/lskjs/libs/commit/9d5cea9f572c58b95d7d733baca7f1e8a9879c49))
+* **algos:** add sortBy ([aa8ca28](https://github.com/lskjs/libs/commit/aa8ca2806b4d8989be1cfe0b3a524a090e2a574a))
+* **algos:** improve tests ([fa6f856](https://github.com/lskjs/libs/commit/fa6f856d5253f8f3baf32eef3393b9fdf55b0957))
+
+
+
+
+
 # [4.9.0](https://github.com/lskjs/libs/compare/v4.8.0...v4.9.0) (2024-01-30)
 
 

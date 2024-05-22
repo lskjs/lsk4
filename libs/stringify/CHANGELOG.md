@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.20.0](https://github.com/lskjs/libs/compare/v4.19.0...v4.20.0) (2024-05-22)
+
+
+### Features
+
+* **algos:** improve tests ([fa6f856](https://github.com/lskjs/libs/commit/fa6f856d5253f8f3baf32eef3393b9fdf55b0957))
+
+
+
+
+
 # [4.19.0](https://github.com/lskjs/libs/compare/v4.18.0...v4.19.0) (2024-05-12)
 
 

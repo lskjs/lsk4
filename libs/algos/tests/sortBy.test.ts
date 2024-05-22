@@ -9,7 +9,7 @@ const test = suite('sortBy');
 test('empty', () => {
   const input: any[] = [];
   const results = sortBy(input, (a) => a.value);
-  assert.is(results, undefined);
+  assert.equal(results, []);
 });
 
 test('1,2,3', () => {

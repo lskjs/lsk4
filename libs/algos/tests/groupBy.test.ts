@@ -8,8 +8,8 @@ const test = suite('groupBy');
 
 test('default', () => {
   const input = [
-    { id: 1, val: 1 },
     { id: 2, val: 2 },
+    { id: 1, val: 1 },
     { id: 3, val: 2 },
   ];
   const results = groupBy(input, (a: any) => a.id);
@@ -28,9 +28,12 @@ test('dublicates', () => {
   ];
   const results = groupBy(input, (a: any) => a.val);
   assert.equal(results, {
-    1: [{ id: 1, val: 3 }],
+    1: [
+      //
+      { id: 1, val: 1 },
+    ],
     2: [
-      { id: 1, val: 2 },
+      { id: 2, val: 2 },
       { id: 3, val: 2 },
     ],
   });

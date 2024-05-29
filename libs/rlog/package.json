@@ -1,0 +1,56 @@
+{
+  "name": "@lsk4/rlog",
+  "version": "4.20.0",
+  "description": "LSK.js – remote logger in telegram, slack, email",
+  "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
+  "private": false,
+  "scripts": {
+    "dev": "            ycmd dev",
+    "build": "          ycmd build",
+    "test": "           ycmd test",
+    "prepack": "        ycmd prepack",
+    "release": "        ycmd release"
+  },
+  "dependencies": {
+    "@lsk4/algos": "workspace:^",
+    "@lsk4/err": "workspace:^",
+    "@lsk4/log": "workspace:^",
+    "axios": "^1.7.2"
+  },
+  "//": "///////////========================/////////========================/////////========================/////////",
+  "prettier": "@lsk4/eslint-config/prettier",
+  "eslintConfig": {
+    "extends": "@lsk4/eslint-config/strict"
+  },
+  "files": [
+    "lib",
+    "cjs",
+    "README.md",
+    "LICENCE"
+  ],
+  "main": "cjs/index.js",
+  "types": "cjs/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "types": "./cjs/index.d.ts",
+      "default": "./cjs/index.js"
+    },
+    "./*": {
+      "import": "./lib/*.js",
+      "types": "./cjs/*.d.ts",
+      "default": "./cjs/*.js"
+    }
+  },
+  "///": "//////////========================/////////========================/////////========================/////////",
+  "repository": "https://github.com/lskjs/libs",
+  "homepage": "https://github.com/lskjs/libs/tree/master//libs/algos",
+  "bugs": "https://github.com/lskjs/libs/issues",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [],
+  "////": "/////////========================/////////========================/////////========================/////////"
+}

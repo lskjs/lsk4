@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.21.4](https://github.com/lskjs/lsk4/compare/v4.21.3...v4.21.4) (2024-05-30)
+
+
+### Bug Fixes
+
+* **rlog:** change priority of levels and add fatal ([6cc2094](https://github.com/lskjs/lsk4/commit/6cc209418881ada11aadb89c46cc7b47c2cefdd6))
+
+
+
+
+
 ## [4.21.3](https://github.com/lskjs/lsk4/compare/v4.21.2...v4.21.3) (2024-05-30)
 
 

@@ -59,22 +59,22 @@ export class Rlog {
     return data;
   }
   trace(data: RlogSendData, options: RlogSendOptions = {}) {
-    return this.send(data, { ...options, level: 'trace' });
+    return this.send(data, { level: 'trace', ...options });
   }
   debug(data: RlogSendData, options: RlogSendOptions = {}) {
-    return this.send(data, { ...options, level: 'debug' });
+    return this.send(data, { level: 'debug', ...options });
   }
   info(data: RlogSendData, options: RlogSendOptions = {}) {
-    return this.send(data, { ...options, level: 'info' });
+    return this.send(data, { level: 'info', ...options });
   }
   warn(data: RlogSendData, options: RlogSendOptions = {}) {
-    return this.send(data, { ...options, level: 'warn' });
+    return this.send(data, { level: 'warn', ...options });
   }
   error(data: RlogSendData, options: RlogSendOptions = {}) {
-    return this.send(data, { ...options, level: 'error' });
+    return this.send(data, { level: 'error', ...options });
   }
   fatal(data: RlogSendData, options: RlogSendOptions = {}) {
-    return this.send(data, { ...options, level: 'error' });
+    return this.send(data, { level: 'error', ...options });
   }
 }
 

@@ -7,7 +7,7 @@ export type RlogOptions = {
   logLevel?: string;
 };
 
-export type RlogLogLevels = 'error' | 'warn' | 'info' | 'debug' | 'trace';
+export type RlogLogLevels = 'fatal' | 'error' | 'warn' | 'info' | 'debug' | 'trace';
 export type RlogSendData = string; // TODO: Error
 
 export type RlogSendOptions = {

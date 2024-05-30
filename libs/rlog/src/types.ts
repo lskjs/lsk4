@@ -14,4 +14,6 @@ export type RlogSendOptions = {
   type?: 'text' | 'md' | 'html';
   level?: RlogLogLevels;
   ns?: string;
+
+  throw?: boolean | number;
 };

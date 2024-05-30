@@ -1,4 +1,4 @@
-import { omitNull } from '@lsk4/algos';
+import { omit, omitNull } from '@lsk4/algos';
 import { Err } from '@lsk4/err';
 import type { ILogger } from '@lsk4/log';
 import { createLogger } from '@lsk4/log';
@@ -42,14 +42,17 @@ export class Rlog {
     const ns = options.ns || this.options.ns || null;
     const type = options.type || 'text';
     const level = options.level || 'info';
+    const { throw: throwError = false } = options;
     const body = omitNull({
       ns,
       type: type === 'text' ? null : 'md',
       msg,
       level: level === 'info' ? null : level,
+      ...omit(options, ['ns', 'type', 'level', 'msg', 'throw'] as any),
     });
     const path = ns || '/';
     const { data } = await this.client.post(path, body).catch((err) => {
+      if (throwError) throw err;
       this.log.error('[send]', Err.getCode(err));
       return { data: null };
     });

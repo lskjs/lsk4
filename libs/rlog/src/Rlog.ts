@@ -48,7 +48,7 @@ export class Rlog {
       msg,
       level: level === 'info' ? null : level,
     });
-    const path = ['/api/notify', ns].filter(Boolean).join('/');
+    const path = ns || '/';
     const { data } = await this.client.post(path, body).catch((err) => {
       this.log.error('[send]', Err.getCode(err));
       return { data: null };

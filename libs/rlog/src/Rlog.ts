@@ -41,13 +41,13 @@ export class Rlog {
           : safeStringify(raw);
     const ns = options.ns || this.options.ns || null;
     const type = options.type || 'text';
-    const level = options.level || 'info';
+    const { level } = options;
     const { throw: throwError = false } = options;
     const body = omitNull({
       ns,
       type: type === 'text' ? null : 'md',
       msg,
-      level: level === 'info' ? null : level,
+      level,
       ...omit(options, ['ns', 'type', 'level', 'msg', 'throw'] as any),
     });
     const path = ns || '/';

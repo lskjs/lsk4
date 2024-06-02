@@ -51,12 +51,14 @@ export class Rlog {
       ...omit(options, ['ns', 'type', 'level', 'msg', 'throw'] as any),
     });
     const path = ns || '/';
-    const { data } = await this.client.post(path, body).catch((err) => {
+    try {
+      const { data } = await this.client.post(path, body);
+      return data;
+    } catch (err) {
       if (throwError) throw err;
       this.log.error('[send]', Err.getCode(err));
       return { data: null };
-    });
-    return data;
+    }
   }
   trace(data: RlogSendData, options: RlogSendOptions = {}) {
     return this.send(data, { level: 'trace', ...options });

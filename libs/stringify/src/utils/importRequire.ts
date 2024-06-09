@@ -1,3 +1,5 @@
+import { copyFile, unlink } from 'node:fs/promises';
+
 import { Err } from '@lsk4/err';
 
 // NOTE: ESM Import or CJS require
@@ -12,6 +14,7 @@ export async function importRequire(path: string, { removeCache }: { removeCache
       throw new Err(`${path} not found`, requireErr);
     }
     const isTryImport =
+      Err.getCode(requireErr).startsWith('Unknown file extension ".ts"') ||
       Err.getCode(requireErr).startsWith('Dynamic require of') ||
       Err.getCode(requireErr).startsWith(
         'ReferenceError: module is not defined in ES module scope',
@@ -21,7 +24,19 @@ export async function importRequire(path: string, { removeCache }: { removeCache
       try {
         const rand = Date.now() + Math.random();
         const fullpath = removeCache ? `${path}?update=${rand}` : path;
-        const res = await import(fullpath);
+        let res;
+        if (path.endsWith('.ts')) {
+          const date = new Date().toISOString().replace(/[^0-9]/g, '');
+          const newPath = path.replace(/\.ts$/, `.tmp${date}.mjs`);
+          await copyFile(path, newPath);
+          try {
+            res = await import(newPath);
+          } finally {
+            unlink(newPath);
+          }
+        } else {
+          res = await import(fullpath);
+        }
         return res;
       } catch (importErr) {
         if (Err.getCode(importErr) === 'ERR_MODULE_NOT_FOUND') {

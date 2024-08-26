@@ -64,7 +64,7 @@ export function jsonToString(
 
   return [
     commentString,
-    '/* eslint-disable prettier/prettier */',
+    '/* eslint-disable max-len, prettier/prettier */',
     `${moduleExports} ${jsStringify(json, null, indent)};`,
   ]
     .filter(Boolean)

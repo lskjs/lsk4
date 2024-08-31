@@ -1,9 +1,8 @@
 import { pickBy } from './pickBy.js';
-import { ObjectFilter, ObjectLike } from './types.js';
 
-const defaultFilter: ObjectFilter<any> = (a) => a != null;
-
-export const omitNull = <T>(object: ObjectLike<T>, filter: ObjectFilter<T> = defaultFilter) =>
-  pickBy(object, filter);
+export const omitNull = <T extends Record<string, any>>(
+  obj: T,
+  filter: (value: T[keyof T]) => boolean = (a) => a != null,
+): Partial<T> => pickBy(obj, filter);
 
 export default omitNull;

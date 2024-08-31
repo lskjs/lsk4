@@ -1,21 +1,8 @@
-import { PickOmit } from './types.js';
+import pick from './pick.js';
 
-/**
- * NOTE: copied from @lskjs utils
- */
-
-export const omit: PickOmit = (obj, keys) => {
-  const ret = {} as {
-    [K in keyof typeof obj]: (typeof obj)[K];
-  };
-  let key: keyof typeof obj;
-  // eslint-disable-next-line no-restricted-syntax
-  for (key in obj) {
-    if (!keys.includes(key)) {
-      ret[key] = obj[key];
-    }
-  }
-  return ret;
-};
+export const omit = <T extends Record<string, any>, K extends keyof T>(
+  obj: T,
+  keys: K[],
+): Omit<T, K> => pick(obj, Object.keys(obj).filter((k: any) => !keys.includes(k)) as any);
 
 export default omit;

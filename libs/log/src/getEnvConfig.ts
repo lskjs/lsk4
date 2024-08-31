@@ -1,4 +1,3 @@
-import type { ObjectLike } from '@lsk4/algos';
 import { omitNull } from '@lsk4/algos';
 import { getEnvVar, isClient, isDev } from '@lsk4/env';
 
@@ -9,7 +8,7 @@ const safeProcess = typeof process !== 'undefined' ? process : null;
 
 const isYes = (v: string | undefined | null): boolean => Boolean(+(v as any));
 
-export const getEnvConfig = (): ObjectLike<string | RegExp[]> => {
+export const getEnvConfig = () => {
   const debug = getEnvVar('DEBUG', '') || '';
   // NOTE: тупое говно тупого говна, увы, надо переделать
   const isSilent = isYes(getEnvVar('LSK_SILENT')) || safeProcess?.argv?.includes('--silent');
@@ -19,13 +18,18 @@ export const getEnvConfig = (): ObjectLike<string | RegExp[]> => {
   // eslint-disable-next-line no-nested-ternary
   const defaultLevel = isSilent ? 'error' : isTrace ? 'trace' : 'debug';
   const level = getEnvVar('LOG_LEVEL', getEnvVar('DEBUG_LEVEL', defaultLevel));
-  const res = omitNull<string | null | RegExp[]>({
+  const res = omitNull({
     format,
     level,
     on,
     off,
-  }) as ObjectLike<string | RegExp[]>;
-  return res;
+  })
+  return res as Partial<{
+    format: string;
+    level: string;
+    on: RegExp[];
+    off: RegExp[];
+}>
 };
 
 export default getEnvConfig;

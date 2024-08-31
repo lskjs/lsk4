@@ -1,11 +1,12 @@
-import { ObjectFilter, ObjectLike } from './types.js';
-
-export const pickBy = <T>(object: ObjectLike<T>, filter: ObjectFilter<T>) =>
-  Object.keys(object)
-    .filter((k) => filter(object[k], k, object))
-    .reduce((acc, key) => {
-      acc[key] = object[key];
-      return acc;
-    }, {} as ObjectLike<T>);
+export const pickBy = <T extends Record<string, any>>(
+  obj: T,
+  filter: (value: T[keyof T], key: keyof T) => boolean,
+): Partial<T> => {
+  const result = {} as Partial<T>;
+  (Object.keys(obj) as Array<keyof T>).forEach((key) => {
+    if (filter(obj[key], key)) result[key] = obj[key];
+  });
+  return result;
+};
 
 export default pickBy;

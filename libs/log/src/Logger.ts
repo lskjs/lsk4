@@ -19,14 +19,14 @@ export class Logger implements ILogger {
   level: LoggerLevelType = 'trace';
   on: RegExp[] = [];
   off: RegExp[] = [];
-  constructor(props: ILoggerProps | string = {}) {
+  constructor(props: Partial<ILoggerProps> | string = {}) {
     if (typeof props === 'string') {
-      this.setProps({ name: props, ...getEnvConfig() });
+      this.setProps({ name: props, ...getEnvConfig() } as any);
     } else {
       this.setProps(props);
     }
   }
-  setProps({ prefix, ns, name, level, format, on = [], off = [] }: ILoggerProps): void {
+  setProps({ prefix, ns, name, level, format, on = [], off = [] }: Partial<ILoggerProps>): void {
     if (prefix) this.prefix = prefix;
     if (ns) this.ns = ns;
     if (on) this.on = on;

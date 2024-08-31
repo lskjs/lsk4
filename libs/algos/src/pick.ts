@@ -1,16 +1,12 @@
-import { ObjectLike } from './types.js';
-
-export const pick = <T>(object: ObjectLike<T>, fields: string[]) =>
-  // console.log('[object]', object);
-  // console.log('[fields]', fields);
-  // console.log('[object.message]', object.message);
-  // console.log('[object.code]', object.code);
-  // console.log('[JSON object]', JSON.stringify(object));
-  fields.reduce((acc, key) => {
-    if (object[key] !== undefined) {
-      acc[key] = object[key];
-    }
-    return acc;
-  }, {} as ObjectLike<T>);
+export const pick = <T extends Record<string, any>, K extends keyof T>(
+  obj: T,
+  keys: K[],
+): Pick<T, K> => {
+  const result = {} as Pick<T, K>;
+  keys.forEach((key) => {
+    if (key in obj) result[key] = obj[key];
+  });
+  return result;
+};
 
 export default pick;

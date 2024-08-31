@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.24.0](https://github.com/lskjs/libs/compare/v4.23.0...v4.24.0) (2024-08-31)
+
+
+### Bug Fixes
+
+* **algos:** improve non nulable type ([5e1e0d6](https://github.com/lskjs/libs/commit/5e1e0d6b4c451cd99a1a4907f4075170db255363))
+
+
+### Features
+
+* **algos:** improve types in count, countBy ([33c9e0e](https://github.com/lskjs/libs/commit/33c9e0e589707784ab2eb11226acf0c4f466ca97))
+
+
+
+
+
 # [4.23.0](https://github.com/lskjs/libs/compare/v4.22.0...v4.23.0) (2024-08-31)
 
 

@@ -14,7 +14,7 @@ test('empty mapper', () => {
 
 test('check values', () => {
   const input = { one: 1, two: 2, three: 3, four: 4, five: 5 };
-  const results = countBy(input, (a: any) => a % 2);
+  const results = countBy(input, (a: any) => String(a % 2));
   assert.equal(results, { 1: 3, 0: 2 });
 });
 

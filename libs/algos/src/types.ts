@@ -1,7 +1,7 @@
-// export type ObjectLike<T> = Record<string, T>;
-// export type ObjectKeyPath = string | string[];
-// export type ObjectFilter<T> = (value?: T, key?: string, object?: ObjectLike<T>) => boolean;
-// export type ObjectMapper<T> = (value?: T, key?: string, object?: ObjectLike<T>) => any;
+export type ObjectLike<T> = Record<string, T>;
+export type ObjectKeyPath = string | string[];
+export type ObjectFilter<T> = (value?: T, key?: string, object?: ObjectLike<T>) => boolean;
+export type ObjectMapper<T> = (value?: T, key?: string, object?: ObjectLike<T>) => any;
 
 // export interface PickOmit {
 //   <T extends Record<string, unknown>, K extends [...(keyof T)[]]>(
@@ -12,13 +12,9 @@
 //   };
 // }
 
-
-
-
 // export type NonNullable<T> = {
 //   [K in keyof T]: Exclude<T[K], null | undefined>;
 // };
-
 
 // export type NonNullable<T> = Exclude<T, null | undefined>;
 // export type NonNullable<T> = {

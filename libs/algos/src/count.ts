@@ -1,6 +1,8 @@
-import { ObjectFilter, ObjectLike } from './types.js';
-
-export const count = <T>(object: ObjectLike<T>, filter: ObjectFilter<T>): number => {
+export const count = <T extends Record<string, any>>(
+  object: T,
+  // eslint-disable-next-line no-shadow
+  filter: (value: T[keyof T], key: keyof T, object: T) => boolean,
+): number => {
   const keys = Object.keys(object);
   let counts = 0;
   for (let i = 0; i < keys.length; i += 1) {

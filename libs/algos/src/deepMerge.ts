@@ -10,7 +10,7 @@ const deepMergeInto = (target: any, source: any): any => {
   }
   return {
     ...target,
-    ...mapValues(source, (value, key: any) => {
+    ...mapValues(source, (value: any, key: any) => {
       const targetValue = target[key];
       if (isBoth(targetValue, value, Array.isArray)) return targetValue.concat(value);
       if (isBoth(targetValue, value, isPlainObject)) {

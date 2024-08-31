@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.23.0](https://github.com/lskjs/lskjs/compare/v4.22.0...v4.23.0) (2024-08-31)
+
+
+### Features
+
+* **algos:** improve pick and omit function types ([b3b8870](https://github.com/lskjs/lskjs/commit/b3b8870bc92fbd0d9e6092dcada411fbe930a55a))
+
+
+
+
+
 # [4.20.0](https://github.com/lskjs/lskjs/compare/v4.19.0...v4.20.0) (2024-05-22)
 
 **Note:** Version bump only for package @lsk4/log

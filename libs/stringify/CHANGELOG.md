@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.23.0](https://github.com/lskjs/libs/compare/v4.22.0...v4.23.0) (2024-08-31)
+
+
+### Features
+
+* **stringify:** add eslint disable max-len by default ([804d042](https://github.com/lskjs/libs/commit/804d04258a3626cd9d0faeb4e912202bb6fa25df))
+
+
+
+
+
 # [4.22.0](https://github.com/lskjs/libs/compare/v4.21.4...v4.22.0) (2024-06-09)
 
 

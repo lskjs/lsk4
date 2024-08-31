@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.23.0](https://github.com/lskjs/lsk4/compare/v4.22.0...v4.23.0) (2024-08-31)
+
+
+### Features
+
+* **algos:** improve pick and omit function types ([b3b8870](https://github.com/lskjs/lsk4/commit/b3b8870bc92fbd0d9e6092dcada411fbe930a55a))
+* **stringify:** add eslint disable max-len by default ([804d042](https://github.com/lskjs/lsk4/commit/804d04258a3626cd9d0faeb4e912202bb6fa25df))
+
+
+
+
+
 # [4.22.0](https://github.com/lskjs/lsk4/compare/v4.21.4...v4.22.0) (2024-06-09)
 
 

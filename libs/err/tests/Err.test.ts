@@ -13,15 +13,15 @@ test('Err()', () => {
   const input: any[] = [];
   const res = {
     name: 'Err',
-    code: 'err_unknown',
-    message: 'err_unknown',
+    code: 'errUnknown',
+    message: 'errUnknown',
   };
   const err = new Err(...input);
 
   assert.instance(err, Error);
   assert.instance(err, Err);
   assert.is(err.__err, true);
-  assert.match(err.stack!, 'Err: err_unknown');
+  assert.match(err.stack!, 'Err: errUnknown');
   partialEqual(err, res);
   partialEqual(err.getJSON(), res);
 });
@@ -34,7 +34,6 @@ test('Err("some_code")', () => {
     message: 'some_code',
   };
   const err = new Err(...input);
-
   assert.instance(err, Error);
   assert.instance(err, Err);
   assert.is(err.__err, true);
@@ -137,8 +136,8 @@ test('Err({ options: 123 })', () => {
   const input: any[] = [{ options: 123 }];
   const res = {
     name: 'Err',
-    code: 'err_unknown',
-    message: 'err_unknown',
+    code: 'errUnknown',
+    message: 'errUnknown',
     options: 123,
   };
   const err = new Err(...input);
@@ -146,7 +145,7 @@ test('Err({ options: 123 })', () => {
   assert.instance(err, Error);
   assert.instance(err, Err);
   assert.is(err.__err, true);
-  assert.match(err.stack!, 'Err: err_unknown');
+  assert.match(err.stack!, 'Err: errUnknown');
   partialEqual(err, res);
   partialEqual(err.getJSON(), res);
 });
@@ -155,8 +154,8 @@ test('Err({ options: 123 }, "Some broken message")', () => {
   const input: any[] = [{ options: 123 }];
   const res = {
     name: 'Err',
-    code: 'err_unknown',
-    message: 'err_unknown',
+    code: 'errUnknown',
+    message: 'errUnknown',
     options: 123,
   };
   const err = new Err(...input);
@@ -164,7 +163,7 @@ test('Err({ options: 123 }, "Some broken message")', () => {
   assert.instance(err, Error);
   assert.instance(err, Err);
   assert.is(err.__err, true);
-  assert.match(err.stack!, 'Err: err_unknown');
+  assert.match(err.stack!, 'Err: errUnknown');
   partialEqual(err, res);
   partialEqual(err.getJSON(), res);
 });

@@ -2,7 +2,7 @@ import { omit, pick } from '@lsk4/algos';
 
 const uniq = (arr: any[]) => Array.from(new Set(arr));
 
-export const errUnknown = 'err_unknown';
+export const errUnknown = 'errUnknown';
 
 export const getMessage = (err: any, def = errUnknown): string => {
   if (typeof err === 'string') return err;
@@ -20,10 +20,10 @@ export const getCode = (err: any, def = errUnknown): string =>
   (err && (err.code || err.name || err.text || err.message)) || def;
 
 export const getCodeMessage = (err: any, def = errUnknown): [string, string?] => {
-  const code = getCode(err, def);
-  const message = getMessage(err, def);
-  if (code === message) return [code];
-  return [code, message];
+  const code = getCode(err);
+  const message = getMessage(err);
+  if (code === message) return [code ?? def];
+  return [code ?? def, message].filter(Boolean) as [string, string?];
 };
 
 export const getJSON = (err: any, onlySafeField = false): Record<string, unknown> => {

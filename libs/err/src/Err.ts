@@ -3,7 +3,15 @@
 import { copyProps } from './copyProps.js';
 import { errMerge } from './errMerge.js';
 import { IErr } from './types.js';
-import { errUnknown, getCode, getJSON, getMessage, getText, isError } from './utils.js';
+import {
+  errUnknown,
+  getCode,
+  getCodeMessage,
+  getJSON,
+  getMessage,
+  getText,
+  isError,
+} from './utils.js';
 
 // eslint-disable-next-line @typescript-eslint/no-use-before-define
 export const isErr = (err: any): boolean => err instanceof Err;
@@ -53,6 +61,9 @@ export class Err extends Error implements IErr {
   static getCode(err: any, def = errUnknown): string {
     return getCode(err, def);
   }
+  static getCodeMessage(err: any, def = errUnknown): [string, string?] {
+    return getCodeMessage(err, def);
+  }
   static getJSON(err: any, onlySafeField = false): Record<string, unknown> {
     return getJSON(err, onlySafeField);
   }
@@ -79,6 +90,9 @@ export class Err extends Error implements IErr {
   }
   getCode(): string {
     return getCode(this);
+  }
+  getCodeMessage(): [string, string?] {
+    return getCodeMessage(this);
   }
   toJSON(): Record<string, unknown> {
     const json = this.getJSON(true);

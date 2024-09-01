@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.26.0](https://github.com/lskjs/libs/compare/v4.25.0...v4.26.0) (2024-09-01)
+
+
+### Features
+
+* **err:** improve errUnknown cases ([1b66107](https://github.com/lskjs/libs/commit/1b66107a1617872c523d77d92ba634615a15a782))
+
+
+
+
+
 # [4.25.0](https://github.com/lskjs/libs/compare/v4.24.0...v4.25.0) (2024-09-01)
 
 

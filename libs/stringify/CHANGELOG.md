@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.25.0](https://github.com/lskjs/libs/compare/v4.24.0...v4.25.0) (2024-09-01)
+
+**Note:** Version bump only for package @lsk4/stringify
+
+
+
+
+
 # [4.24.0](https://github.com/lskjs/libs/compare/v4.23.0...v4.24.0) (2024-08-31)
 
 **Note:** Version bump only for package @lsk4/stringify

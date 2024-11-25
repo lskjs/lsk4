@@ -4,7 +4,6 @@
     "strict": false,
 
     "ignoreDeprecations": "5.0",
-    "suppressImplicitAnyIndexErrors": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true
   },

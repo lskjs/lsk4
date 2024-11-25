@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.27.0](https://github.com/lskjs/lsk4/compare/v4.26.0...v4.27.0) (2024-11-25)
+
+
+### Features
+
+* remove suppressImplicitAnyIndexErrors ([3ac5dab](https://github.com/lskjs/lsk4/commit/3ac5dab890247d7c0ccc4d114c31b2cef26f1cab))
+
+
+
+
+
 # [4.26.0](https://github.com/lskjs/lsk4/compare/v4.25.0...v4.26.0) (2024-09-01)
 
 

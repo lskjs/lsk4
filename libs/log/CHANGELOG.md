@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.28.0](https://github.com/lskjs/lskjs/compare/v4.27.0...v4.28.0) (2024-12-10)
+
+
+### Features
+
+* **log:** improve lazyLog ([5a04aa9](https://github.com/lskjs/lskjs/commit/5a04aa9b4d58bb6f8fd675d12a49d19bfddb78a0))
+
+
+
+
+
 # [4.26.0](https://github.com/lskjs/lskjs/compare/v4.25.0...v4.26.0) (2024-09-01)
 
 **Note:** Version bump only for package @lsk4/log

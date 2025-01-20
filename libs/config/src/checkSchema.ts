@@ -3,6 +3,8 @@ import { Err } from '@lsk4/err';
 import { lazyLog } from './log.js';
 import type { LoadConfigOptions } from './types.js';
 
+const stringify = (arr: any) => (Array.isArray(arr) ? arr.map(String).join('.') : String(arr));
+
 export function checkSchema<T>(
   res: { name: string; path: string; config: T },
   options: LoadConfigOptions<T> = {},
@@ -21,7 +23,10 @@ export function checkSchema<T>(
     }
     result.error.errors.forEach((err) => {
       if (!silent)
-        lazyLog().warn('[checkSchema]', [err.path, err.message].filter(Boolean).join(' '));
+        lazyLog().warn(
+          '[checkSchema]',
+          [stringify(err.path), err.message].filter(Boolean).join(' '),
+        );
     });
     if (!silent) lazyLog().trace('[checkSchema]', 'Invalid config error', result.error);
     if (!throwError) {

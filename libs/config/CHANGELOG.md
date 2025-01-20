@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.28.1](https://github.com/lskjs/libs/compare/v4.28.0...v4.28.1) (2025-01-20)
+
+
+### Bug Fixes
+
+* **config:** correct error stringify ([47bb2c3](https://github.com/lskjs/libs/commit/47bb2c3855db36d62e02fc3c346bd61a212d9d1c))
+
+
+
+
+
 # [4.28.0](https://github.com/lskjs/libs/compare/v4.27.0...v4.28.0) (2024-12-10)
 
 **Note:** Version bump only for package @lsk4/config

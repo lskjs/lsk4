@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.28.2](https://github.com/lskjs/libs/compare/v4.28.1...v4.28.2) (2025-01-21)
+
+
+### Bug Fixes
+
+* **config:** change configNotFound error message ([1968f19](https://github.com/lskjs/libs/commit/1968f19a3ce170ec1e7eb4d3ef813bb976184e58))
+
+
+
+
+
 ## [4.28.1](https://github.com/lskjs/libs/compare/v4.28.0...v4.28.1) (2025-01-20)
 
 

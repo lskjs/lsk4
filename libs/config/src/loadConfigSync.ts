@@ -44,7 +44,9 @@ export function loadConfigSync<T>(
     let files = initFiles;
     if (files.length === 0) {
       files = filteredExts.map((ext) => name + ext);
-      if (packageKey) files.push('package.json');
+      if (packageKey) {
+        files.push('package.json');
+      }
     }
 
     const configPath = configJoycon.resolveSync({
@@ -94,7 +96,17 @@ export function loadConfigSync<T>(
       if (schema) return checkSchema<T>(res as any, { schema, throwError, silent });
       return res;
     }
-    throw new Err(`Config not found: ${name}`);
+    const lookingPaths = [
+      ...files.map((file) =>
+        file === 'package.json' ? `${cwd}/${file}#${packageKey}` : `${cwd}/${file}`,
+      ),
+      processEnvPath,
+    ].filter(Boolean);
+    const lookinPathsMessage = lookingPaths.map((p) => `- ${p}`).join('\n');
+    const errMessage = `Config not found (${name}) in paths: \n${lookinPathsMessage}`;
+    throw new Err('configNotFound', errMessage, {
+      paths: lookingPaths,
+    });
   } catch (err) {
     if (throwError) throw err;
     // TODO: replace to lsk4/log/log, but now it doesn't compile dts

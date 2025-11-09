@@ -12,7 +12,7 @@
     "release": "        ycmd release"
   },
   "dependencies": {
-    "@lsk4/algos": "workspace:^"
+    "@lsk4/algos": "4"
   },
   "//": "///////////========================/////////========================/////////========================/////////",
   "prettier": "@lsk4/eslint-config/prettier",

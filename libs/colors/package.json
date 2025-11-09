@@ -12,7 +12,7 @@
     "release": "        ycmd release"
   },
   "dependencies": {
-    "@lsk4/env": "workspace:^"
+    "@lsk4/env": "4"
   },
   "devDependencies": {
     "@types/node": "^20.10.4"

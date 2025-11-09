@@ -12,9 +12,9 @@
     "release": "        ycmd release"
   },
   "dependencies": {
-    "@lsk4/algos": "workspace:^",
-    "@lsk4/err": "workspace:^",
-    "@lsk4/log": "workspace:^",
+    "@lsk4/algos": "4",
+    "@lsk4/err": "4",
+    "@lsk4/log": "4",
     "axios": "^1.7.2"
   },
   "//": "///////////========================/////////========================/////////========================/////////",

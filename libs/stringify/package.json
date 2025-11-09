@@ -12,9 +12,9 @@
     "release": "        ycmd release"
   },
   "dependencies": {
-    "@lsk4/algos": "workspace:^",
-    "@lsk4/err": "workspace:^",
-    "@lsk4/log": "workspace:^",
+    "@lsk4/algos": "4",
+    "@lsk4/err": "4",
+    "@lsk4/log": "4",
     "javascript-stringify": "^2.1.0",
     "js-yaml": "^4.1.0",
     "strip-json-comments": "^3.1.1"

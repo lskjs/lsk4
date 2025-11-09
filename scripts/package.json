@@ -1,0 +1,18 @@
+{
+  "type": "module",
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": " NODE_NO_WARNINGS=1 tsdown",
+    "dev": "   NODE_NO_WARNINGS=1 tsdown --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.1",
+  "devDependencies": {
+    "tsdown": "^0.15.12"
+  }
+}

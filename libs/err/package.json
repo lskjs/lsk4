@@ -1,5 +1,5 @@
 {
-  "name": "@lsk4/err",
+  "name": "@macrobe/err",
   "version": "4.26.0",
   "description": "LSK.js – err – Error class and utils for custom code and message extracting 123",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",

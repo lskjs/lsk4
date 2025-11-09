@@ -1,5 +1,5 @@
 {
-  "name": "@lsk4/rlog",
+  "name": "@macrobe/rlog",
   "version": "4.28.0",
   "description": "LSK.js – remote logger in telegram, slack, email",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",

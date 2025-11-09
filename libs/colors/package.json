@@ -1,5 +1,5 @@
 {
-  "name": "@lsk4/colors",
+  "name": "@macrobe/colors",
   "version": "4.6.0",
   "description": "Yet another colors library – like picocolors but with for browser too",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",

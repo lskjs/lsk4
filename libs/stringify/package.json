@@ -1,5 +1,5 @@
 {
-  "name": "@lsk4/stringify",
+  "name": "@macrobe/stringify",
   "version": "4.28.0",
   "description": "LSK.js – stringify JS, ESM, TS like JSON.stringify",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",

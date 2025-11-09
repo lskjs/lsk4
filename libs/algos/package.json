@@ -128,7 +128,7 @@
     }
   ],
   "///": "//////////========================/////////========================/////////========================/////////",
-  "repository": "https://github.com/lskjs/libs",
+  "repository": "https://github.com/lskjs/lsk4",
   "homepage": "https://github.com/lskjs/libs/tree/master//libs/algos",
   "bugs": "https://github.com/lskjs/libs/issues",
   "license": "MIT",

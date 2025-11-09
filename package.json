@@ -2,13 +2,14 @@
   "name": "@lsk5/root",
   "version": "5.0.0",
   "type": "module",
-  "description": "Lego Starte Kit",
+  "description": "Lego Starter Kit",
   "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
   "private": true,
   "scripts": {
     "start": "          ycmd start",
     "dev": "            ycmd dev",
-    "build": "          ycmd build",
+    "build:scripts": "  test -d scripts/lib || (cd scripts && pnpm install && pnpm run build && cd ..)",
+    "build": "          npm run build:scripts && ycmd build",
     "test": "           ycmd test",
     "prepack": "        ycmd prepack",
     "release": "        ycmd release"
